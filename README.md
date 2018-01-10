@@ -4,4 +4,4 @@
 	<img src="http://weclipart.com/gimg/A99157A84840E31E/raketa.jpg" alt="Raketa Project">
 </p>
 
-<p>Artyom Rudavin</p>
+<p>Author: Artyom Rudavin</p>

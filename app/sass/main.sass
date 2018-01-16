@@ -41,14 +41,212 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1.5
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
+
+ul, p, h1, h2, h3, h4, h5
+	padding: 0
+	margin: 0
+
+ul
+	list-style: none
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5
+	line-height: 1.1
+	font-weight: 500
+
+// Forms:
+form,
+fieldset
+	margin: 0
+	padding: 0
+	border-style: none
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+input[type='date'],
+textarea
+	-webkit-appearance: none
+	-webkit-border-radius: 3px
+	box-sizing: border-box
+	border: 0
+	padding: 10px
+	color: $dark-gray
+	background: #fff
+	box-shadow: inset 0 0 2px $dark-gray
+	&:focus
+		outline: none
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+
+/* Header Start */
+
+
+/* Navnar Start */
+.header
+	position: relative
+	width: 100%
+	height: 100vh
+	background: #fff url(/img/bg-1.png) no-repeat 100% 0
+	background-size: 50%
+
+.header-nav
+ 	position: fixed
+ 	top: 0
+ 	width: 100%
+ 	z-index: 500
+ 	opacity: .95
+ 	box-shadow: 0 0 10px #ccc
+ 	background-color: #FFF
+ 	.row
+ 		display: flex
+ 		align-items: center 
+
+.header-brand
+	font-size: 12px
+	img
+		height: 48px
+		margin-bottom: 3px 
+
+.header-navbar
+ 	ul
+ 		display: flex
+ 	a
+ 		display: block
+ 		padding: 10px 20px
+ 		color: $black
+ 		text-decoration: none
+ 		&:hover
+ 			color: $accent
+ 		&::after
+ 			background-color: $accent
+ 			display: block
+ 			content: ""
+ 			height: 2px
+ 			width: 0%
+ 			transition: width .3s ease
+ 		&:hover::after, &:focus::after
+ 			width: 100%
+
+.header-call
+	text-align: right
+	font-family: $else-font
+	span
+		font-size: 17px
+		font-weight: bold
+	.brd-btm
+		border-bottom: 2px solid $accent
+	a
+		font-size: 14px
+		color: $accent
+		text-decoration: none
+
+/* Navnar End */
+
+/* Wellcome Start */
+
+.header-wellcome
+	padding-top: 80px
+	.jumbotron
+		max-width: 1000px
+		margin: 0 auto
+		height: 100%
+		.img-1
+			vertical-align: middle
+			width: 95%
+		.h4
+			font-size: 36px
+		.h3
+			font-size: 72px
+		.h5
+			font-size: 20px
+		.standart
+				position: absolute
+				padding: 0 14px
+				border: 2px solid #000
+				top: 7px
+				left: 438px
+				font-size: 32px
+				border-radius: 4px
+		.price
+			li
+				display: inline-block
+				font-size: 24px
+				&:not(last-child)
+					margin-right: 5px
+				strong
+					font-size: 36px
+					font-family: $else-font
+					color: $accent
+		.check
+			padding-top: 10px
+			padding-left: 15px
+			padding-bottom: 10px
+			border: 3px solid $accent
+			.check-item
+				display: inline-flex
+				width: 100%
+				vertical-align: middle
+				padding: 6px 0
+				.fa
+					font-size: 27px
+					color: $accent
+					margin-right: 15px
+				span
+					margin-top: auto
+					margin-bottom: auto
+		.form
+			padding: 10px 10px
+			display: flex
+			justify-content: space-between
+			.form-item
+				flex: 1 0 auto
+				&:not(last-child)
+					margin-right: 10px
+			.button
+				padding: 0 25px
+				border: none
+				background-color: $accent
+				color: #fff
+				font-size: 20px
+				&:hover
+					background-color: $accent, 50%
+
+				
+
+/* Wellcome End */
+
+/* Header End */
+
+
+
+
+
+
+.section
+	width: 100%
+	height: 100vh
+
+.section-1
+	background-color: pink
+	overflow: hidden
+
+.section-2
+	background-color: blue
+
+.section-3
+	background-color: green
+
+.section-4
+	background-color: yellow
 
 @import "media" // Всегда в конце

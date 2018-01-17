@@ -88,6 +88,10 @@ textarea
 	&:focus
 		outline: none
 
+.row
+	display: flex
+	flex-wrap: wrap
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -168,11 +172,11 @@ textarea
 .header-wellcome
 	padding-top: rem(80)
 	// padding-top: 80px
-	.jumbotron, .container // jumbotron
-		// max-width: 1000px
+	.container-fluid
 		max-width: 1030px
 		margin: 0 auto
 		height: 100%
+		// max-width: 1000px
 		.img-1
 			vertical-align: middle
 			width: 95%
@@ -293,26 +297,67 @@ textarea
 
 /* Header End */
 
+/* Convenience Start */
 
+.convenience
+	background-color: #F2F2F2
+	.container-fluid
+		max-width: 1030px
+		.wash
+			padding-top: rem(46)
+			padding-bottom: rem(64)
+			z-index: 1
+			.h1
+				font-size: 40px
+				font-weight: bold
+				margin-bottom: rem(50)
+				&:after
+					content: ""
+					width: 150px
+					height: 3px
+					background-color: $accent
+					position: absolute
+					left: rem(15)
+					margin-top: rem(66)
+			p
+				width: 80%
+				margin-top: rem(24)
+				margin-bottom: rem(16)
+		.wash-img
+			text-align: right
+			img
+				vertical-align: middle
+				margin-top: rem(-260)
+				bottom: 0
+				right: 0
+				width: 100%
+		.wash-icos
+			margin-left: 41.66667%
+			.wre-box
+				margin-top: rem(-110)
+				margin-bottom: rem(50)
+				.row
+					justify-content: center
+					div
+						padding: 0
+						text-align: center
+						flex: 0 0 25%
+						font-size: 15px
+						img
+							max-width: 60px
+							margin-bottom: rem(10)
 
+/* Convenience End */
 
+/* Characteristics Start */
 
+.characteristics
+	.container-fluid
+		max-width: 1030px
+		.h3
+			font-size: 32px
+			font-weight: bold
 
-.section
-	width: 100%
-	height: 100vh
-
-.section-1
-	background-color: pink
-	overflow: hidden
-
-.section-2
-	background-color: blue
-
-.section-3
-	background-color: green
-
-.section-4
-	background-color: yellow
+/* Characteristics End */
 
 @import "media" // Всегда в конце

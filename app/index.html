@@ -104,7 +104,7 @@
 							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт">
 							<input type="text" class="form-item" name="DATA[NAME]" required placeholder="Ваше имя">
 							<input type="text" class="form-item" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон" id="phone">
-							<button class="form-item button">Заказать</button>
+							<button class="form-item btn header-btn">Заказать</button>
 						</form>
 						<div class="order">
 							<img src="img/bg-2.png" alt="Бесплатная доставка AquaGradus" class="order-bg">
@@ -121,7 +121,7 @@
 			</div>
 		</div>
 
-	</header>
+	</header> <!-- Header End -->
 
 	<section class="convenience">
 		
@@ -155,7 +155,7 @@
 			</div>
 		</div>
 
-	</section>
+	</section> <!-- Convenience End -->
 
 	<section class="characteristics">
 		
@@ -163,19 +163,319 @@
 			<h3 class="h3">Характеристики <span class="title-no-mobile">и размеры самогонного аппарата <br>AquaGradus Стандарт</span></h3>
 			<div class="row">
 				<div class="char-img col-6">
-					<img src="img/12.jpg" alt="Самогонный аппарат AquaGradus Стандарт 12л">
+					<img src="img/12/12.jpg" alt="Самогонный аппарат AquaGradus Стандарт 12л">
 				</div>
 				<div class="char-box col-6">
 					<div class="choose">
-						
+						<div class="row">
+							<div class="col-lg-6 num">
+								<a data-tank="twelveTank" href="#" class="litre-val active">12 л</a>
+								<a data-tank="twentyTank" href="#" class="litre-val">20 л</a>
+								<a data-tank="thirtyTank" href="#" class="litre-val">30 л</a>
+								<a data-tank="fiftyTank" href="#" class="litre-val">50 л</a>
+							</div>
+							<div class="col-lg-6">
+								<a href="#" class="bk-val">Бак отдельно</a>
+							</div>
+							<div class="clearfix"></div>
+							<div class="hr-line carSuh"></div>
+							<div class="col-12 carSuh">
+								<a href="#" class="car-val"><span>+</span> царга</a>
+								<span class="separate-cs">/</span>
+								<a href="#" class="suh-val"><span>+</span> сухопарник</a>
+							</div>
+						</div>
 					</div>
-					<div class="char-list"></div>
-					<div class="product"></div>
+					<div class="char-list">
+						<div class="row">
+
+							<div class="col-md-6">
+								<span class="ch-name">Марка стали</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong class="ch-val">AISI 304Ti (медицинская)</strong>
+							</div>
+
+							<div class="col-md-6">
+								<span class="ch-name">Диаметр колонны</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong class="ch-val">51 мм (Фланец 91мм")</strong>
+							</div>
+
+							<div class="col-md-6">
+								<span class="ch-name">Диаметр трубок охладителя</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong class="ch-val">3 шт. по 10 мм</strong>
+							</div>
+
+							<div class="col-md-6">
+								<span class="ch-name">Скорость перегонки</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong class="ch-val">3-7 л/час</strong>
+							</div>
+
+							<div class="col-md-6">
+								<span class="ch-name">Наполнитель</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong class="ch-val">Сетка Панченкова (5 м)</strong>
+							</div>
+
+							<div class="col-md-6">
+								<span class="ch-name">Толщина листа/дна</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong class="ch-val">2 мм/5 мм</strong>
+							</div>
+
+							<div class="col-md-6">
+								<span class="ch-name">Тип дна</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong class="ch-val">3 слойное</strong>
+							</div>
+
+							<div class="col-md-6">
+								<span class="ch-name">Для плит</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong class="ch-val">электр., газ, керамич., индукц.</strong>
+							</div>
+
+							<div class="col-md-6">
+								<span class="ch-name">Вес</span>
+							</div>
+							<div class="col-md-6 bg-ch">
+								<strong id="weight" class="ch-val">7 кг</strong>
+							</div>
+
+						</div>
+					</div>
+					<div class="product">
+						<div class="title"><strong>Сколько продукта получится за 1 перегонку?</strong></div>
+						<div class="row">
+							<div class="col-7 pr-bottom">
+								<span class="pr-name">Заливаем в бак</span>
+								<span class="product-ds">(чуть меньше объема)</span>
+							</div>
+							<div class="col-5 pr-bottom bg-pr align-self-end">
+								<strong id="inTank" class="pr-val">10 л</strong>
+							</div>
+							<div class="col-7">
+								<span class="pr-name">Крепость браги</span>
+							</div>
+							<div class="col-5 bg-pr align-self-end">
+								<strong class="pr-val">10.0%</strong>
+							</div>
+							<div class="col-7 pr-bottom">
+								<span class="pr-name">Чистого спирта в браге</span>
+								<span class="product-ds">(10 л х 10.0%)</span>
+							</div>
+							<div class="col-5 pr-bottom bg-pr align-self-end">
+								<strong id="cleanSpirt" class="pr-val">1.00 л</strong>
+							</div>
+							<div class="col-7 pr-bottom">
+								<span class="pr-name">40-градусного напитка, пригодного для употребления внутрь</span>
+								<span class="product-ds">(1.00л х 100%) / 40 %</span>
+							</div>
+							<div class="col-5 pr-bottom bg-pr align-self-end">
+								<strong id="inside" class="pr-val">2.5 л</strong>
+								<span id="insideButle" class="product-ds text-green">(5 бутылок по 0.5л)</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 
-	</section>
+	</section> <!-- Characteristics End -->
+
+	<section class="recipe">
+		
+		<div class="container-fluid">
+			<h3 class="h3">Популярные рецепты. Как быстро окупится прибор?</h3>
+			<div class="row">
+				<div class="resipe-box col-md-12">
+					<div class="row m0">
+						<div class="resipe-text col-md-12">
+							<span>Классический самогон из сахара</span>
+						</div>
+						<div class="resipe-img col-md-4 textout">
+							<img src="img/five-1.png" alt="Классический самогон из сахара">
+						</div>
+						<div class="resipe-ch md-6 textout">
+							<div class="row">
+
+								<div class="ch-item col-lg-6 col-6">Сахар - <span class="num">45₴/кг: </span></div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span>3 кг</span>
+								</div>
+
+								<div class="ch-item col-lg-6 col-6">Дрожжи - <span class="num">12₴: </span></div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span class="num">200 г</span>
+								</div>
+
+								<div class="ch-item col-lg-6 col-6">Вода: </div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span class="num">10 л</span>
+								</div>
+
+								<div class="ch-item col-lg-6 col-6">Выход продукта из сахара: </div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span class="num">0,5 л/кг</span>
+								</div>
+
+							</div>
+						</div>
+						<div class="resipe-result md-6 textout">
+							<div class="row">
+								<div class="col-md-3 num textout">=</div>
+								<div class="col-md-3 textout"><img src="img/bottle6.png" alt="Самогон из сахар бутылка"></div>
+								<div class="col-md-6">
+									<h1 class="accent num">49</h1>
+									<p>₴/бутылка</p>
+									<small>В магазине от <strong class="num">250 ₴</strong></small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="resipe-box col-md-12">
+					<div class="row m0">
+						<div class="resipe-text col-md-12">
+							<span>Кальвадос из яблок</span>
+						</div>
+						<div class="resipe-img col-md-4 textout">
+							<img src="img/five-2.png" alt="Кальвадос из яблок">
+						</div>
+						<div class="resipe-ch md-6 textout">
+							<div class="row">
+
+								<div class="ch-item col-lg-6 col-6">Яблоки - <span class="num">60₴/кг: </span></div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span>5 кг</span>
+								</div>
+
+								<!-- <div class="ch-item col-lg-6 col-6">Дрожжи - <span class="num">12₴: </span></div>
+								<div class="ch-item col-lg-6 col-6">
+									 ....................... 
+									<span class="num">200 г</span>
+								</div> -->
+
+								<div class="ch-item col-lg-6 col-6">Вода: </div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span class="num">10 л</span>
+								</div>
+
+								<div class="ch-item col-lg-6 col-6">Выход продукта из яблок: </div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span class="num">0,12 л/кг</span>
+								</div>
+
+							</div>
+						</div>
+						<div class="resipe-result md-6 textout">
+							<div class="row">
+								<div class="col-md-3 num textout">=</div>
+								<div class="col-md-3 textout"><img src="img/bottle7.png" alt="Кальвадо из яблок бутылка"></div>
+								<div class="col-md-6">
+									<h1 class="accent num">87</h1>
+									<p>₴/бутылка</p>
+									<small>В магазине от <strong class="num">500 ₴</strong></small>
+									<p class="resipe-note">Бесплатно, если яблоки у Вас свои</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="resipe-box col-md-12">
+					<div class="row m0">
+						<div class="resipe-text col-md-12">
+							<span>Чача, ракия, коньяк из винограда</span>
+						</div>
+						<div class="resipe-img col-md-4 textout">
+							<img src="img/five-3.png" alt="Чача, ракия, коньяк из виноградаа">
+						</div>
+						<div class="resipe-ch md-6 textout">
+							<div class="row">
+
+								<div class="ch-item col-lg-6 col-6">Виноград - <span class="num">100₴/кг: </span></div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span>5 кг</span>
+								</div>
+
+								<div class="ch-item col-lg-6 col-6">Дрожжи - <span class="num">12₴: </span></div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span class="num">200 г</span>
+								</div>
+
+								<div class="ch-item col-lg-6 col-6">Вода: </div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span class="num">10 л</span>
+								</div>
+
+								<div class="ch-item col-lg-6 col-6">Выход продукта из винограда: </div>
+								<div class="ch-item col-lg-6 col-6">
+									....................... 
+									<span class="num">0,22 л/кг</span>
+								</div>
+
+							</div>
+						</div>
+						<div class="resipe-result md-6 textout">
+							<div class="row">
+								<div class="col-md-3 num textout">=</div>
+								<div class="col-md-3 textout"><img src="img/bottle4.png" alt="Чача, ракия, коньяк из винограда бутылка"></div>
+								<div class="col-md-6">
+									<h1 class="accent num">112</h1>
+									<p>₴/бутылка</p>
+									<small>В магазине от <strong class="num">500 ₴</strong></small>
+									<p class="resipe-note">Бесплатно, если виноград у вас свой или вы замените его на смородину, крыжовник, другие ягоды</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="resipe-book col-md-12">
+					<p>Узнать рецепты подробно Вы можете из книги «100 рецептов алкогольных напитков Мира на самогонном аппарате»</p>
+					<a href="#" class="btn recipe-btn">Скачать книгу рецептов <br class="hidden-up">  и руководство по эксплуатации</a>
+				</div>
+			</div>
+		</div>
+		<div class="add">Цена прибора окупится за несколько застолий за счет Вашей экономии!</div>
+		<div class="modal-mask hide">
+			<div class="modal-wrapper">
+				<div class="modal-container">
+					<div class="modal-close"></div>
+					<div class="modal-header">
+						<h3>Скачать книгу / руководство</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<p class="title">Введите свой адрес электронной почты. После подтверждения Вам придет книга с рецептами и руководство по эксплуатации.</p>
+							<input type="text" placeholder="Введите свой e-mail">
+							<button type="submit" class="btn modal-btn">Получить на e-mail</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section> <!-- Recipe End -->
 	
 
 	

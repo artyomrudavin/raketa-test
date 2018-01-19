@@ -222,7 +222,7 @@ textarea
 		.img-1
 			vertical-align: middle
 			width: 95%
-		.h4
+		.h2
 			font-size: 36px
 			margin-top: rem(25)
 			margin-bottom: rem(-10)
@@ -232,7 +232,7 @@ textarea
 			font-size: 72px
 			font-family: $logo-font
 			font-weight: bold
-		.h5
+		.h1
 			font-size: 20px
 		.standart
 				position: absolute
@@ -340,13 +340,13 @@ textarea
 			padding-top: rem(46)
 			padding-bottom: rem(64)
 			z-index: 1
-			.h1
+			.h3
 				font-size: 40px
 				font-weight: bold
 				margin-bottom: rem(50)
 				&:after
 					content: ""
-					width: 150px
+					width: rem(150)
 					height: 3px
 					background-color: $accent
 					position: absolute
@@ -443,6 +443,7 @@ textarea
 			.car-val, .suh-val
 				&.active
 					color: $green
+					border-bottom: 1px solid $green
 			.separate-cs
 				margin: 0 rem(5)
 		.char-list
@@ -613,6 +614,49 @@ textarea
 
 /* Recipe End */
 
+/* Modes Start */
+
+.modes
+	padding-top: rem(30)
+	// padding-bottom: rem(60)
+	.container-fluid
+		max-width: 1030px
+		.col-md-7
+			align-self: center
+			img
+				width: 100%
+				margin-left: rem(-75)
+		.col-md-5
+			margin-top: rem(20)
+			margin-left: rem(-30)
+			padding-bottom: rem(60)
+			.h3
+				font-size: 40px
+				font-weight: bold
+				margin-bottom: rem(50)
+				&:after
+					content: ""
+					width: rem(150)
+					height: 3px
+					background-color: $accent
+					position: absolute
+					left: rem(15)
+					margin-top: rem(66)
+			p
+				margin-bottom: rem(24)
+			a
+				transition: .5s
+				border-bottom: 1px solid $accent
+				font-weight: bold
+				color: $accent
+				&:hover
+					text-decoration: none
+					color: darken($accent, 30%)
+					border-bottom: 1px solid darken($accent, 30%)
+
+
+/* Modes End */
+
 /* Madal Start */
 
 .hide
@@ -689,9 +733,6 @@ textarea
 					max-width: 100%
 					margin: rem(13) auto rem(13)
 					padding: 0 rem(25)
-
-
-
 
 /* Madal End */
 

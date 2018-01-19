@@ -13,9 +13,9 @@ $(function() {
 		modal.addClass('hide');
 	});
 
-	$(modal).on('click', function() {
-		modal.addClass('hide');
-	});
+	// $(modal).on('click', function() {
+	// 	modal.addClass('hide');
+	// });
 
 });
 

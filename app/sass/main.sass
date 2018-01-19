@@ -41,8 +41,9 @@ html
 	font-size: 16px
 
 body
+	margin: 0
+	padding: 0
 	font-size: 16px
-	font-size: 1rem
 	min-width: 320px
 	position: relative
 	line-height: 1.5
@@ -86,7 +87,7 @@ textarea
 	-webkit-border-radius: 3px
 	box-sizing: border-box
 	border: 0
-	// padding: 10px
+	font-size: 16px
 	padding: rem(10)
 	color: $dark-gray
 	background: #fff
@@ -94,9 +95,9 @@ textarea
 	&:focus
 		outline: none
 
-.row
-	display: flex
-	flex-wrap: wrap
+// .row
+// 	display: flex
+// 	flex-wrap: wrap
 
 .col-5
 	flex: 0 0 41.66667%
@@ -258,11 +259,6 @@ textarea
 					// font-family: $else-font
 		.check
 			margin-bottom: rem(5)
-			// margin-bottom: 5px
-			// padding-top: 10px
-			// padding-left: 15px
-			// padding-bottom: 10px
-			// border: 3px solid $accent
 			.check-item
 				display: inline-flex
 				width: 100%
@@ -285,10 +281,6 @@ textarea
 			padding: rem(10) rem(10)
 			border-left: 3px solid $accent
 			width: 100%
-			// padding: 10px 10px
-			// display: flex
-			// justify-content: space-between
-			// margin-bottom: 60px
 			.form-item
 				width: 30%
 				font-family: $else-font
@@ -411,8 +403,8 @@ textarea
 			margin-top: rem(30)
 			border: rem(7) solid $accent
 			padding: rem(25)
-			div
-				text-align: center
+			// div
+			// 	text-align: center
 			.litre-val
 				border: 2px solid #f2f2f2
 				background-color: #f2f2f2
@@ -657,6 +649,91 @@ textarea
 
 /* Modes End */
 
+/* Mode 8 Start */
+
+.mode
+	margin-bottom: rem(60)
+	.container-fluid
+		max-width: 1030px
+		.row
+			.block
+				align-self: center
+
+.mode-one
+	.block
+		.mode-text
+			.h3
+				font-size: 28px
+				font-weight: bold
+				margin-bottom: rem(8)
+			p
+				margin-top: rem(25)
+				margin-bottom: rem(25)
+				font-size: 15px
+		.mode-box
+			padding: rem(15) rem(40)
+			border: 6px solid lighten($accent, 40%)
+			.title
+				margin-right: rem(80)
+				font-weight: bold
+				text-align: left
+				font-size: 24px
+				line-height: 1.1
+				margin-bottom: rem(8)
+				align-self: center
+			.mode-text-img
+				display: grid
+				justify-content: center
+				img
+					width: 90px
+				div
+					font-size: 14px
+					font-weight: 500
+					text-align: center
+
+		.mode-img
+			width: 120%
+			margin-right: rem(-90)
+
+.mode-two
+	.block
+		.mode-text
+			.h3
+				font-size: 28px
+				font-weight: bold
+				margin-bottom: rem(8)
+			p
+				margin-top: rem(25)
+				margin-bottom: rem(25)
+				font-size: 15px
+		.mode-box
+			padding: rem(15) rem(40)
+			border: 6px solid lighten($accent, 40%)
+			.title
+				margin-right: rem(80)
+				font-weight: bold
+				text-align: left
+				font-size: 24px
+				line-height: 1.1
+				margin-bottom: rem(8)
+				align-self: center
+			.mode-text-img
+				display: grid
+				justify-content: center
+				img
+					width: 90px
+				div
+					font-size: 14px
+					font-weight: 500
+					text-align: center
+
+		.mode-img
+			// width: 120%
+			// margin-left: rem(-90)
+			max-width: 100%
+			height: auto
+/* Mode 8 End */
+
 /* Madal Start */
 
 .hide
@@ -729,6 +806,7 @@ textarea
 					max-width: 100%
 					margin-right: rem(5)
 				.modal-btn
+					font-size: 18px
 					height: rem(53)
 					max-width: 100%
 					margin: rem(13) auto rem(13)

@@ -457,16 +457,16 @@
 			</div>
 		</div>
 		<div class="add">Цена прибора окупится за несколько застолий за счет Вашей экономии!</div>
-		<div class="modal-mask hide">
+		<div id="book" class="modal-mask hide">
 			<div class="modal-wrapper">
 				<div class="modal-container">
 					<div class="modal-close"></div>
 					<div class="modal-header">
-						<h3>Скачать книгу / руководство</h3>
+						<h3 class="modal-title">Скачать книгу / руководство</h3>
 					</div>
 					<div class="modal-body">
 						<div>
-							<p class="title">Введите свой адрес электронной почты. После подтверждения Вам придет книга с рецептами и руководство по эксплуатации.</p>
+							<p class="modal-text">Введите свой адрес электронной почты. После подтверждения Вам придет книга с рецептами и руководство по эксплуатации.</p>
 							<input type="text" placeholder="Введите свой e-mail">
 							<button type="submit" class="btn modal-btn">Получить на e-mail</button>
 						</div>
@@ -556,10 +556,6 @@
 					<div class="mode-box">
 						<div class="row">
 							<div class="col-lg-4 col-md-12 title">Продукты простой перегонки</div>
-							<!-- <div class="col-lg-2 col-4 mode-text-img">
-								<img src="img/modes/bootles/tank.png" alt="Брага">
-								<div>Брага</div>
-							</div> -->
 							<div class="col-lg-4 col-4 mode-text-img">
 								<img src="img/modes/bootles/jar.png" alt="«Деревенский» самогон">
 								<div>«Деревенский» самогон</div>
@@ -879,7 +875,7 @@
 								<span class="form-value num">6090₴</span>
 							</div>
 							<div class="col-lg-4 col-md-6 col-12 buy">
-								<a href="#" class="btn constr-btn">Купить аппарат</a>
+								<a href="#" class="btn constr-btn buy-btn">Купить аппарат</a>
 							</div>
 							<div class="col-lg-4 col-md-6 col-12 add-buy">
 								<a href="#" class="btn constr-btn">Купить аппарат <br>с доп. товарами</a>
@@ -932,6 +928,44 @@
 								<div>Биметалл термометр</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="catalog" class="modal-mask hide">
+			<div class="modal-wrapper modal-wrapper--buy">
+				<div class="modal-container modal-container--buy">
+					<div class="modal-close"></div>
+					<div class="modal-header">
+						<h3 class="modal-title modal-title--buy">Оформление заказа</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="modal-order-price">
+								<div>
+									<div class="order-price-caption">
+										Сумма заказа
+									</div>
+									<div class="order-price-value num">
+										6090₴
+									</div>
+								</div>
+							</div>
+							<p class="modal-text modal-text--buy">Введите Ваш телефон. Специалист позвонит и уточнит адрес доставки и сообщит дату, когда заказ будет у Вас</p>
+							<form action="#" method="post">
+								<input type="text" placeholder="Введите свой телефон" class="buy">
+								<div class="modal-products">
+									<div>
+										<h5 class="modal-products-title">Товары в заказе:</h5>
+										<div class="modal-products-item">Самогонный аппарат с баком на 12л</div>
+									</div>
+								</div>
+								<button type="submit" class="btn modal-btn modal-btn--buy">Оформить заказ</button>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						перезвоним Вам в течение 15 минут
 					</div>
 				</div>
 			</div>

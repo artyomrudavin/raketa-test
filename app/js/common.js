@@ -1,10 +1,31 @@
-// Modal Control
+// Modal Control - Book
 
 $(function() {
 
-	var modal = $('.modal-mask');
+	var modal = $('#book.modal-mask');
 
 	$('.recipe-btn').on('click', function(event) {
+		event.preventDefault();
+		modal.removeClass('hide');
+	});
+
+	$('.modal-close').on('click', function() {
+		modal.addClass('hide');
+	});
+
+	// $(modal).on('click', function() {
+	// 	modal.addClass('hide');
+	// });
+
+});
+
+// Modal Control - Catalog
+
+$(function() {
+
+	var modal = $('#catalog.modal-mask');
+
+	$('.buy-btn').on('click', function(event) {
 		event.preventDefault();
 		modal.removeClass('hide');
 	});

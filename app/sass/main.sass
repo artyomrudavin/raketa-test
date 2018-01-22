@@ -651,11 +651,28 @@ textarea
 
 /* Mode 8 Start */
 
+// Structure
+
+// .mode-one
+// 	.container-fluid
+// 		.row
+// 			.block
+// 				.mode-text
+// 					.h3
+// 					p
+// 					.more
+// 					a
+// 				.mode-box
+// 					.row
+// 						.title
+// 						.mode-text-img
+// 			.mode-img
 .mode
 	margin-bottom: rem(60)
 	.container-fluid
 		max-width: 1030px
 		.row
+			justify-content: center
 			.block
 				align-self: center
 				.mode-text
@@ -667,260 +684,122 @@ textarea
 						margin-top: rem(25)
 						margin-bottom: rem(25)
 						font-size: 15px
+					.more
+					font-size: 12px
+					margin: rem(20) 0
+					a
+						font-size: 20px
+						transition: .5s
+						border-bottom: 1px solid $accent
+						font-weight: bold
+						color: $accent
+						&:hover
+							text-decoration: none
+							color: darken($accent, 30%)
+							border-bottom: 1px solid darken($accent, 30%)
+				.mode-box
+					padding: rem(20)
+					border: 6px solid lighten($accent, 40%)
+					.row
+						.title
+							font-weight: bold
+							text-align: left
+							font-size: 24px
+							line-height: 1.1
+							margin-bottom: rem(8)
+							align-self: center
+						.mode-text-img
+							display: grid
+							justify-content: center
+							text-align: center
+							img
+								width: 90px
+								margin: 0 auto
+							div
+								font-size: 14px
+								font-weight: 500
+						.mode-text
+							display: grid
+							justify-content: center
+							align-self: center
+							text-align: center
+							margin-right: rem(-4)
+							font-size: 20px
+							font-weight: bold
+							z-index: 1
 			.mode-img
 				text-align: center
+				margin: 0 auto
+
+.mode-one, 
+.mode-two, 
+.mode-four
+	.container-fluid
+		.row
+			.block
+				.mode-box
+					padding: rem(15) rem(40)
+
+.mode-three, 
+.mode-seven, 
+.mode-four, 
+.mode-eight
+	.container-fluid
+		.row
+			.block
+				.mode-box
+					.row
+						.title
+							font-size: 20px
+
+.mode-three, 
+.mode-eight
+	.container-fluid
+		.row
+			.block
+				.mode-box
+					.row
+						.title
+							text-align: center
 
 .mode-one
-	.block
-		.mode-text
-			// .h3
-			// 	font-size: 28px
-			// 	font-weight: bold
-			// 	margin-bottom: rem(8)
-			// p
-			// 	margin-top: rem(25)
-			// 	margin-bottom: rem(25)
-			// 	font-size: 15px
-		.mode-box
-			padding: rem(15) rem(40)
-			border: 6px solid lighten($accent, 40%)
-			.title
-				margin-right: rem(80)
-				font-weight: bold
-				text-align: left
-				font-size: 24px
-				line-height: 1.1
-				margin-bottom: rem(8)
-				align-self: center
-			.mode-text-img
-				display: grid
-				justify-content: center
-				text-align: center
-				img
-					width: 90px
-				div
-					font-size: 14px
-					font-weight: 500
-					text-align: center
-
-		.mode-img
-			width: 120%
-			margin-right: rem(-90)
-
-.mode-two
-	.block
-		.mode-text
-			// .h3
-			// 	font-size: 28px
-			// 	font-weight: bold
-			// 	margin-bottom: rem(8)
-			// p
-			// 	margin-top: rem(25)
-			// 	margin-bottom: rem(25)
-			// 	font-size: 15px
-		.mode-box
-			padding: rem(15) rem(40)
-			border: 6px solid lighten($accent, 40%)
-			.title
-				// margin-right: rem(80)
-				font-weight: bold
-				text-align: left
-				font-size: 24px
-				line-height: 1.1
-				margin-bottom: rem(8)
-				align-self: center
-			.mode-text-img
-				// display: grid
-				// justify-content: center
-				text-align: center
-				img
-					width: 90px
-				div
-					font-size: 14px
-					font-weight: 500
-					text-align: center
-
-		.mode-img
-			// width: 120%
-			// margin-left: rem(-90)
-			max-width: 100%
-			// height: auto
-
-.mode-three
-	.row
-		justify-content: center
-		.block
-			.mode-box
-				padding: rem(20)
-				border: 6px solid lighten($accent, 40%)
-				// padding: rem(15) rem(40)
-				.title
-					font-weight: bold
-					text-align: left
-					font-size: 20px
-					line-height: 1.1
-					margin-bottom: rem(8)
-					align-self: center
-					text-align: center
-				.mode-text-img
-					text-align: center
-					display: grid
-					justify-content: center
-					img
-						width: 90px
-					div
-						font-size: 14px
-						font-weight: 500
-						text-align: center
+	.container-fluid
+		.row
+			.block
+				.mode-box
+					.row
+						.title
+							margin-right: rem(80)
+						.mode-text-img
 			.mode-img
-				max-width: 100%
-				height: auto
+				max-width: 120%
+				margin-left: rem(-80)
 
 .mode-four
 	.container-fluid
 		max-width: 1000px
-		.block
-			.mode-text
-				.more
-					font-size: 12px
-					margin: rem(20) 0
-					a
-						font-size: 20px
-						transition: .5s
-						border-bottom: 1px solid $accent
-						font-weight: bold
-						color: $accent
-						&:hover
-							text-decoration: none
-							color: darken($accent, 30%)
-							border-bottom: 1px solid darken($accent, 30%)
-			.mode-box
-				padding: rem(15) rem(40)
-				border: 6px solid lighten($accent, 40%)
-				.title
-					// margin-right: rem(80)
-					font-weight: bold
-					text-align: left
-					font-size: 24px
-					line-height: 1.1
-					margin-bottom: rem(8)
-					align-self: center
-				.mode-text-img
-					display: grid
-					justify-content: center
-					text-align: center
-					img
-						width: 90px
-					div
-						font-size: 14px
-						font-weight: 500
-						text-align: center
-
-			.mode-img
-				// height: auto
-				// width: 100%
-				// margin-right: rem(-90)
-
-.mode-five
-	.container-fluid
-		// max-width: 1000px
-		.block
-			.mode-text
-				.more
-					font-size: 12px
-					margin: rem(20) 0
-					a
-						font-size: 20px
-						transition: .5s
-						border-bottom: 1px solid $accent
-						font-weight: bold
-						color: $accent
-						&:hover
-							text-decoration: none
-							color: darken($accent, 30%)
-							border-bottom: 1px solid darken($accent, 30%)
-			.mode-box
-				padding: rem(20)
-				border: 6px solid lighten($accent, 40%)
-				.title
-					// margin-right: rem(80)
-					font-weight: bold
-					text-align: left
-					font-size: 24px
-					line-height: 1.1
-					margin-bottom: rem(8)
-					align-self: center
-				.mode-text-img
-					display: grid
-					justify-content: center
-					text-align: center
-					img
-						width: 90px
-					div
-						font-size: 14px
-						font-weight: 500
-						text-align: center
-
-			.mode-img
-				margin: 0 auto
-				// height: auto
-				// width: 100%
-				// margin-right: rem(-90)
 
 .mode-six
 	.container-fluid
-		// max-width: 1000px
-		.block
-			.mode-text
-				.more
-					font-size: 12px
-					margin: rem(20) 0
-					a
-						font-size: 20px
-						transition: .5s
-						border-bottom: 1px solid $accent
-						font-weight: bold
-						color: $accent
-						&:hover
-							text-decoration: none
-							color: darken($accent, 30%)
-							border-bottom: 1px solid darken($accent, 30%)
-			.mode-box
-				padding: rem(20) rem(30)
-				border: 6px solid lighten($accent, 40%)
-				.title
-					margin-right: rem(24)
-					font-weight: bold
-					text-align: left
-					font-size: 24px
-					line-height: 1.1
-					margin-bottom: rem(8)
-					align-self: center
-				.mode-text-img
-					display: grid
-					justify-content: center
-					text-align: center
-					margin-right: rem(-5)
-					img
-						width: 90px
-					div
-						font-size: 14px
-						font-weight: 500
-						text-align: center
+		.row
+			.block
+				.mode-box
+					padding: rem(20) rem(30)
+					.row
+						.title
+							margin-right: rem(24)
+						.mode-text-img
+							margin-right: rem(-5)
+
+.mode-seven
+	.container-fluid
+		.row
+			.block
 				.mode-text
-					display: grid
-					justify-content: center
-					align-self: center
-					text-align: center
-					margin-right: rem(-4)
-					z-index: 1
-					font-size: 20px
-					font-weight: bold
-			.mode-img
-				margin: 0 auto
-				// height: auto
-				// width: 100%
-				// margin-right: rem(-90)
+					.more
+						a
+							font-size: 19px	
+
 /* Mode 8 End */
 
 /* Madal Start */

@@ -149,6 +149,7 @@ textarea
 	transition: all .2s ease-in-out
 	&:hover
 		background-color: darken($accent, 10%)
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 
 /* Header Start */
 
@@ -914,6 +915,145 @@ textarea
 					text-align: center
 
 /* Constructor End */
+
+/* About Start */
+
+.about
+	padding-top: rem(30)
+	padding-bottom: rem(60)
+	background-color: #f2f2f2
+	position: relative
+	overflow: hidden
+	.layer-1
+		position: absolute
+		left: rem(280)
+		top: rem(80)
+	.container-fluid
+		max-width: 1240px
+		.h3
+			font-size: 32px
+			font-weight: bold
+			margin-bottom: rem(80)
+			position: relative
+			&:after
+				content: ""
+				width: rem(150)
+				height: 3px
+				background-color: $accent
+				position: absolute
+				left: 0
+				margin-top: rem(66)
+			span
+				font-family: $logo-font
+				font-size: 36px
+		.row
+			.step
+				text-align: center
+				img
+					margin: 0 auto
+					margin-bottom: 40px
+				.title
+					margin-bottom: rem(18)
+				p
+					font-size: 14px
+					a
+						transition: .5s
+						border-bottom: 1px solid $accent
+						font-weight: bold
+						color: $accent
+						&:hover
+							text-decoration: none
+							color: darken($accent, 30%)
+							border-bottom: 1px solid darken($accent, 30%)
+					span
+						font-family: $logo-font
+						font-weight: bold
+						font-size: 18px			
+
+
+/* About End */
+
+/* Additionally Start */
+
+.additionally
+	.container-fluid
+		overflow: hidden
+		max-width: 1300px
+		.row
+			.h3
+				padding-top: rem(24)
+				font-size: rem(24)
+				margin-bottom: rem(8)
+			.add-box
+				padding: rem(24)
+				margin-top: rem(24)
+				border: 5px solid lighten($accent, 40%)
+			img
+				width: 130%
+.additionally-goods
+	background-color: #f2f2f2
+	padding-top: rem(30)
+	padding-bottom: rem(30)
+	.container-fluid
+		max-width: 1030px
+		.row
+			.col-md-4
+				padding: rem(8)
+				.bg-white
+					background-color: #FFF
+					.column-hover
+						position: relative
+						&:hover span
+							opacity: 1
+							transition: .5s
+						&:hover .sized
+							transition: .5s
+							opacity: .25
+						span
+							margin: 0
+							cursor: #000
+							position: absolute
+							top: 0
+							left: 0
+							bottom: 0
+							right: 0
+							z-index: 10
+							opacity: 0
+							a
+								position: absolute
+								top: 0
+								left: 0
+								bottom: 0
+								right: 0
+								text-align: center
+								line-height: rem(320)
+								transition: .5s
+								font-weight: bold
+								color: $accent
+						.sized
+							background-color: #fff
+							padding: rem(14) rem(16) rem(13)
+							font-size: 14px
+							font-weight: bold
+							height: rem(320)
+							text-align: center
+							img
+								max-height: rem(250)
+								max-width: rem(250)
+							p
+								margin-top: 0
+								margin-bottom: rem(1)
+		.details
+			.good-image
+				display: flex
+				justify-content: center
+				align-items: center
+				text-align: right
+
+
+
+/* Additionally End */
+
 
 /* Modal Start */
 

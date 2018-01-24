@@ -49,15 +49,15 @@ $(function() {
 $(function() {
 
 	var litreVal = $('.litre-val'),
-		bkVal = $('.bk-val'),
-		carVal = $('.car-val'),
-		suhVal = $('.suh-val'),
-		charImg = $('.char-img img'),
-		weight = $('#weight'),
-		inTank = $('#inTank'),
-		cleanSpirt = $('#cleanSpirt'),
-		inside = $('#inside'),
-		insideButle = $('#insideButle');
+	bkVal = $('.bk-val'),
+	carVal = $('.car-val'),
+	suhVal = $('.suh-val'),
+	charImg = $('.char-img img'),
+	weight = $('#weight'),
+	inTank = $('#inTank'),
+	cleanSpirt = $('#cleanSpirt'),
+	inside = $('#inside'),
+	insideButle = $('#insideButle');
 
 	var twelveTank = {
 		urlA: 'img/12/12.jpg',
@@ -270,4 +270,64 @@ $(function() {
 
 	});
 
+});
+
+// Tab Additionally
+
+$(function() {
+
+	$('.tab-content').hide();
+
+	$('.tablink').each(function(i) {
+		$(this).attr('data-tab', 'tab'+i)
+	});
+
+	$('.tab-content').each(function(i) {
+		$(this).attr('data-tab', 'tab'+i)
+	});
+
+	$('.tablink').on('click', function(e) {
+		
+		e.preventDefault();
+
+		var dataTab = $(this).data('tab');
+		var getWrapper = $(this).closest('.additionally-goods');
+		
+		getWrapper.find('.tab').removeClass('active');
+		$(this).closest('.tab').addClass('active');
+		getWrapper.find('.tab-content').hide();
+		getWrapper.find('.tab-content[data-tab='+dataTab+']').fadeIn('slow');
+
+	});
+
+	$('.tab-close').on('click', function(e) {
+		
+		e.preventDefault();
+
+		var dataTab = $(this).data('tab');
+		var getWrapper = $(this).closest('.additionally-goods');
+
+		getWrapper.find('.tab-content').fadeOut('fast');
+		getWrapper.find('.tab').removeClass('active');
+
+	})
+
+});
+
+// Scroll to
+
+$(document).ready(function(){
+	$("#menu").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+		top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
 });

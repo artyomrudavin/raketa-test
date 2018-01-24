@@ -292,7 +292,7 @@ $(function() {
 
 		var dataTab = $(this).data('tab');
 		var getWrapper = $(this).closest('.additionally-goods');
-		
+
 		getWrapper.find('.tab').removeClass('active');
 		$(this).closest('.tab').addClass('active');
 		getWrapper.find('.tab-content').hide();
@@ -317,17 +317,32 @@ $(function() {
 // Scroll to
 
 $(document).ready(function(){
-	$("#menu").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
 
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
+	// $(".more").on("click","a", function (event) {
+	// 	//отменяем стандартную обработку нажатия по ссылке
+	// 	event.preventDefault();
 
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-		top = $(id).offset().top;
-		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 1500);
+	// 	//забираем идентификатор бока с атрибута href
+	// 	var id  = $(this).attr('href');
+	// 	console.log(id);
+	// 	//узнаем высоту от начала страницы до блока на который ссылается якорь
+	// 	var blya = $(id).offset().top;
+	// 	console.log(blya);
+
+	// 	//анимируем переход на расстояние - top за 1500 мс
+	// 	$('body,html').animate({scrollTop: blya}, 1500);
+	// });
+
+	$('#menu a').click(function(){
+		// $(this).addClass('active');
+		var id  = $(this).attr('href');
+		$('html, body').animate({scrollTop:$(id).position().top - 60}, 1500);
 	});
+
+	$('.more a').click(function(){
+		// $(this).addClass('active');
+		var id  = $(this).attr('href');
+		$('html, body').animate({scrollTop:$(id).position().top - 60}, 1500);
+	});
+
 });

@@ -318,31 +318,12 @@ $(function() {
 
 $(document).ready(function(){
 
-	// $(".more").on("click","a", function (event) {
-	// 	//отменяем стандартную обработку нажатия по ссылке
-	// 	event.preventDefault();
-
-	// 	//забираем идентификатор бока с атрибута href
-	// 	var id  = $(this).attr('href');
-	// 	console.log(id);
-	// 	//узнаем высоту от начала страницы до блока на который ссылается якорь
-	// 	var blya = $(id).offset().top;
-	// 	console.log(blya);
-
-	// 	//анимируем переход на расстояние - top за 1500 мс
-	// 	$('body,html').animate({scrollTop: blya}, 1500);
-	// });
-
-	$('#menu a').click(function(){
-		// $(this).addClass('active');
-		var id  = $(this).attr('href');
-		$('html, body').animate({scrollTop:$(id).position().top - 60}, 1500);
-	});
-
-	$('.more a').click(function(){
-		// $(this).addClass('active');
-		var id  = $(this).attr('href');
-		$('html, body').animate({scrollTop:$(id).position().top - 60}, 1500);
+	$('.more a, #menu a, .goto a').click( function(){ // ловим клик по ссылке с классом go_to
+	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 75}, 2000); // анимируем скроолинг к элементу scroll_el
+	}
+	    return false; // выключаем стандартное действие
 	});
 
 });

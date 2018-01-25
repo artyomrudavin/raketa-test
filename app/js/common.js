@@ -361,4 +361,26 @@ $(function() {
 });
 
 
+// Scroll Header
+
+$(function() {
+
+	$(document).scroll(function() {
+		
+		if ( $(this).scrollTop() > 20 ) {
+		
+			$('.header-navbar li:last-child').hide();
+			$('.header-navbar .btnHead').show();
+
+		} else {
+
+			$('.header-navbar ul li:last-child').show();
+			$('.header-navbar .btnHead').hide();
+
+		}
+
+	});
+
+});
+
 

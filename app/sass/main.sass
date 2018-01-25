@@ -203,10 +203,12 @@ textarea
 .header-navbar
 	ul
 		display: flex
+		align-items: center
 		li
 			.h-link
 				display: block
 				padding: rem(10) rem(20)
+				font-size: 14px
 				&:hover
 					color: $accent
 				&::after
@@ -248,7 +250,7 @@ textarea
 /* Wellcome Start */
 
 .header-wellcome
-	padding-top: rem(80)
+	padding-top: rem(72)
 	// padding-top: 80px
 	.container-fluid
 		max-width: 1030px
@@ -319,14 +321,19 @@ textarea
 			.form-item
 				width: 30%
 				font-family: $else-font
+				padding-top: 16px
+				padding-bottom: 16px
 				// flex: 1 0 auto
 				&:not(last-child)
 					margin-right: rem(10)
 					// margin-right: 10px
 			.header-btn
-				padding: rem(7) rem(25)
+				padding: rem(14) rem(25)
 				font-size: 20px
+				background-color: $green
 				cursor: pointer
+				&:hover
+					background-color: darken($green, 10%)
 		.order
 			margin-top: rem(85)
 			position: relative

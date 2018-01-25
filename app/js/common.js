@@ -316,9 +316,9 @@ $(function() {
 
 // Scroll to
 
-$(document).ready(function(){
+$(function() {
 
-	$('.more a, #menu a, .goto a').click( function(){ // ловим клик по ссылке с классом go_to
+	$('.more a, #menu a, .goto a, .card-block a').click( function(){ // ловим клик по ссылке с классом go_to
 	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
 	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 75}, 2000); // анимируем скроолинг к элементу scroll_el
@@ -327,3 +327,38 @@ $(document).ready(function(){
 	});
 
 });
+
+// Accardeon FAQ
+
+$(function() {
+
+	$('.accordeon .card>.collapse').not(':eq(1)').hide();
+	$('.accordeon .card .x-link').not(':eq(1)').addClass('collapsed');
+
+	$('.accordeon .card .x-link').on('click', function(e) {
+		e.preventDefault();
+		console.log('click');
+		
+		var findCollapse = $(this).closest('.card-header').next('.collapse');
+		console.log(findCollapse);
+
+		var findWrapper = $(this).closest('.accordeon');
+		console.log(findWrapper);
+
+		if ( findCollapse.is(':visible') ) {
+			findCollapse.slideUp();
+			findWrapper.find('.card .x-link').addClass('collapsed');
+		} else {
+			findWrapper.find('.card>.collapse').slideUp();
+			findCollapse.slideDown();
+			findWrapper.find('.card .x-link').addClass('collapsed');
+			$(this).removeClass('collapsed');
+		};
+
+		
+	});
+
+});
+
+
+

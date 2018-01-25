@@ -367,7 +367,7 @@ $(function() {
 
 	$(document).scroll(function() {
 		
-		if ( $(this).scrollTop() > 600 ) {
+		if ( $(this).scrollTop() > 580 ) {
 		
 			$('.header-navbar li:last-child').hide();
 			$('.header-navbar .btnHead').show();

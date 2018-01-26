@@ -368,7 +368,7 @@ $(function() {
 	$(document).scroll(function() {
 		
 		if ( $(this).scrollTop() > 580 ) {
-		
+
 			$('.header-navbar li:last-child').hide();
 			$('.header-navbar .btnHead').show();
 
@@ -383,4 +383,10 @@ $(function() {
 
 });
 
+// Drag img
 
+$(function() {
+
+	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+});

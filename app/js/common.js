@@ -365,19 +365,19 @@ $(function() {
 
 $(function() {
 
-	$(document).scroll(function() {
-		
-		if ( $(this).scrollTop() > 580 ) {
+	$(window).scroll(function() {
 
-			$('.header-navbar li:last-child').hide();
-			$('.header-navbar .btnHead').show();
+		if ( $(window).width() > 767 ) {
 
-		} else {
+			if ( $(this).scrollTop() > 580 ) {
+				$('.header-navbar li:last-child').hide();
+				$('.header-navbar .btnHead').show();
+			} else {
+				$('.header-navbar ul li:last-child').show();
+				$('.header-navbar .btnHead').hide();
+			};
 
-			$('.header-navbar ul li:last-child').show();
-			$('.header-navbar .btnHead').hide();
-
-		}
+		};
 
 	});
 
@@ -388,5 +388,21 @@ $(function() {
 $(function() {
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+});
+
+// Burger bar
+
+$(function() {
+	
+	$('.icon').on('click', function(e) {
+		e.preventDefault();
+
+		$('.icon').toggleClass('active');
+
+		var menu = $('#menu');
+
+		menu.slideToggle();
+	});
 
 });

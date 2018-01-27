@@ -181,27 +181,84 @@ textarea
 	
 .header-nav-box
 	display: flex
+	flex-direction: column
 	justify-content: space-between
 	align-items: center
 	max-width: 1240px
 	margin: auto
-	padding: rem(3)
+	padding: rem(3) rem(5)
 
 .header-brand
 	font-size: 12px
-	img
-		height: rem(40)
-		margin-bottom: rem(3) 
-	p
-		margin-top: rem(-10)
-		text-align: center
-		font-size: 10px
-
-.header-navbar
-	#menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	.header-logo
+		img
+			height: rem(40) // xs rem(32) 
+		p
+			margin-top: rem(-7)
+			text-align: center
+			font-size: 10px // xs 8px
+	.phone-mobile
+		font-family: $else-font
+		font-weight: bold
+		font-size: 14px
 		display: flex
 		flex-direction: column
+		flex: 1 1 auto
+		align-items: flex-end
+	.icon
+		// position: absolute
+		// top: 50%
+		// left: 50%
+		// transform: translate(-50%, -50%)
+		position: relative
+		width: rem(50)
+		height: rem(50)
+		cursor: pointer
+		.hamburger
+			width: rem(35)
+			height: rem(2)
+			background-color: #000
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			box-shadow: 0 1px 2px rgba(0,0,0,.2)
+			transition: .1s
+		.hamburger:before, .hamburger:after
+			content: ""
+			width: rem(35)
+			height: rem(2)
+			background-color: #000
+			position: absolute
+			box-shadow: 0 1px 2px rgba(0,0,0,.2)
+			transition: .3s
+		.hamburger:before
+			top: rem(-8)
+		.hamburger:after
+			top: rem(8)
+		&.active
+			.hamburger
+				background-color: rgba(0,0,0,0)
+				box-shadow: 0 1px 2px rgba(0,0,0,0)
+		&.active
+			.hamburger:before
+				top: 0
+				transform: rotate(45deg)
+		&.active
+			.hamburger:after
+				top: 0
+				transform: rotate(135deg)
+.header-navbar
+	#menu
+		// display: flex
+		display: none
+		flex-direction: column
 		align-items: center
+		text-align: center
 		li
 			.h-link
 				display: block
@@ -209,28 +266,26 @@ textarea
 				font-size: 14px
 				&:hover
 					color: $accent
-				&::after
-					background-color: $accent
-					display: block
-					content: ""
-					height: 2px
-					width: 0%
-					transition: width .3s ease
-				&:hover::after, &:focus::after
-					width: 100%
+				// &::after
+				// 	background-color: $accent
+				// 	display: block
+				// 	content: ""
+				// 	height: 2px
+				// 	width: 0%
+				// 	transition: width .3s ease
+				// &:hover::after, &:focus::after
+				// 	width: 100%
 		li:last-child
 			font-family: $else-font
 			font-weight: bold
 			display: none
 			font-size: 14px
-			// min-width: 160px
-			// opacity: 1
-			// transition: width .5s ease
-			// display: none
+			display: none
 		.btnHead
 			display: none
 			.btn
-				padding: rem(10) rem(20)
+				padding: rem(8) rem(10)
+				font-size: 14px
 				background-color: $green
 			
 
@@ -258,25 +313,26 @@ textarea
 			vertical-align: middle
 			width: 95%
 		.h2
-			font-size: 36px
+			font-size: 28px // md 36px xs 22px
 			margin-top: rem(25)
 			margin-bottom: rem(-10)
 			// margin-top: 25px
 			// margin-bottom: -10px
 		.h3
-			font-size: 72px
+			font-size: 64px // md 72px xs 48px
 			font-family: $logo-font
 			font-weight: bold
 		.h1
-			font-size: 20px
+			font-size: 20px // xs 16px
 		.standart
 				position: absolute
-				padding: 0 rem(14)
-				border: 2px solid #000
-				top: rem(45)
-				left: rem(420)
-				font-size: 20px
+				padding: 0 rem(14) // xs none
+				border: 2px solid #000 // xs none
+				top: rem(40) // md rem(45) rem(32)
+				left: rem(365) // md rem(420) rem(258)
+				font-size: 14px // md 20px xs 12px
 				border-radius: 4px
+				// display: none
 				// top: 45px
 				// left: 420px
 				// padding: 0 14px
@@ -341,7 +397,7 @@ textarea
 				bottom: 0
 				z-index: 0
 				// width: 100%
-				// display: none
+				display: none
 				// left: -512px
 			.order-ico
 				position: absolute
@@ -476,6 +532,8 @@ textarea
 					border-bottom: 1px solid $green
 			.separate-cs
 				margin: 0 rem(5)
+			.bk-box
+				padding-top: 5px
 		.char-list
 			.row
 				overflow: hidden
@@ -610,8 +668,8 @@ textarea
 					margin-top: 0
 					margin-bottom: rem(16)
 				.recipe-btn
-					padding: rem(16) rem(48)
-					font-size: 20px
+					padding: rem(8) rem(32) // md rem(16) rem(48) xs rem(8)
+					font-size: 16px // md 20px
 					text-transform: uppercase
 					font-weight: bold
 					// margin: 0 rem(15)
@@ -654,10 +712,10 @@ textarea
 			align-self: center
 			img
 				width: 100%
-				margin-left: rem(-75)
+				// margin-left: rem(-75)
 		.col-md-5
 			margin-top: rem(20)
-			margin-left: rem(-30)
+			// margin-left: rem(-30)
 			padding-bottom: rem(60)
 			.h3
 				font-size: 40px
@@ -791,8 +849,8 @@ textarea
 							margin-right: rem(80)
 						.mode-text-img
 			.mode-img
-				max-width: 120%
-				margin-left: rem(-80)
+				// max-width: 120%
+				// margin-left: rem(-80)
 
 .mode-four
 	.container-fluid
@@ -877,7 +935,7 @@ textarea
 									background-color: $light-gray
 									border-radius: 5px
 									padding: rem(3) rem(10)
-									margin-right: rem(10)
+									// margin-right: rem(10)
 									font-weight: bold
 									transition: .5s
 									&:hover, &:focus
@@ -889,7 +947,7 @@ textarea
 										background-color: #fff
 					.choose
 						margin-top: rem(10)
-						padding-left: 0
+						// padding-left: 0
 						margin-bottom: rem(16)
 			.constr-form
 				.price
@@ -905,10 +963,10 @@ textarea
 					background-color: $green
 					&:hover
 						background-color: darken($green, 10%)
-				.add-buy
-					.constr-btn
-						padding: rem(10) rem(40)
-						line-height: rem(20)
+				// .add-buy
+				// 	.constr-btn
+				// 		padding: rem(10) rem(40)
+				// 		line-height: rem(20)
 		.complication
 			margin-top: rem(20)
 			overflow: hidden
@@ -1330,7 +1388,7 @@ textarea
 		vertical-align: middle
 		padding-top: rem(120)
 		&--buy
-			padding-top: rem(75)
+			padding-top: rem(32)
 		.modal-container
 			max-height: 100vh
 			overflow: auto
@@ -1344,7 +1402,7 @@ textarea
 			box-shadow: 0 2px 8px rgba(0,0,0,.33)
 			transition: all .3s ease
 			&--buy
-				width: rem(600)
+				width: rem(800)
 			.modal-close
 				cursor: pointer
 				position: absolute

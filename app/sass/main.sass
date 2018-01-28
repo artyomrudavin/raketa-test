@@ -196,11 +196,11 @@ textarea
 	width: 100%
 	.header-logo
 		img
-			height: rem(40) // xs rem(32) 
+			height: rem(32) // sm rem(40) 
 		p
 			margin-top: rem(-7)
 			text-align: center
-			font-size: 10px // xs 8px
+			font-size: 8px // sm 8px
 	.phone-mobile
 		font-family: $else-font
 		font-weight: bold
@@ -210,10 +210,6 @@ textarea
 		flex: 1 1 auto
 		align-items: flex-end
 	.icon
-		// position: absolute
-		// top: 50%
-		// left: 50%
-		// transform: translate(-50%, -50%)
 		position: relative
 		width: rem(50)
 		height: rem(50)
@@ -302,47 +298,38 @@ textarea
 		color: $accent
 
 .header-wellcome
-	padding-top: rem(72)
-	// padding-top: 80px
+	padding-top: rem(67)
 	.container-fluid
 		max-width: 1030px
 		margin: 0 auto
 		height: 100%
-		// max-width: 1000px
 		.img-1
 			vertical-align: middle
 			width: 95%
 		.h2
-			font-size: 28px // md 36px xs 22px
+			font-size: 22px // md 36px xs 22px
 			margin-top: rem(25)
 			margin-bottom: rem(-10)
-			// margin-top: 25px
-			// margin-bottom: -10px
 		.h3
-			font-size: 64px // md 72px xs 48px
+			font-size: 48px // md 72px xs 48px
 			font-family: $logo-font
 			font-weight: bold
 		.h1
-			font-size: 20px // xs 16px
+			font-size: 16px // xs 16px
 		.standart
 				position: absolute
-				padding: 0 rem(14) // xs none
-				border: 2px solid #000 // xs none
-				top: rem(40) // md rem(45) rem(32)
-				left: rem(365) // md rem(420) rem(258)
-				font-size: 14px // md 20px xs 12px
+				padding: none // xs none
+				border: none // xs none
+				top: rem(32) // md rem(45) rem(32)
+				left: rem(258) // md rem(420) rem(258)
+				font-size: 12px // md 20px xs 12px
 				border-radius: 4px
-				// display: none
-				// top: 45px
-				// left: 420px
-				// padding: 0 14px
 		.price
 			li
 				display: inline-block
 				font-size: 24px
 				&:not(last-child)
 					margin-right: rem(5)
-					// margin-right: 5px
 				strong
 					font-size: 36px
 					color: $accent
@@ -369,16 +356,21 @@ textarea
 				color: $accent
 		.form
 			padding: rem(10) rem(10)
+			padding-right: 0
 			border-left: 3px solid $accent
 			width: 100%
+			display: flex
+			justify-content: space-between
+			flex-direction: column
 			.form-item
-				width: 30%
+				width: 100%
 				font-family: $else-font
 				padding-top: 16px
 				padding-bottom: 16px
+				margin-bottom: rem(5)
 				// flex: 1 0 auto
 				&:not(last-child)
-					margin-right: rem(10)
+					// margin-right: rem(10)
 					// margin-right: 10px
 			.header-btn
 				padding: rem(14) rem(25)
@@ -668,8 +660,8 @@ textarea
 					margin-top: 0
 					margin-bottom: rem(16)
 				.recipe-btn
-					padding: rem(8) rem(32) // md rem(16) rem(48) xs rem(8)
-					font-size: 16px // md 20px
+					padding: rem(8) // md rem(16) rem(48) xs rem(8)
+					font-size: 14px // md 20px
 					text-transform: uppercase
 					font-weight: bold
 					// margin: 0 rem(15)
@@ -1346,6 +1338,8 @@ textarea
 		.row
 			justify-content: center
 			.f-logo
+				img
+					margin: auto
 				p
 					margin-top: rem(-15)
 					padding-bottom: rem(30)

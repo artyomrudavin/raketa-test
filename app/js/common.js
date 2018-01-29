@@ -249,9 +249,9 @@ $(function() {
 	colVal = $('#col-val'),
 	bakVal = $('#bak-val'),
 	buyBtn = $('.btn.constr-btn.buy-btn'),
-	modalBtn = $('.btn.modal-btn.modal-btn--buy');
-	console.log(buyBtn);
-	console.log(modalBtn);
+	modalBtn = $('.btn.modal-btn.modal-btn--buy'),
+	hiddenComment = $('[name="DATA[COMMENTS]"]');
+	// console.log(hiddenComment);
 
 	var arrCompl = $('.compl-item');
 
@@ -274,6 +274,8 @@ $(function() {
 					backgroundPosition: 'top center'
 				});
 				mtextValue.text('Бак Aquagradus Стандарт на 20л');
+				hiddenComment.val('Бак Aquagradus Стандарт на 20л');
+				// console.log(hiddenComment.val());
 			} else if ( dataTk == 'thirtyTk' ) {
 				formValue.text('3740₴');
 				imgConstr.css({
@@ -283,6 +285,7 @@ $(function() {
 					backgroundPosition: 'top center'
 				});
 				mtextValue.text('Бак Aquagradus Стандарт на 30л');
+				hiddenComment.val('Бак Aquagradus Стандарт на 30л');
 			} else if ( dataTk == 'fiftyTk' ) {
 				formValue.text('4440₴');
 				imgConstr.css({
@@ -292,6 +295,7 @@ $(function() {
 					backgroundPosition: 'top center'
 				});
 				mtextValue.text('Бак Aquagradus Стандарт на 50л');
+				hiddenComment.val('Бак Aquagradus Стандарт на 50л');
 			};
 		} else {
 			buyBtn.text('Купить аппарат');
@@ -306,6 +310,7 @@ $(function() {
 					backgroundPosition: 'top center'
 				});
 				mtextValue.text('Самогонный аппарат с баком на 20л');
+				hiddenComment.val('Самогонный аппарат с баком на 20л');
 			} else if ( dataTk == 'thirtyTk' ) {
 				formValue.text('6790₴');
 				imgConstr.css({
@@ -315,6 +320,7 @@ $(function() {
 					backgroundPosition: 'top center'
 				});
 				mtextValue.text('Самогонный аппарат с баком на 30л');
+				hiddenComment.val('Самогонный аппарат с баком на 30л');
 			} else if ( dataTk == 'fiftyTk' ) {
 				formValue.text('7490₴');
 				imgConstr.css({
@@ -324,6 +330,7 @@ $(function() {
 					backgroundPosition: 'top center'
 				});
 				mtextValue.text('Самогонный аппарат с баком на 50л');
+				hiddenComment.val('Самогонный аппарат с баком на 50л');
 			};
 		}
 	});
@@ -345,6 +352,7 @@ $(function() {
 			backgroundPosition: 'top center'
 		});
 		mtextValue.text('Колонна Aquagradus Стандарт');
+		hiddenComment.val('Колонна Aquagradus Стандарт');
 
 		if ( colVal.hasClass('active') ) {
 			colVal.text('Аппарат в сборе');
@@ -367,6 +375,7 @@ $(function() {
 				backgroundPosition: 'top center'
 			});
 			mtextValue.text('Самогонный аппарат с баком на 20л');
+			hiddenComment.val('Самогонный аппарат с баком на 20л');
 			$(litreVl).removeClass('active');
 			$(litreVl[0]).addClass('active');
 			$(arrCompl).removeClass('hide');
@@ -398,6 +407,7 @@ $(function() {
 			backgroundPosition: 'top center'
 		});
 		mtextValue.text('Бак Aquagradus Стандарт на 20л');
+		hiddenComment.val('Бак Aquagradus Стандарт на 20л');
 		$(litreVl).removeClass('active');
 		$(litreVl[0]).addClass('active');
 
@@ -424,6 +434,7 @@ $(function() {
 				backgroundPosition: 'top center'
 			});
 			mtextValue.text('Самогонный аппарат с баком на 20л');
+			hiddenComment.val('Самогонный аппарат с баком на 20л');
 			$(litreVl).removeClass('active');
 			$(litreVl[0]).addClass('active');
 			$(arrCompl).removeClass('hide');

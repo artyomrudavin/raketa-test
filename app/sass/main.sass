@@ -891,111 +891,132 @@ textarea
 .constructor
 	padding-top: rem(30)
 	padding-bottom: rem(60)
-	.title
-		font-size: 40px
-		position: relative
-		margin-bottom: rem(60)
-		&:after
-			content: ""
-			width: rem(150)
-			height: 3px
-			background-color: $accent
-			position: absolute
-			left: 0
-			margin-top: rem(66)
-	.constructor-img
-		background: url(/img/constructor/12l-pro_big.jpg) no-repeat center top
-		min-height: rem(280)
-		flex: 1 0 35%
-		background-size: contain
-	.constructor-control
-		flex: 1 0 65%
-		height: 100%
-		padding-left: 0
-		padding-right: 0
-		.h3
-			font-size: 36px
-			font-weight: bold
-			margin-bottom: rem(8)
-			span
-				font-family: $logo-font
-				font-weight: bold
-				font-size: 40px
-		.constructor-controls-filter
-			margin-top: rem(30)
-			border: 5px solid lighten($accent, 40%)
-			padding: rem(20) rem(30)
-			.constructor-controls-filter-valume
-				.constructor-label
-					font-size: 24px
-				.constr-filter
-					.litre
-						ul
-							margin-top: rem(10)
-							padding-left: 0
-							justify-content: center
-							margin-bottom: 0
-							li
-								display: inline-block
-								.litre-vl
-									border: 2px solid $light-gray
-									background-color: $light-gray
-									border-radius: 5px
-									padding: rem(3) rem(10)
-									// margin-right: rem(10)
-									font-weight: bold
-									transition: .5s
-									&:hover, &:focus
-										text-decoration: none
-										color: $black
-									&.active
-										border: 2px solid $green
-										border-radius: 5px
-										background-color: #fff
-					.choose
-						margin-top: rem(10)
-						// padding-left: 0
-						margin-bottom: rem(16)
-			.constr-form
-				.price
+	.container
+		padding-right: rem(50)
+   		padding-left: rem(50)
+		.title
+			font-size: 40px
+			position: relative
+			margin-bottom: rem(60)
+			&:after
+				content: ""
+				width: rem(150)
+				height: 3px
+				background-color: $accent
+				position: absolute
+				left: 0
+				margin-top: rem(66)
+		.constr-row
+			flex-wrap: nowrap
+			.constructor-img
+				background: url(/img/constructor/12l-pro_big.jpg) no-repeat center top
+				min-height: rem(280)
+				flex: 1 0 35%
+				background-size: contain
+			.constructor-control
+				flex: 1 0 65%
+				height: 100%
+				padding-left: 0
+				padding-right: 0
+				.h3
+					font-size: 36px
 					font-weight: bold
-					.constructor-form-label
-						font-size: 13px
-					.form-value
-						font-size: 36px
-				.constr-btn
-					margin-top: rem(15)
-					padding: rem(17) rem(40)
-					height: 80%
-					background-color: $green
-					&:hover
-						background-color: darken($green, 10%)
-				// .add-buy
-				// 	.constr-btn
-				// 		padding: rem(10) rem(40)
-				// 		line-height: rem(20)
-		.complication
-			margin-top: rem(20)
-			overflow: hidden
-			.row
-				justify-content: flex-start
-				.col-12
-					.line
-						font-size: 24px
+					margin-bottom: rem(8)
+					display: none
+					span
+						font-family: $logo-font
 						font-weight: bold
-						margin-bottom: rem(8)
-						&:after
-							content: ""
-							position: absolute
-							height: 1px
-							top: rem(14)
-							margin-left: rem(10)
-							width: 100%
-							background-color: #f8f4ea
-				.compl-item
-					font-size: 14px
-					font-weight: bold
-					text-align: center
+						font-size: 40px
+				.constructor-controls-filter
+					// margin-top: rem(30)
+					border: 5px solid lighten($accent, 40%)
+					padding: rem(5)
+					.constructor-controls-filter-valume
+						.constructor-label
+							font-size: 20px
+						.constr-filter
+							.litre
+								ul
+									margin-top: rem(10)
+									padding-left: 0
+									text-align: center
+									// justify-content: center
+									// margin-bottom: 0
+									li
+										display: inline-block
+										margin-bottom: 10px
+										.litre-vl
+											border: 2px solid $light-gray
+											background-color: $light-gray
+											border-radius: 5px
+											padding: rem(3) rem(10)
+											margin-right: rem(10)
+											font-weight: bold
+											transition: .5s
+											&:hover, &:focus
+												text-decoration: none
+												color: $black
+											&.active
+												border: 2px solid $green
+												border-radius: 5px
+												background-color: #fff
+							.choose
+								// margin-top: rem(10)
+								// padding-left: 0
+								margin-bottom: rem(16)
+								display: flex
+								flex-direction: column
+								font-size: 14px
+								.separate
+									display: none
+								.bk-val, .col-val
+									text-align: center
+									text-decoration: underline
+									border-bottom: none
+					.constr-form
+						.price
+							font-weight: bold
+							.constructor-form-label
+								font-size: 13px
+							.form-value
+								font-size: 36px
+						.constr-btn
+							margin-top: rem(15)
+							// margin: 0 auto
+							padding: rem(17) rem(40)
+							height: 80%
+							background-color: $green
+							&:hover
+								background-color: darken($green, 10%)
+						// .add-buy
+						// 	.constr-btn
+						// 		padding: rem(10) rem(40)
+						// 		line-height: rem(20)
+				.complication
+					margin-top: rem(20)
+					margin-left: -40%
+					overflow: hidden
+					.row
+						justify-content: flex-start
+						.col-12
+							.line
+								font-size: 24px
+								font-weight: bold
+								margin-bottom: rem(8)
+								&:after
+									content: ""
+									position: absolute
+									height: 1px
+									top: rem(14)
+									margin-left: rem(10)
+									width: 100%
+									background-color: #f8f4ea
+						.compl-item
+							font-size: 14px
+							font-weight: bold
+							text-align: center
+							img
+								margin: 0 auto
 
 /* Constructor End */
 
@@ -1507,26 +1528,26 @@ textarea
 	display: none
 .recipe
 	display: none
-// .modes
-// 	display: none
-// .mode-one
-// 	display: none
-// .mode-two
-// 	display: none
-// .mode-three
-// 	display: none
-// .mode-four
-// 	display: none
-// .mode-five
-// 	display: none
-// .mode-six
-// 	display: none
-// .mode-seven
-// 	display: none
-// .mode-eight
-// 	display: none
-.constructor
+.modes
 	display: none
+.mode-one
+	display: none
+.mode-two
+	display: none
+.mode-three
+	display: none
+.mode-four
+	display: none
+.mode-five
+	display: none
+.mode-six
+	display: none
+.mode-seven
+	display: none
+.mode-eight
+	display: none
+// .constructor
+// 	display: none
 .about
 	display: none
 .additionally

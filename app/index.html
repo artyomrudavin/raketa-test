@@ -78,7 +78,7 @@
 						<h1 class="h1">Готовьте беспохмельные и полностью натуральные <br class="hidden-up"> алкогольные напитки на своей кухне</h1>
 						<ul class="price">
 							<li>от</li>
-							<li class="num"><span>6 790грн</span></li>
+							<li class="num"><span>6 890грн</span></li>
 							<!-- <li>₴</li> -->
 							<!-- <li>от</li> -->
 							<li class="num"><strong>6 090</strong></li>
@@ -103,7 +103,7 @@
 							</li>
 						</ul>
 						<img src="img/img-1.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1">
-						<p class="formAction"><strong>Заполните форму чтобы зафиксировать скидку <span class="num">700 грн</span></strong></p>
+						<p class="formAction"><strong>Заполните форму чтобы зафиксировать скидку <span class="num">800 грн</span></strong></p>
 						<form class="form" method="post" id="form">
 							<input type="hidden" name="DATA[TITLE]" value="Test Lead from Site">
 							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт">
@@ -168,14 +168,14 @@
 			<h3 class="h3">Характеристики <span class="title-no-mobile">и размеры самогонного аппарата <br><span>AquaGradus</span> Стандарт</span></h3>
 			<div class="row">
 				<div class="char-img col-6">
-					<img src="img/12/12.jpg" alt="Самогонный аппарат AquaGradus Стандарт 12л">
+					<img src="img/20/20.jpg" alt="Самогонный аппарат AquaGradus Стандарт 12л">
 				</div>
 				<div class="char-box col-6">
 					<div class="choose">
 						<div class="row">
 							<div class="litre-box col-lg-7 num">
-								<a data-tank="twelveTank" href="#" class="litre-val active">12 л</a>
-								<a data-tank="twentyTank" href="#" class="litre-val">20 л</a>
+								<!-- <a data-tank="twelveTank" href="#" class="litre-val active">12 л</a> -->
+								<a data-tank="twentyTank" href="#" class="litre-val active">20 л</a>
 								<a data-tank="thirtyTank" href="#" class="litre-val">30 л</a>
 								<a data-tank="fiftyTank" href="#" class="litre-val">50 л</a>
 							</div>
@@ -864,24 +864,24 @@
 							<div class="constructor-label">Выберите объем</div>
 							<div class="row constr-filter">
 								<div class="col-lg-6 litre">
-									<ul>
-										<li><a href="#" class="litre-vl active">12 л</a></li>
-										<li><a href="#" class="litre-vl">20 л</a></li>
-										<li><a href="#" class="litre-vl">30 л</a></li>
-										<li><a href="#" class="litre-vl">50 л</a></li>
+									<ul id="litre">
+										<!-- 	<li><a href="#" class="litre-vl active">12 л</a></li> -->
+										<li><a data-tank="twentyTk" href="#" class="litre-vl active">20 л</a></li>
+										<li><a data-tank="thirtyTk" href="#" class="litre-vl">30 л</a></li>
+										<li><a data-tank="fiftyTk" href="#" class="litre-vl">50 л</a></li>
 									</ul>
 								</div>
 								<div class="col-lg-6 choose">
-									<a href="#" class="col-val link">Колонна отдельно</a>
+									<a id="col-val" href="#" class="col-val link">Колонна отдельно</a>
 									<span class="separate">/</span>
-									<a href="#" class="bk-val link">Бак отдельно</a>
+									<a id="bak-val" href="#" class="bak-val link">Бак отдельно</a>
 								</div>
 							</div>
 						</div>
 						<div class="row constr-form">
 							<div class="col-lg-6 col-12 price">
 								<div class="constructor-form-label">Цена:</div>
-								<span class="form-value num">6090₴</span>
+								<span id="form-value" class="form-value num">6090₴</span>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12 buy">
 								<a href="#" class="btn constr-btn buy-btn">Купить аппарат</a>
@@ -955,18 +955,22 @@
 									<div class="order-price-caption">
 										Сумма заказа
 									</div>
-									<div class="order-price-value num">
+									<div id="modal-value" class="order-price-value num">
 										6090₴
 									</div>
 								</div>
 							</div>
 							<p class="modal-text modal-text--buy">Введите Ваш телефон. Специалист позвонит и уточнит адрес доставки и сообщит дату, когда заказ будет у Вас</p>
-							<form action="#" method="post">
-								<input type="text" placeholder="Введите свой телефон" class="buy">
+							<form id="formBuy" method="post">
+								<!-- Hidden -->
+								<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Каталог">
+								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+								<!-- Hidden -->
+								<input type="text" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
 								<div class="modal-products">
 									<div>
 										<h5 class="modal-products-title">Товары в заказе:</h5>
-										<div class="modal-products-item">Самогонный аппарат с баком на 12л</div>
+										<div id="modal-text-value" class="modal-products-item">Самогонный аппарат с баком на 20л</div>
 									</div>
 								</div>
 								<button type="submit" class="btn modal-btn modal-btn--buy">Оформить заказ</button>

@@ -59,23 +59,6 @@ $(function() {
 	inside = $('#inside'),
 	insideButle = $('#insideButle');
 
-	var twelveTank = {
-		urlA: 'img/12/12.jpg',
-		urlC: 'img/12/12c.jpg',
-		urlS: 'img/12/12s.jpg',
-		urlCs: 'img/12/12cs.jpg',
-		urlT: 'img/12/tank-12.jpg',
-		weightA: '7 кг',
-		weightC: '8 кг',
-		weightS: '9 кг',
-		weightCs: '10 кг',
-		weightT: '4 кг',
-		inTank: '10 л',
-		cleanSpirt: '1.00 л',
-		inside: '2.5 л',
-		insideButle: '5 бутылок по 0.5'
-	};
-
 	var twentyTank = {
 		urlA: 'img/20/20.jpg',
 		urlC: 'img/20/20c.jpg',
@@ -255,6 +238,209 @@ $(function() {
 
 });
 
+// Constructor
+
+$(function() {
+	
+	var litreVl = $('.litre-vl'),
+	formValue = $('#form-value, #modal-value'),
+	imgConstr = $('.constructor-img'),
+	mtextValue = $('#modal-text-value'),
+	colVal = $('#col-val'),
+	bakVal = $('#bak-val'),
+	buyBtn = $('.btn.constr-btn.buy-btn'),
+	modalBtn = $('.btn.modal-btn.modal-btn--buy');
+	console.log(buyBtn);
+	console.log(modalBtn);
+
+	var arrCompl = $('.compl-item');
+
+	$(litreVl).on('click', function (e) {
+
+		e.preventDefault();
+
+		$(litreVl).removeClass('active');
+		$(this).addClass('active');
+
+		var dataTk = $('a.litre-vl.active').attr('data-tank');
+
+		if ( bakVal.hasClass('active') ) {
+			if ( dataTk == 'twentyTk' ) {
+				formValue.text('3040₴');
+				imgConstr.css({
+					background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'contain',
+					backgroundPosition: 'top center'
+				});
+				mtextValue.text('Бак Aquagradus Стандарт на 20л');
+			} else if ( dataTk == 'thirtyTk' ) {
+				formValue.text('3740₴');
+				imgConstr.css({
+					background: 'url(/img/constructor/30l-nocolumn_big.jpg)',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'contain',
+					backgroundPosition: 'top center'
+				});
+				mtextValue.text('Бак Aquagradus Стандарт на 30л');
+			} else if ( dataTk == 'fiftyTk' ) {
+				formValue.text('4440₴');
+				imgConstr.css({
+					background: 'url(/img/constructor/50l-nocolumn_big.jpg)',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'contain',
+					backgroundPosition: 'top center'
+				});
+				mtextValue.text('Бак Aquagradus Стандарт на 50л');
+			};
+		} else {
+			buyBtn.text('Купить аппарат');
+			modalBtn.text('Купить аппарат');
+
+			if ( dataTk == 'twentyTk' ) {
+				formValue.text('6090₴');
+				imgConstr.css({
+					background: 'url(/img/constructor/20l-pro_big.jpg)',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'contain',
+					backgroundPosition: 'top center'
+				});
+				mtextValue.text('Самогонный аппарат с баком на 20л');
+			} else if ( dataTk == 'thirtyTk' ) {
+				formValue.text('6790₴');
+				imgConstr.css({
+					background: 'url(/img/constructor/30l-pro_big.jpg)',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'contain',
+					backgroundPosition: 'top center'
+				});
+				mtextValue.text('Самогонный аппарат с баком на 30л');
+			} else if ( dataTk == 'fiftyTk' ) {
+				formValue.text('7490₴');
+				imgConstr.css({
+					background: 'url(/img/constructor/50l-pro_big.jpg)',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'contain',
+					backgroundPosition: 'top center'
+				});
+				mtextValue.text('Самогонный аппарат с баком на 50л');
+			};
+		}
+	});
+
+	$(colVal).on('click', function(e) {
+
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		$('#litre').toggleClass('hide');
+		bakVal.removeClass('active');
+
+
+		formValue.text('4090₴');
+		imgConstr.css({
+			background: 'url(/img/constructor/pro_big.jpg)',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: 'contain',
+			backgroundPosition: 'top center'
+		});
+		mtextValue.text('Колонна Aquagradus Стандарт');
+
+		if ( colVal.hasClass('active') ) {
+			colVal.text('Аппарат в сборе');
+			bakVal.text('Бак отдельно');
+			$(arrCompl).removeClass('hide');
+			$.each(arrCompl, function(i, val) {
+				if ( i > 4) {
+					$(val).addClass('hide');
+				};
+			});
+			buyBtn.text('Купить колонну отдельно');
+			modalBtn.text('Купить колонну отдельно');
+		} else {
+			colVal.text('Колонна отдельно');
+			formValue.text('6090₴');
+			imgConstr.css({
+				background: 'url(/img/constructor/20l-pro_big.jpg)',
+				backgroundRepeat: 'no-repeat',
+				backgroundSize: 'contain',
+				backgroundPosition: 'top center'
+			});
+			mtextValue.text('Самогонный аппарат с баком на 20л');
+			$(litreVl).removeClass('active');
+			$(litreVl[0]).addClass('active');
+			$(arrCompl).removeClass('hide');
+			$.each(arrCompl, function(i, val) {
+				if ( i > 4 && i < 9) {
+					$(val).addClass('hide');
+				};
+			});
+			buyBtn.text('Купить аппарат');
+			modalBtn.text('Купить аппарат');
+		};
+
+		
+	});
+
+	$(bakVal).on('click', function(e) {
+
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		colVal.removeClass('active');
+
+
+		formValue.text('3040₴');
+		imgConstr.css({
+			background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
+			backgroundRepeat: 'no-repeat',
+			backgroundSize: 'contain',
+			backgroundPosition: 'top center'
+		});
+		mtextValue.text('Бак Aquagradus Стандарт на 20л');
+		$(litreVl).removeClass('active');
+		$(litreVl[0]).addClass('active');
+
+		if ( bakVal.hasClass('active') ) {
+			bakVal.text('Аппарат в сборе');
+			colVal.text('Колонна отдельно');
+
+			$(arrCompl).removeClass('hide');
+			$.each(arrCompl, function(i, val) {
+				$(val).addClass('hide');
+				if ( i > 3 ) {
+					return false;
+				}
+			});
+			buyBtn.text('Купить бак отдельно');
+			modalBtn.text('Купить бак отдельно');
+		} else {
+			bakVal.text('Бак отдельно');
+			formValue.text('6090₴');
+			imgConstr.css({
+				background: 'url(/img/constructor/20l-pro_big.jpg)',
+				backgroundRepeat: 'no-repeat',
+				backgroundSize: 'contain',
+				backgroundPosition: 'top center'
+			});
+			mtextValue.text('Самогонный аппарат с баком на 20л');
+			$(litreVl).removeClass('active');
+			$(litreVl[0]).addClass('active');
+			$(arrCompl).removeClass('hide');
+			$.each(arrCompl, function(i, val) {
+				if ( i > 4 && i < 9) {
+					$(val).addClass('hide');
+				};
+			});
+			buyBtn.text('Купить аппарат');
+			modalBtn.text('Купить аппарат');
+		};
+
+		
+	});
+
+});
+
 // Parallax
 
 $(function() {
@@ -322,11 +508,11 @@ $(function() {
 	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
 	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 75}, 2000); // анимируем скроолинг к элементу scroll_el
-		
+
 	    if ( $(window).width() < 768 ) {
-		    $('.icon').toggleClass('active');
-			var menu = $('#menu');
-			menu.slideToggle();
+	    	$('.icon').toggleClass('active');
+	    	var menu = $('#menu');
+	    	menu.slideToggle();
 	    };	    
 	}
 	    return false; // выключаем стандартное действие

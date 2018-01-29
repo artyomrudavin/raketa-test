@@ -196,11 +196,11 @@ textarea
 	width: 100%
 	.header-logo
 		img
-			height: rem(32) // sm rem(40) 
+			height: rem(30) // sm rem(40) 
 		p
-			margin-top: rem(-7)
+			margin-top: rem(-4)
 			text-align: center
-			font-size: 8px // sm 8px
+			font-size: 7px // sm 8px
 	.phone-mobile
 		font-family: $else-font
 		font-weight: bold
@@ -211,11 +211,11 @@ textarea
 		align-items: flex-end
 	.icon
 		position: relative
-		width: rem(50)
+		width: rem(40)
 		height: rem(50)
 		cursor: pointer
 		.hamburger
-			width: rem(35)
+			width: rem(30)
 			height: rem(2)
 			background-color: #000
 			position: absolute
@@ -226,7 +226,7 @@ textarea
 			transition: .1s
 		.hamburger:before, .hamburger:after
 			content: ""
-			width: rem(35)
+			width: rem(30)
 			height: rem(2)
 			background-color: #000
 			position: absolute
@@ -298,12 +298,12 @@ textarea
 		color: $accent
 
 .header-wellcome
-	padding-top: rem(67)
+	padding-top: rem(40) // sm rem(67) xs rem(40)
 	.container-fluid
 		max-width: 1030px
 		margin: 0 auto
 		height: 100%
-		.img-1
+		.img-1, .img-2
 			vertical-align: middle
 			width: 95%
 		.h2
@@ -330,6 +330,9 @@ textarea
 				font-size: 24px
 				&:not(last-child)
 					margin-right: rem(5)
+				span
+					text-decoration: line-through
+					color: $dark-gray
 				strong
 					font-size: 36px
 					color: $accent
@@ -350,9 +353,12 @@ textarea
 				span
 					margin-top: auto
 					margin-bottom: auto
+					font-size: 14px // sm 16px
 		.formAction
+			strong
+				font-size: 14px // sm 16px
 			.num
-				font-size: 22px
+				font-size: 22px // sm 22px xs 18px
 				color: $accent
 		.form
 			padding: rem(10) rem(10)
@@ -398,15 +404,17 @@ textarea
 				// bottom: 32px
 			strong
 				position: absolute
-				left: rem(55)
-				bottom: rem(27)
+				left: rem(40) // sm rem(55) xs rem(40)
+				bottom: rem(10) // sm rem(27) xs rem(10)
 				font-style: italic
 				font-size: 14px
 				// bottom: 27px
 				// left: 55px
 				.order-date
 					font-size: 18px
-					color: $accent			
+					color: $accent
+		.header-col-hd
+			display: none	
 
 
 /* Header End */
@@ -471,7 +479,7 @@ textarea
 	background-color: #fff
 
 .pr-bottom
-		margin-bottom: rem(20)
+		// margin-bottom: rem(20)
 
 .align-self-end
 	align-self: flex-end
@@ -485,6 +493,7 @@ textarea
 			font-size: 32px
 			font-weight: bold
 			.title-no-mobile
+				display: none
 				span
 					font-family: $logo-font
 		.char-img
@@ -497,35 +506,42 @@ textarea
 			margin-top: rem(30)
 			border: rem(7) solid $accent
 			padding: rem(25)
+			text-align: center
 			// div
 			// 	text-align: center
-			.litre-val
-				border: 2px solid $light-gray
-				background-color: $light-gray
-				border-radius: 5px
-				padding: rem(3) rem(5)
-				margin-right: rem(2)
-				font-weight: bold
-				transition: .5s
-				&:hover, &:focus
-					// transition: .5s // attention
-					text-decoration: none
-					color: $black
-				&.active
-					border: 2px solid $green
+			.litre-box
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				.litre-val
+					border: 2px solid $light-gray
+					background-color: $light-gray
 					border-radius: 5px
-					background-color: #fff
+					padding: rem(3) rem(5)
+					margin-bottom: rem(5)
+					font-weight: bold
+					transition: .5s
+					&:hover, &:focus
+						// transition: .5s // attention
+						text-decoration: none
+						color: $black
+					&.active
+						border: 2px solid $green
+						border-radius: 5px
+						background-color: #fff
 			.bk-val, .car-val, .suh-val
+				font-size: 14px
 				span
 					font-family: $else-font
 			.car-val, .suh-val
 				&.active
 					color: $green
 					border-bottom: 1px solid $green
-			.separate-cs
-				margin: 0 rem(5)
-			.bk-box
-				padding-top: 5px
+			.carSuh
+				padding: 0
+				.separate-cs
+					margin: 0 rem(5)
+					display: none
 		.char-list
 			.row
 				overflow: hidden
@@ -533,14 +549,14 @@ textarea
 				.ch-name
 					font-size: 15px
 					background-color: #fff
-					&:after
-						content: "......................................................................."
-						position: absolute
-						width: 100%
-						font-family: Arial, sans-serif
-						top: rem(2)
-						margin-left: rem(10)
-						font-size: 14px
+					// &:after
+					// 	content: "......................................................................."
+					// 	position: absolute
+					// 	width: 100%
+					// 	font-family: Arial, sans-serif
+					// 	top: rem(2)
+					// 	margin-left: rem(10)
+					// 	font-size: 14px
 				.ch-val
 					font-size: 16px
 					z-index: 1
@@ -571,6 +587,7 @@ textarea
 						top: auto
 				.product-ds
 					position: absolute
+					display: none
 					left: rem(15)
 					bottom: rem(-18)
 					font-size: 13px
@@ -581,6 +598,8 @@ textarea
 				.pr-val
 					font-size: 16px
 					z-index: 1
+		.char-list, .product
+			margin-left: -110%
 
 /* Characteristics End */
 
@@ -597,11 +616,11 @@ textarea
 			font-weight: bold
 			margin-bottom: rem(24)
 		.row
-			.resipe-box
+			.recipe-box
 				padding: rem(15)
 				margin-bottom: rem(20)
 				background-color: #fff
-				.resipe-text
+				.recipe-text
 					position: relative
 					padding: 0
 					padding-left: rem(15)
@@ -621,9 +640,9 @@ textarea
 						background-color: #fff
 						padding-right: rem(24)
 						z-index: 1
-				.resipe-img
+				.recipe-img
 					text-align: center
-				.resipe-ch
+				.recipe-ch
 					.ch-item
 						padding: 0
 						padding-bottom: rem(4)
@@ -634,7 +653,9 @@ textarea
 						&:nth-child(even)
 							padding-left: rem(4)
 							font-weight: bold
-				.resipe-result
+						span
+							font-size: 15px
+				.recipe-result
 					text-align: center
 					.row
 						margin: 0
@@ -648,14 +669,14 @@ textarea
 								color: $accent
 							p
 								font-weight: bold
-							.resipe-note
+							.recipe-note
 								padding-top: rem(5)
 								font-size: 13px
 								line-height: 1em
 								color: $accent
-			.resipe-book
+			.recipe-book
 				text-align: center
-				padding-top: rem(48)
+				// padding-top: rem(48)
 				p
 					margin-top: 0
 					margin-bottom: rem(16)
@@ -682,8 +703,8 @@ textarea
 		text-align: center
 
 .md-6
-	flex: 0 0 33.33333%
-	max-width: 33.33333%
+	flex: 0 0 100%
+	max-width: 100%
 
 .textout
 	margin-top: auto
@@ -1348,7 +1369,8 @@ textarea
 				.f-box
 					padding: rem(20) rem(30)
 					border: 3px solid #fff
-					min-height: rem(150)
+					min-height: 100%
+					// min-height: rem(150)
 					.title
 						font-size: 24px
 						margin-bottom: rem(8)
@@ -1356,11 +1378,11 @@ textarea
 				.title
 					font-size: 24px
 				div
-					width: 35%
+					width: 100% // lg 35% xs 100%
 					margin: 0 auto
 					span
-						display: inline-block
-						width: 50%
+						display: block // lg inline-block xs block
+						width: 100% // lg 50% xs 100%
 						font-family: $else-font
 				p, div, .title
 					margin-bottom: rem(8)
@@ -1485,44 +1507,44 @@ textarea
 
 /*test*/
 
-// .convenience
-// 	display: none
-// .characteristics
-// 	display: none
+.convenience
+	display: none
+.characteristics
+	display: none
 // .recipe
 // 	display: none
-// .modes
-// 	display: none
-// .mode-one
-// 	display: none
-// .mode-two
-// 	display: none
-// .mode-three
-// 	display: none
-// .mode-four
-// 	display: none
-// .mode-five
-// 	display: none
-// .mode-six
-// 	display: none
-// .mode-seven
-// 	display: none
-// .mode-eight
-// 	display: none
-// .constructor
-// 	display: none
-// .about
-// 	display: none
-// .additionally
-// 	display: none
-// .additionally-goods
-// 	display: none
-// .reviews
-// 	display: none
-// .faq
-// 	display: none
-// .question
-// 	display: none
+.modes
+	display: none
+.mode-one
+	display: none
+.mode-two
+	display: none
+.mode-three
+	display: none
+.mode-four
+	display: none
+.mode-five
+	display: none
+.mode-six
+	display: none
+.mode-seven
+	display: none
+.mode-eight
+	display: none
+.constructor
+	display: none
+.about
+	display: none
+.additionally
+	display: none
+.additionally-goods
+	display: none
+.reviews
+	display: none
+.faq
+	display: none
+.question
+	display: none
 
 /*test*/
 

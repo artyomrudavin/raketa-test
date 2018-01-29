@@ -416,6 +416,12 @@ textarea
 		.header-col-hd
 			display: none	
 
+#header-modal
+	#mW3
+		.modal-container
+			.order-price-value
+				font-size: 26px
+
 
 /* Header End */
 
@@ -972,7 +978,7 @@ textarea
 								font-size: 14px
 								.separate
 									display: none
-								.bk-val, .col-val
+								.bak-val, .col-val
 									text-align: center
 									text-decoration: underline
 									border-bottom: none
@@ -1478,6 +1484,8 @@ textarea
 					.order-price-value
 						font-size: 30px
 						font-weight: bold
+						&--about
+							font-size: 26px
 				.modal-text
 					margin-top: 0
 					margin-bottom: rem(16)
@@ -1510,10 +1518,9 @@ textarea
 					margin: rem(13) auto rem(13)
 					padding: 0 rem(25)
 					cursor: pointer
-					&--buy
-						background-color: $green
-						&:hover
-							darken($green, 10%)
+					background-color: $green
+					&:hover
+						darken($green, 10%)
 			.modal-footer
 				text-align: center
 				padding: rem(15)

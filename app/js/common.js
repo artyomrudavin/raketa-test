@@ -44,6 +44,52 @@ $(function() {
 
 });
 
+// Modal Control - Header
+
+$(function() {
+
+	var modal = $('#header-modal.modal-mask');
+
+	$('#menu .btnHead').on('click', function(e) {
+		e.preventDefault();
+		modal.removeClass('hide');
+	});
+
+	$('.modal-close').on('click', function() {
+		modal.addClass('hide');
+	});
+
+	$(document).on('click', function(event) {
+		if ( event.target.id == 'mW3' ) {
+			modal.addClass('hide');
+		}
+	});
+
+});
+
+// Modal Control - Header
+
+$(function() {
+
+	var modal = $('#about-modal.modal-mask');
+
+	$('#aboutBtn').on('click', function(e) {
+		e.preventDefault();
+		modal.removeClass('hide');
+	});
+
+	$('.modal-close').on('click', function() {
+		modal.addClass('hide');
+	});
+
+	$(document).on('click', function(event) {
+		if ( event.target.id == 'mW4' ) {
+			modal.addClass('hide');
+		}
+	});
+
+});
+
 // Characteristics Control
 
 $(function() {

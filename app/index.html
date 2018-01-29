@@ -99,14 +99,14 @@
 							</li>
 							<li class="check-item">
 								<i class="fa fa-check-circle"></i>
-								<span>Оплата после проверки при получении. Гарантия <strong class="num">10 лет</strong></span>
+								<span>Оплата после проверки при получении. Гарантия <strong class="num">5 лет</strong></span>
 							</li>
 						</ul>
 						<img src="img/img-1.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1">
 						<p class="formAction"><strong>Заполните форму чтобы зафиксировать скидку <span class="num">800 грн</span></strong></p>
 						<form class="form" method="post" id="form">
-							<input type="hidden" name="DATA[TITLE]" value="Test Lead from Site">
-							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт">
+							<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Первый экран">
+							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 							<input type="text" class="form-item" name="DATA[NAME]" required placeholder="Ваше имя">
 							<input type="text" class="form-item" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон" id="phone">
 							<button class="form-item btn header-btn">Заказать</button>
@@ -123,6 +123,40 @@
 
 					</div>
 				</div>	
+			</div>
+		</div>
+
+		<div id="header-modal" class="modal-mask hide">
+			<div id="mW3" class="modal-wrapper">
+				<div class="modal-container modal-container--buy">
+					<div class="modal-close"></div>
+					<div class="modal-header">
+						<h3 class="modal-title modal-title--buy">Заказать обратный звонок</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="modal-order-price">
+								<div>
+									<div class="order-price-value num">
+										Оставьте заявку, менеджер перезвонит Вам
+									</div>
+								</div>
+							</div>
+							<form id="headerCall" method="post">
+								<!-- Hidden -->
+								<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Обратный звонок">
+								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								<!-- Hidden -->
+								<input type="text" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+								<button type="submit" class="btn modal-btn">Заказать обратный звонок</button>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						перезвоним Вам в течение 15 минут
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -464,11 +498,15 @@
 						<h3 class="modal-title">Скачать книгу / руководство</h3>
 					</div>
 					<div class="modal-body">
-						<div>
+						<form id="modalBook" method="post">
 							<p class="modal-text">Введите свой адрес электронной почты. После подтверждения Вам придет книга с рецептами и руководство по эксплуатации.</p>
+							<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Книга">
+							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+							<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+
 							<input type="text" placeholder="Введите свой e-mail">
 							<button type="submit" class="btn modal-btn">Получить на e-mail</button>
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -974,7 +1012,7 @@
 										<div id="modal-text-value" class="modal-products-item">Самогонный аппарат с баком на 20л</div>
 									</div>
 								</div>
-								<button type="submit" class="btn modal-btn modal-btn--buy">Оформить заказ</button>
+								<button type="submit" class="btn modal-btn">Оформить заказ</button>
 							</form>
 						</div>
 					</div>
@@ -1012,7 +1050,7 @@
 				<div class="step col-lg-2 col-md-4 col-6">
 					<img src="img/delivery.png" alt="Бесплатная доставка на следующий день после заказа" class="img-responsive">
 					<h4 class="title">4. Доставка</h4>
-					<p>Доставка за 1 - 3 дня в одно из 2300 отделений Новой Почты по всей Украине. <a href="#" class="link">При заказе до <strong class="today num">24.01</strong> доставка Бесплатна!</a></p>
+					<p>Доставка за 1 - 3 дня в одно из 2300 отделений Новой Почты по всей Украине. <a href="#" class="link" id="aboutBtn">При заказе до <strong class="today num">24.01</strong> доставка Бесплатна!</a></p>
 				</div>
 				<div class="step col-lg-2 col-md-4 col-6">
 					<img src="img/pay.png" alt="Оплата после получения" class="img-responsive">
@@ -1020,9 +1058,43 @@
 					<p>При получении, тщательно проверьте посылку на наличие транспортных повреждений и целостности упаковки. Только после этого оплатите картой или наличными</p>
 				</div>
 				<div class="step col-lg-2 col-md-4 col-6">
-					<img src="img/service.png" alt="Гарантия 10 лет" class="img-responsive">
+					<img src="img/service.png" alt="Гарантия 5 лет" class="img-responsive">
 					<h4 class="title">6. Гарантия и сервис</h4>
-					<p>Аппарат <strong class="logo-font">AquaGradus</strong> Стандарт - Домашние <strong>напитки до 96°; Гарантия 10 лет; Бесплатная консультация</strong> и поддержка клиентов!</p>
+					<p>Аппарат <strong class="logo-font">AquaGradus</strong> Стандарт - Домашние <strong>напитки до 96°; Гарантия 5 лет; Бесплатная консультация</strong> и поддержка клиентов!</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="about-modal" class="modal-mask hide">
+			<div id="mW4" class="modal-wrapper">
+				<div class="modal-container modal-container--buy">
+					<div class="modal-close"></div>
+					<div class="modal-header">
+						<h3 class="modal-title modal-title--buy">Заказать обратный звонок</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="modal-order-price">
+								<div>
+									<div class="order-price-value order-price-value--about num">
+										Оставьте заявку, менеджер перезвонит Вам
+									</div>
+								</div>
+							</div>
+							<form id="aboutCall" method="post">
+								<!-- Hidden -->
+								<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Обратный звонок как работаем">
+								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								<!-- Hidden -->
+								<input type="text" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+								<button type="submit" class="btn modal-btn">Заказать обратный звонок</button>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						перезвоним Вам в течение 15 минут
+					</div>
 				</div>
 			</div>
 		</div>

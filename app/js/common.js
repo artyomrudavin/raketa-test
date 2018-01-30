@@ -95,13 +95,13 @@ $(function() {
 $(function() {
 
 	var modal = $('#additionally-modal.modal-mask'),
-		addPrice = $('#additionally-modal #modal-value-add'),
-		addTextm = $('#additionally-modal #modal-text-add')
-		hiddenComAdd = $('#additionally-modal [name="DATA[COMMENTS]"]');
+	addPrice = $('#additionally-modal #modal-value-add'),
+	addTextm = $('#additionally-modal #modal-text-add')
+	hiddenComAdd = $('#additionally-modal [name="DATA[COMMENTS]"]');
 		// console.log(hiddenComAdd);
 
-	$('#carga, #drogi, #areom, #rashiga, #popugai, #dioptr').on('click', function(e) {
-		e.preventDefault();
+		$('#carga, #drogi, #areom, #rashiga, #popugai, #dioptr').on('click', function(e) {
+			e.preventDefault();
 		// $(this).addClass('active');
 		modal.removeClass('hide');
 
@@ -138,18 +138,40 @@ $(function() {
 		};
 	});
 
-	
 
-	$('.modal-close').on('click', function() {
-		modal.addClass('hide');
-	});
 
-	$(document).on('click', function(event) {
-		if ( event.target.id == 'mW5' ) {
+		$('.modal-close').on('click', function() {
 			modal.addClass('hide');
-		}
+		});
+
+		$(document).on('click', function(event) {
+			if ( event.target.id == 'mW5' ) {
+				modal.addClass('hide');
+			}
+		});
+
 	});
 
+// Date Today
+
+$(function() {
+
+	var dateNow = new Date(),
+		todayInner = $('.today');
+	// dateNow.toDateString();
+	function formatDate(date) {
+
+		var dd = date.getDate();
+		if (dd < 10) dd = '0' + dd;
+
+		var mm = date.getMonth() + 1;
+		if (mm < 10) mm = '0' + mm;
+
+		return dd + '.' + mm;
+	};
+
+	todayInner.text(formatDate(dateNow));
+	// console.log(formatDate(dateNow));
 });
 
 // Characteristics Control
@@ -504,6 +526,7 @@ $(function() {
 		e.preventDefault();
 
 		$(this).toggleClass('active');
+		$('#litre').removeClass('hide');
 		colVal.removeClass('active');
 
 

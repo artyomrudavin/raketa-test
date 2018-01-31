@@ -74,10 +74,16 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 	var buildFiles = gulp.src([
 		'app/*.html',
 		'app/.htaccess',
+		'app/*.php',
 		]).pipe(gulp.dest('dist'));
+
+	var buildFilesSps = gulp.src([
+		'app/sps/*.html',
+		]).pipe(gulp.dest('dist/sps'));
 
 	var buildCss = gulp.src([
 		'app/css/main.min.css',
+		'app/css/sps.min.css',
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([
@@ -93,9 +99,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'hostname.com',
-		user:      'username',
-		password:  'userpassword',
+		host:      'акваградус.com',
+		user:      'com12',
+		password:  'bh9Q05dj5C',
 		parallel:  10,
 		log: gutil.log
 	});
@@ -105,7 +111,7 @@ gulp.task('deploy', function() {
 	'dist/.htaccess',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/path/to/folder/on/server'));
+	.pipe(conn.dest('/domains/aquagradus.com/public_html/standart'));
 
 });
 

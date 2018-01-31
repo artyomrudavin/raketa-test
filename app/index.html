@@ -26,44 +26,52 @@
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K5KHPKL');</script>
+<!-- End Google Tag Manager -->
+
 </head>
 
 <body>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5KHPKL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 	<header class="header">
 		<nav class="header-nav">
 			<div class="header-nav-box">
-
 				<div class="header-brand">
 					<div class="header-logo">
 						<a href="#"><img src="img/AquaGradusLogo.png" alt="Самогоный аппарат Aquagradus Standart"></a>
 						<p>Фабрика дистилляторов и пивоварен</p>
 					</div>
 					<div class="phone-mobile">
-						<span>+38 (050) 342-00-06</span>
-						<span>+38 (067) 460-40-99</span>
+						<a href="tel:+380503420006">+38 (050) 342-00-06</a>
+						<a href="tel:+380674604099">+38 (067) 460-40-99</a>
 					</div>
 					<div class="icon" id="burg">
 						<div class="hamburger"></div>
 					</div>
-
 				</div>
-
-
 				<div class="header-navbar"> 
 					<ul id="menu">
-						<li><a href="#characteristics" class="h-link">Характеристики</a></li>
-						<li><a href="#modes" class="h-link">Принцип работы</a></li>
-						<li><a href="#constructor" class="h-link">Каталог</a></li>
-						<li><a href="#reviews" class="h-link">Отзывы</a></li>
-						<li><a href="#about" class="h-link">Доставка</a></li>
+						<li><a href="#characteristics" class="h-link h-menu">Характеристики</a></li>
+						<li><a href="#modes" class="h-link h-menu">Принцип работы</a></li>
+						<li><a href="#constructor" class="h-link h-menu">Каталог</a></li>
+						<li><a href="#reviews" class="h-link h-menu">Отзывы</a></li>
+						<li><a href="#about" class="h-link h-menu">Доставка</a></li>
 						<li class="btnHead"><a href="#" class="btn">Заказать звонок</a></li>
 						<li>
 							<span>+38 (050) 342-00-06</span><br>
 							<span class="brd-btm">+38 (067) 460-40-99</span><br>
 						</li>
 					</ul>
-
 				</div>
 			</div>				
 		</nav>
@@ -104,12 +112,12 @@
 						</ul>
 						<img src="img/img-1-1.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1">
 						<p class="formAction"><strong>Заполните форму чтобы зафиксировать скидку <span class="num">800 грн</span></strong></p>
-						<form class="form" method="post" id="form">
-							<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Первый экран">
+						<form class="form" method="post" id="headerForm">
+							<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Первый экран">
 							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 							<input type="text" class="form-item" name="DATA[NAME]" required placeholder="Ваше имя">
-							<input type="text" class="form-item" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон" id="phone">
-							<button class="form-item btn header-btn">Заказать</button>
+							<input type="tel" class="form-item" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
+							<button type="submit" class="form-item btn header-btn">Заказать</button>
 						</form>
 						<div class="order">
 							<img src="img/bg-2.png" alt="Бесплатная доставка AquaGradus" class="order-bg">
@@ -143,13 +151,17 @@
 								</div>
 							</div>
 							<form id="headerCall" method="post">
-								<!-- Hidden -->
-								<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Обратный звонок">
+
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Обратный звонок;">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
-								<!-- Hidden -->
-								<input type="text" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+								<!-- END Hidden Required Fields -->
+
+								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+
 								<button type="submit" class="btn modal-btn">Заказать обратный звонок</button>
+
 							</form>
 						</div>
 					</div>
@@ -218,12 +230,12 @@
 				<div class="tip-item col-lg-3 col-md-3 col-6">
 					<img src="img/icons/003-education.png" alt="Опыт работы с нержавеющей сталью более 10 лет" class="img-responsive">
 					<h4 class="title">Опыт работы с нержавеющей сталью более 10 лет</h4>
-					<p>Высокое качество продукции и отзывчивость на предложения клиентов - позволяют нам занимать устойчевое положение на рынке и собрать команду более 40 человек.</p>
+					<p>Высокое качество продукции и отзывчивость на предложения клиентов - позволяют нам занимать устойчивое положение на рынке и собрать команду более 40 человек.</p>
 				</div>
 				<div class="tip-item col-lg-3 col-md-3 col-6">
 					<img src="img/icons/002-pot.png" alt="100% герметичность" class="img-responsive">
 					<h4 class="title">100% герметичность</h4>
-					<p>Лазерная резка металла, ровный сварной шов, силиконовые прокладки на всех соеденительных узлах - обеспечивают 100% герметичность аппаата и избавят Вас от неприяьного запаха на кухне.</p>
+					<p>Лазерная резка и сваривание металла по Стандарту 141 TIG согласно норме EN15085-2, силиконовые прокладки на всех соеденительных узлах - обеспечивают 100% герметичность аппарата и избавят Вас от неприятного запаха на кухне.</p>
 				</div>
 				<div class="tip-item col-lg-3 col-md-3 col-6">
 					<img src="img/icons/bracket.png" alt="Нержавеющая сталь AISI 304" class="img-responsive">
@@ -243,7 +255,7 @@
 			</div>
 
 		</div>
-	</section>
+	</section> <!-- Tips End -->
 
 	<section id="characteristics" class="characteristics">
 
@@ -270,54 +282,54 @@
 							<div class="col-12 carSuh">
 								<a href="#" class="car-val link"><span>+</span> царга</a>
 								<!-- <span class="separate-cs">/</span><br>
-								<a href="#" class="suh-val link"><span>+</span> сухопарник</a> -->
+									<a href="#" class="suh-val link"><span>+</span> сухопарник</a> -->
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="char-list">
-						<div class="row">
+						<div class="char-list">
+							<div class="row">
 
-							<div class="col-md-6">
-								<span class="ch-name">Марка стали</span>
-							</div>
-							<div class="col-md-6 bg-ch">
-								<strong class="ch-val">AISI 304Ti (медицинская)</strong>
-							</div>
+								<div class="col-md-6">
+									<span class="ch-name">Марка стали</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">AISI 304Ti (медицинская)</strong>
+								</div>
 
-							<div class="col-md-6">
-								<span class="ch-name">Диаметр колонны</span>
-							</div>
-							<div class="col-md-6 bg-ch">
-								<strong class="ch-val">51 мм (Фланец 91мм")</strong>
-							</div>
+								<div class="col-md-6">
+									<span class="ch-name">Диаметр колонны</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">51 мм (Фланец 91мм")</strong>
+								</div>
 
-							<div class="col-md-6">
-								<span class="ch-name">Диаметр трубок охладителя</span>
-							</div>
-							<div class="col-md-6 bg-ch">
-								<strong class="ch-val">7 шт. по 8 мм</strong>
-							</div>
+								<div class="col-md-6">
+									<span class="ch-name">Диаметр трубок охладителя</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">7 шт. по 8 мм</strong>
+								</div>
 
-							<div class="col-md-6">
-								<span class="ch-name">Скорость перегонки</span>
-							</div>
-							<div class="col-md-6 bg-ch">
-								<strong class="ch-val">3-7 л/час</strong>
-							</div>
+								<div class="col-md-6">
+									<span class="ch-name">Скорость перегонки</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">3-7 л/час</strong>
+								</div>
 
-							<div class="col-md-6">
-								<span class="ch-name">Наполнитель</span>
-							</div>
-							<div class="col-md-6 bg-ch">
-								<strong class="ch-val">Сетка Панченкова (5 м)</strong>
-							</div>
+								<div class="col-md-6">
+									<span class="ch-name">Наполнитель</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">Сетка Панченкова (5 м)</strong>
+								</div>
 
-							<div class="col-md-6">
-								<span class="ch-name">Толщина листа/дна</span>
-							</div>
-							<div class="col-md-6 bg-ch">
-								<strong class="ch-val">1 мм/3 мм</strong>
-							</div>
+								<div class="col-md-6">
+									<span class="ch-name">Толщина листа/дна</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">1 мм/3 мм</strong>
+								</div>
 
 							<!-- <div class="col-md-6">
 								<span class="ch-name">Тип дна</span>
@@ -397,13 +409,13 @@
 						<div class="recipe-ch md-6 textout">
 							<div class="row">
 
-								<div class="ch-item col-lg-6 col-6">Сахар - <span class="num">45₴/кг: </span></div>
+								<div class="ch-item col-lg-6 col-6">Сахар - <span class="num">14₴/кг: </span></div>
 								<div class="ch-item col-lg-6 col-6">
 									....................... 
 									<span>3 кг</span>
 								</div>
 
-								<div class="ch-item col-lg-6 col-6">Дрожжи - <span class="num">12₴: </span></div>
+								<div class="ch-item col-lg-6 col-6">Дрожжи - <span class="num">7₴: </span></div>
 								<div class="ch-item col-lg-6 col-6">
 									....................... 
 									<span class="num">200 г</span>
@@ -418,7 +430,7 @@
 								<div class="ch-item col-lg-6 col-6">Выход продукта из сахара: </div>
 								<div class="ch-item col-lg-6 col-6">
 									....................... 
-									<span class="num">0,5 л/кг</span>
+									<span class="num">1 л/кг</span>
 								</div>
 
 							</div>
@@ -428,9 +440,9 @@
 								<div class="col-md-3 num textout">=</div>
 								<div class="col-md-3 textout"><img src="img/icons/bottle6.png" alt="Самогон из сахар бутылка"></div>
 								<div class="col-md-6">
-									<h5 class="accent num">49</h5>
+									<h5 class="accent num">7</h5>
 									<p>₴/бутылка</p>
-									<small>В магазине от <strong class="num">250 ₴</strong></small>
+									<small>В магазине от <strong class="num">80 ₴</strong></small>
 								</div>
 							</div>
 						</div>
@@ -549,11 +561,11 @@
 					<div class="modal-body">
 						<form id="modalBook" method="post">
 							<p class="modal-text">Введите свой адрес электронной почты. После подтверждения Вам придет книга с рецептами и руководство по эксплуатации.</p>
-							<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Книга">
+							<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Книга">
 							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 							<textarea class="hide" name="DATA[COMMENTS]"></textarea>
 
-							<input type="text" placeholder="Введите свой e-mail">
+							<input type="email" name="DATA[EMAIL_WORK]" placeholder="Введите свой e-mail">
 							<button type="submit" class="btn modal-btn">Получить на e-mail</button>
 						</form>
 					</div>
@@ -902,7 +914,7 @@
 							Однако перегонка в режиме укрепления с диоптром (приобретается отдельно) отличается особо завораживающим эффектом визуализации процессов в колонне. Один раз увидеть возвратный поток спирта в колонне своими глазами лучше, чем 100 раз прочитать о нем на сайте.
 						</p>
 						<div class="more">
-							Подробнее о сухопарнике-диоптре в разделе&nbsp;
+							Подробнее о диоптре и дополнительных узлах на его базе в разделе&nbsp;
 							<a href="#super" class="link">«Дополнительные товары»</a>
 						</div>
 					</div>
@@ -1048,7 +1060,7 @@
 							<p class="modal-text modal-text--buy">Введите Ваш телефон. Специалист позвонит и уточнит адрес доставки и сообщит дату, когда заказ будет у Вас</p>
 							<form id="formBuy" method="post">
 								<!-- Hidden -->
-								<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Каталог">
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Каталог">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
 								<!-- Hidden -->
@@ -1130,7 +1142,7 @@
 							</div>
 							<form id="aboutCall" method="post">
 								<!-- Hidden -->
-								<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Обратный звонок как работаем">
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Обратный звонок как работаем">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
 								<!-- Hidden -->
@@ -1250,15 +1262,13 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="img/additionaly/kart_suhoparnik.jpg" alt="Инновационный диоптр 4 в 1" class="img-responsive">
+					<img src="img/additionaly/kart_suhoparnik.jpg" alt="Диоптр Aquaqradus" class="img-responsive">
 				</div>
 				<div class="col-12 col-sm-7 good-text">
-					<h3 class="title">Инновационный диоптр 4 в 1</h3>
+					<h3 class="title">Диоптр Aquaqradus</h3>
 					<div class="good-content">
-						<h4 class="h4">Сухопарник. Диоптр. Арома-корзина. Тарельчатая колонна.</h4>
-						<p>Перегонка с сухопарником-ароматором — идеальный вариант получения ароматных дистиллятов. После очистки и укрепления в колонне, крепкие спиртовые пары попадают в аромакорзину, насыщаясь эксклюзивным ароматом. Это отличная альтернатива настойкам, которые готовятся несколько недель! Положите в сухопарник ягоды можжевельника, цедру лимона или апельсина, гранатовую кожуру или любые другие ароматные вещества - и насладитесь непревзойденным запахом Вашего уникального шедевра!</p>
-						<p>Нижняя часть сухопарника представляет собой колпачково-тарельчатую колонну из меди. Работа с такой колонной позволяет добиться эффекта «двойной перегонки». Пары напитка, испаряясь в кубе, попадают в сухопарник, где происходит их конденсация на стеклянных стенках. Конденсат стекает на тарелку - нижнюю часть сухопарника, где подогревается вновь идущими из бака парами и закипает (испаряется) второй раз. Таким образом достигается эффект двойной перегонки. Это идеальный способ приготовить «ядреный» самогон (но с приятным запахом!) и ром (самогон из тростникового сахара). Приятный дух дистиллятов при такой перегонке сохраняется на ура!</p>
-						<p>Перегонка в режиме укрепления с диоптром - завораживающий процесс. Один раз увидеть возвратный поток спирта в колонне своими глазами лучше, чем 100 раз прочитать о нем на сайте. В этом режиме из сухопарника извлекается аромакорзина и колпачковая тарелка для предотвращения его переполнения.</p>
+						<h4 class="h4">Диоптр Aquaqradus.</h4>
+						<p>Перегонка в режиме укрепления с диоптром - завораживающий процесс. Один раз увидеть возвратный поток спирта в колонне своими глазами лучше, чем 100 раз прочитать о нем на сайте.</p>
 						<div class="good-params row">
 							<div class="col-lg-6 col-12">
 								<div class="good-params-item">
@@ -1468,9 +1478,9 @@
 								</div>
 							</div>
 							<p class="modal-text modal-text--buy">Введите Ваш телефон. Специалист позвонит и уточнит адрес доставки и сообщит дату, когда заказ будет у Вас</p>
-							<form id="formBuy" method="post">
+							<form id="formAdd" method="post">
 								<!-- Hidden -->
-								<input type="hidden" name="DATA[TITLE]" value="Аппарат: Стандарт, форма: Дополнительно">
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Дополнительно">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
 								<!-- Hidden -->
@@ -1548,7 +1558,7 @@
 						<div class="card-block">
 							Да.
 							<br>
-							<a href="#" class="link">Купить отдельно колонну</a><a href="#" class="link">Купить отдельно бак</a>
+							<a href="#constructor" class="link">Купить отдельно колонну</a><a href="#constructor" class="link">Купить отдельно бак</a>
 						</div>
 					</div>
 				</div>
@@ -1615,17 +1625,24 @@
 			<h3 class="h3">Есть вопрос? Задайте его и мы ответим сразу же!</h3>
 			<p>Прежде чем задать вопрос, внимательно прочитайте ответы на часто задаваемые вопросы выше. Вероятно, там есть ответ на Ваш вопрос</p>
 			<form method="post" id="question">
+				
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Задать вопрос;">
+				<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+				<!-- END Hidden Required Fields -->
+
 				<div class="row">
 					<div class="col-md-3">
-						<input type="text" placeholder="Введите телефон">
+						<input type="tel" name="DATA[PHONE_MOBILE]" placeholder="Введите телефон">
 					</div>
 					<div class="col-md-7">
-						<input type="text" placeholder="Ваш вапрос">
+						<input type="text" name="DATA[COMMENTS]" placeholder="Ваш вапрос">
 					</div>
 					<div class="col-md-2">
 						<button type="submit" class="btn dtn-quest">Задать</button>
 					</div>
 				</div>
+
 			</form>
 		</div>
 	</section> <!-- Question End -->
@@ -1652,7 +1669,7 @@
 				<div class="f-contact col-12">
 					<h5 class="title">Контакты</h5>
 					<div>
-						<span>+38 (067) 460-40-99</span><span>+38 (050) 342-00-06</span>
+						<a href="tel:+380674604099" class="num">+38 (067) 460-40-99</a><a href="tel:+380503420006" class="num">+38 (050) 342-00-06</a>
 					</div>
 					<p>ул. Пушкинская 43А, г. Харьков</p>
 					<p>aquagradus@gmail.com</p>

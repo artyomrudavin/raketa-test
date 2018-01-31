@@ -67,7 +67,7 @@ $(function() {
 
 });
 
-// Modal Control - Header
+// Modal Control - About
 
 $(function() {
 
@@ -90,7 +90,7 @@ $(function() {
 
 });
 
-// Modal Control - Header
+// Modal Control - Additionally
 
 $(function() {
 
@@ -137,8 +137,6 @@ $(function() {
 			// console.log('drogi');
 		};
 	});
-
-
 
 		$('.modal-close').on('click', function() {
 			modal.addClass('hide');
@@ -651,7 +649,8 @@ $(function() {
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
 	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 75}, 2000); // анимируем скроолинг к элементу scroll_el
 
-	    if ( $(window).width() < 768 ) {
+	    if ( $(window).width() < 768 && $(this).hasClass('h-menu') ) {
+	    	// console.log(this);
 	    	$('.icon').toggleClass('active');
 	    	var menu = $('#menu');
 	    	menu.slideToggle();
@@ -737,6 +736,30 @@ $(function() {
 		var menu = $('#menu');
 
 		menu.slideToggle();
+	});
+
+});
+
+//E-mail Ajax Send
+
+$(function() {
+
+	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question").submit(function() { //Change
+		var th = $(this);
+
+		$.ajax({
+			type: "POST",
+			url: "rest.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			// alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+			location.href = "http://standart.aquagradus.com/sps/";
+		});
+		return false;
 	});
 
 });

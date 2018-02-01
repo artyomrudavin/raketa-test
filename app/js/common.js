@@ -718,11 +718,11 @@ $(function() {
 
 // Drag img
 
-$(function() {
+// $(function() {
 
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+// 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-});
+// });
 
 // Burger bar
 
@@ -762,4 +762,9 @@ $(function() {
 		return false;
 	});
 
+
 });
+
+$(function() {
+	$('[type="tel"]').mask('+380999999999');
+})

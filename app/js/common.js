@@ -155,7 +155,7 @@ $(function() {
 $(function() {
 
 	var dateNow = new Date(),
-		todayInner = $('.today');
+	todayInner = $('.today');
 	// dateNow.toDateString();
 	function formatDate(date) {
 
@@ -767,4 +767,22 @@ $(function() {
 
 $(function() {
 	$('[type="tel"]').mask('+380999999999');
-})
+});
+
+$(function() {
+
+	$('.red-more').on('click', function(e) {
+		e.preventDefault();
+		
+		$('.hide-tip').toggle('slow');
+		$(this).text('Свернуть');
+
+		if ( !$(this).hasClass('active') ) {
+			$(this).addClass('active');
+		} else {
+			$(this).text('Больше информации ... ');
+		};
+
+	});
+
+});

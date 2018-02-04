@@ -649,6 +649,41 @@ textarea
 					z-index: 1
 		.char-list, .product
 			margin-left: -110%
+		.char-form
+			text-align: center
+			margin: auto
+			max-width: 960px
+			padding-top: rem(50)
+			p
+				margin-bottom: rem(50)
+			.h4
+				font-size: 36px
+				margin-bottom: rem(15)
+				.logo-font
+					font-size: 42px
+			.h5
+				font-size: 24px
+				font-weight: 300
+				max-width: rem(400)
+				margin: 0 auto
+				margin-bottom: rem(30)
+			form
+				display: flex
+				justify-content: space-between
+				flex-direction: column
+				input
+					flex: 1 1 auto
+					padding: rem(16)
+					color: $black
+					margin-bottom: rem(10)
+				.btn
+					padding: rem(16)
+					font-size: 18px
+					cursor: pointer
+					background-color: $green
+					max-height: rem(50)
+					&:hover
+						background-color: darken($green, 10%)
 
 /* Characteristics End */
 
@@ -733,7 +768,7 @@ textarea
 					margin-top: 0
 					margin-bottom: rem(16)
 				.recipe-btn
-					padding: rem(8) // md rem(16) rem(48) xs rem(8)
+					padding: rem(16) rem(28) // md rem(16) rem(48) xs rem(8)
 					font-size: 14px // md 20px
 					text-transform: uppercase
 					font-weight: bold
@@ -798,6 +833,71 @@ textarea
 				margin-bottom: rem(24)
 
 /* Modes End */
+
+/* Bonus Start */
+
+.bonus
+	// height: 80vh
+	padding-top: rem(30)
+	padding-bottom: rem(60)
+	// background: radial-gradient(#91caf6, $accent)
+	.container-fluid
+		max-width: 1030px
+		.call
+			font-weight: 300
+			text-align: center
+			font-size: 24px
+			line-height: 1.5
+			margin-bottom: rem(150)
+			.logo-font
+				font-size: 26px
+		.row
+			justify-content: center
+			justify-content: space-around
+			padding: rem(60)
+			padding-bottom: rem(40)
+			border-radius: 4px
+			background-color: $accent
+			.bonus-item
+				text-align: center
+				.img-box
+					margin-top: rem(-160)
+					margin-bottom: rem(20)
+					img
+						background-color: #fff
+						border: 5px solid $accent
+						border-radius: 100%
+						width: 80%
+						margin-left: -10px
+				.title
+					font-size: 22px
+					color: #fff
+					margin-bottom: rem(20)
+					height: rem(45)
+				.opis
+					font-size: 14px
+					color: #fff
+					margin-bottom: rem(20)
+				.price
+					color: #fff
+					.old
+						font-size: 20px
+						text-decoration: line-through
+						color: $black
+					strong
+						font-size: 26px
+		.bonus-btn
+			display: flex
+			justify-content: center
+			.btn
+				padding: rem(16) rem(42)
+				background-color: $green
+				margin-top: rem(-29)
+				&:hover
+					background-color: darken($green, 10%)
+
+
+/* Bonus End */
 
 /* Mode 8 Start */
 

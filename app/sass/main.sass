@@ -194,6 +194,7 @@ textarea
 	justify-content: space-between
 	align-items: center
 	width: 100%
+	z-index: 100
 	.header-logo
 		img
 			height: rem(30) // sm rem(40) 
@@ -264,23 +265,16 @@ textarea
 				font-size: 14px
 				&:hover
 					color: $accent
-				// &::after
-				// 	background-color: $accent
-				// 	display: block
-				// 	content: ""
-				// 	height: 2px
-				// 	width: 0%
-				// 	transition: width .3s ease
-				// &:hover::after, &:focus::after
-				// 	width: 100%
 		li:last-child
 			font-family: $else-font
 			font-weight: bold
 			display: none
 			font-size: 14px
 			display: none
+			z-index: 100
 		.btnHead
 			display: none
+			z-index: 100
 			.btn
 				padding: rem(8) rem(10)
 				font-size: 14px
@@ -298,6 +292,41 @@ textarea
 	a
 		font-size: 14px
 		color: $accent
+
+.time-wrap
+	display: flex
+	position: absolute
+	width: 100%
+	height: 100%
+	justify-content: center
+	align-items: center
+	transition: 0.4s linear
+	background-color: #fff
+	// transform: translate(0, rem(-70))
+	&.animateHide
+		transform: translate(0, rem(-70))
+		opacity: 0
+	&.animateHideMob
+		transform: translate(0, rem(35))
+		height: rem(50)
+		position: fixed
+		opacity: 0
+		bottom: 0
+		&.active
+			opacity: 1
+			transform: translate(0, 0)
+	p
+		color: $accent
+	.timer
+		display: flex
+		font-size: 18px
+		font-family: $logo-font
+		font-weight: bold
+		text-align: center
+		#days1, #hours1, #minutes1, #seconds1
+			min-width: rem(32)
+			.delimiter
+				width: rem(15)
 
 .header-wellcome
 	padding-top: rem(40) // sm rem(67) xs rem(40)
@@ -327,18 +356,13 @@ textarea
 				font-size: 12px // md 20px xs 12px
 				border-radius: 4px
 		.price
-			li
-				display: inline-block
-				font-size: 24px
-				&:not(last-child)
-					margin-right: rem(5)
-				span
-					text-decoration: line-through
-					color: $dark-gray
-				strong
-					font-size: 36px
-					color: $accent
-					// font-family: $else-font
+			font-size: 22px
+			span
+				text-decoration: line-through
+				color: $dark-gray
+			strong
+				font-size: 35px
+				color: $accent
 		.check
 			margin-bottom: rem(5)
 			.check-item
@@ -491,6 +515,10 @@ textarea
 	padding-bottom: rem(40)
 	.container-fluid
 		max-width: 1170px
+		.h3
+			font-size: 32px
+			font-weight: bold
+			margin-bottom: rem(40)
 		.row
 			.tip-item
 				text-align: center
@@ -837,55 +865,72 @@ textarea
 /* Bonus Start */
 
 .bonus
-	// height: 80vh
-	padding-top: rem(30)
+	// padding-top: rem(30) // 320 none
 	padding-bottom: rem(60)
-	// background: radial-gradient(#91caf6, $accent)
 	.container-fluid
 		max-width: 1030px
 		.call
 			font-weight: 300
 			text-align: center
-			font-size: 24px
+			font-size: 16px // 576 18px // 320 16px
 			line-height: 1.5
-			margin-bottom: rem(150)
+			margin-bottom: rem(20) // 576 rem(105) // 320 rem(20)
 			.logo-font
-				font-size: 26px
+				font-size: 22px // 576 22px
 		.row
 			justify-content: center
 			justify-content: space-around
-			padding: rem(60)
+			padding: rem(15) // 320 rem(15)
 			padding-bottom: rem(40)
 			border-radius: 4px
-			background-color: $accent
+			background: url(/img/icons/stopwatch.png) no-repeat left bottom $accent
 			.bonus-item
 				text-align: center
 				.img-box
-					margin-top: rem(-160)
 					margin-bottom: rem(20)
+					// margin-top: rem(-160) // 320 none
+					// overflow: hidden
 					img
 						background-color: #fff
 						border: 5px solid $accent
 						border-radius: 100%
 						width: 80%
-						margin-left: -10px
+						margin-left: rem(-10)
+						// transition: all 1s ease-out
+						// &:hover
+						// 	transform: scale(1.1)
 				.title
-					font-size: 22px
+					font-size: 16px // 576 16px
 					color: #fff
 					margin-bottom: rem(20)
-					height: rem(45)
+					// height: rem(45) // 320 none
 				.opis
-					font-size: 14px
+					font-size: 12px // 576 12px
 					color: #fff
 					margin-bottom: rem(20)
 				.price
 					color: #fff
+					margin-bottom: rem(20)
 					.old
-						font-size: 20px
+						font-size: 16px // 576 16px
 						text-decoration: line-through
 						color: $black
 					strong
-						font-size: 26px
+						font-size: 20px // 576 20px
+			.bonus-timer
+				// margin-top: rem(20) // 320 none
+				margin-bottom: rem(10)
+				.timer
+					color: #fff
+					font-size: 26px // 576 32px // 320 26px
+					font-family: $logo-font
+					display: flex
+					justify-content: center
+					text-align: center
+					#days2, #hours2, #minutes2, #seconds2
+						min-width: rem(32) // 576 rem(44) // 320 rem(32)
+					.delimiter
+						width: rem(15)
 		.bonus-btn
 			display: flex
 			justify-content: center
@@ -1130,6 +1175,10 @@ textarea
 							font-weight: bold
 							.constructor-form-label
 								font-size: 13px
+							.form-old
+								font-size: 26px
+								color: $dark-gray
+								text-decoration: line-through
 							.form-value
 								font-size: 36px
 						.constr-btn

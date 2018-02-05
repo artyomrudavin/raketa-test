@@ -1,3 +1,32 @@
+// Price changer
+
+$(function() {
+
+	function nextMsg(i) {
+		if (messages.length == i) {
+			i = 0;
+		}
+		$('#message').html(messages[i]).fadeIn(500).delay(2000).fadeOut(500, function() {
+			nextMsg(i + 1);
+		});
+	};
+
+	var messages = [
+	"20л: <span>6 890грн</span>&nbsp;<strong>6 090</strong> грн",
+	"30л: <span>7 590грн</span>&nbsp;<strong>6 790</strong> грн",
+	"50л: <span>8 290грн</span>&nbsp;<strong>7 490</strong> грн"
+	];
+
+	$('#message').hide();
+
+	nextMsg(0);
+
+});
+
+
+
+
+
 // Modal Control - Book
 
 $(function() {
@@ -38,6 +67,29 @@ $(function() {
 
 	$(document).on('click', function(event) {
 		if ( event.target.id == 'mW2' ) {
+			modal.addClass('hide');
+		}
+	});
+
+});
+
+// Modal Control - Catalog
+
+$(function() {
+
+	var modal = $('#bonus.modal-mask');
+
+	$('.bonus-btn').on('click', function(event) {
+		event.preventDefault();
+		modal.removeClass('hide');
+	});
+
+	$('.modal-close').on('click', function() {
+		modal.addClass('hide');
+	});
+
+	$(document).on('click', function(event) {
+		if ( event.target.id == 'mW6' ) {
 			modal.addClass('hide');
 		}
 	});
@@ -372,6 +424,7 @@ $(function() {
 	
 	var litreVl = $('.litre-vl'),
 	formValue = $('#form-value, #modal-value'),
+	formOld = $('#form-old'),
 	imgConstr = $('.constructor-img'),
 	mtextValue = $('#modal-text-value'),
 	colVal = $('#col-val'),
@@ -393,8 +446,9 @@ $(function() {
 		var dataTk = $('a.litre-vl.active').attr('data-tank');
 
 		if ( bakVal.hasClass('active') ) {
+			formOld.hide();
 			if ( dataTk == 'twentyTk' ) {
-				formValue.text('3040₴');
+				formValue.text('3 040₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -405,7 +459,7 @@ $(function() {
 				hiddenComment.val('Бак Aquagradus Стандарт на 20л');
 				// console.log(hiddenComment.val());
 			} else if ( dataTk == 'thirtyTk' ) {
-				formValue.text('3740₴');
+				formValue.text('3 740₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -415,7 +469,7 @@ $(function() {
 				mtextValue.text('Бак Aquagradus Стандарт на 30л');
 				hiddenComment.val('Бак Aquagradus Стандарт на 30л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formValue.text('4440₴');
+				formValue.text('4 440₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -428,9 +482,11 @@ $(function() {
 		} else {
 			buyBtn.text('Купить аппарат');
 			modalBtn.text('Купить аппарат');
+			formOld.show();
 
 			if ( dataTk == 'twentyTk' ) {
-				formValue.text('6090₴');
+				formOld.text('6 890₴');
+				formValue.text('6 090₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -440,7 +496,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 20л');
 				hiddenComment.val('Самогонный аппарат с баком на 20л');
 			} else if ( dataTk == 'thirtyTk' ) {
-				formValue.text('6790₴');
+				formOld.text('7 590₴');
+				formValue.text('6 790₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -450,7 +507,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 30л');
 				hiddenComment.val('Самогонный аппарат с баком на 30л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formValue.text('7490₴');
+				formOld.text('8 290₴');
+				formValue.text('7 490₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -470,9 +528,10 @@ $(function() {
 		$(this).toggleClass('active');
 		$('#litre').toggleClass('hide');
 		bakVal.removeClass('active');
+		formOld.hide();
 
 
-		formValue.text('4090₴');
+		formValue.text('4 090₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/pro_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -495,7 +554,8 @@ $(function() {
 			modalBtn.text('Купить колонну отдельно');
 		} else {
 			colVal.text('Колонна отдельно');
-			formValue.text('6090₴');
+			formValue.text('6 090₴');
+			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
 				backgroundRepeat: 'no-repeat',
@@ -526,9 +586,10 @@ $(function() {
 		$(this).toggleClass('active');
 		$('#litre').removeClass('hide');
 		colVal.removeClass('active');
+		formOld.hide();
 
 
-		formValue.text('3040₴');
+		formValue.text('3 040₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -555,7 +616,8 @@ $(function() {
 			modalBtn.text('Купить бак отдельно');
 		} else {
 			bakVal.text('Бак отдельно');
-			formValue.text('6090₴');
+			formValue.text('6 090₴');
+			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
 				backgroundRepeat: 'no-repeat',
@@ -784,5 +846,92 @@ $(function() {
 		};
 
 	});
+
+});
+
+$(function() {
+
+	function updater(d, h, m, s) {
+  // День сброса - 27 сентября 2015 года (и далее каждые три дня)
+  var baseTime = new Date(2018, 2, 8);
+  // Период сброса — 3 дня
+  var period = 3*24*60*60*1000;
+
+  function update() {
+  	var cur = new Date();
+    // сколько осталось миллисекунд
+    var diff = period - (cur - baseTime) % period;
+    // сколько миллисекунд до конца секунды
+    var millis = diff % 1000;
+    diff = Math.floor(diff/1000);
+    // сколько секунд до конца минуты
+    var sec = diff % 60;
+    if(sec < 10) sec = "0"+sec;
+    diff = Math.floor(diff/60);
+    // сколько минут до конца часа
+    var min = diff % 60;
+    if(min < 10) min = "0"+min;
+    diff = Math.floor(diff/60);
+    // сколько часов до конца дня
+    var hours = diff % 24;
+    if(hours < 10) hours = "0"+hours;
+    var days = Math.floor(diff / 24);
+    d.innerHTML = days;
+    h.innerHTML = hours;
+    m.innerHTML = min;
+    s.innerHTML = sec;
+
+    // следующий раз вызываем себя, когда закончится текущая секунда
+    setTimeout(update, millis);
+}
+setTimeout(update, 0);
+}
+
+updater(document.getElementById("days1"),
+	document.getElementById("hours1"),
+	document.getElementById("minutes1"),
+	document.getElementById("seconds1"));
+
+updater(document.getElementById("days2"),
+	document.getElementById("hours2"),
+	document.getElementById("minutes2"),
+	document.getElementById("seconds2"));
+
+});
+
+
+$(function() {
+	
+	var goTo = $('#goto'),
+	sticky = goTo.offset().top,
+	timeHeader = $('.time-wrap');
+
+	$(window).scroll(function() {
+    
+    var topPos = $(this).scrollTop();
+    
+    if ( $(window).width() > 767 ) {
+    	if ( topPos >= sticky ) {
+    		timeHeader.removeClass('animateHide');
+
+    	} else {
+    		timeHeader.addClass('animateHide');
+
+    	}
+    } else {
+    	if ( topPos >= sticky ) {
+    		timeHeader.addClass('active');
+
+    	} else {
+    		timeHeader.removeClass('animateHide');
+    		timeHeader.removeClass('active');
+    		timeHeader.addClass('animateHideMob');
+    		$('#time-text').text('Акция: ');
+    	}
+    }
+
+    
+
+});
 
 });

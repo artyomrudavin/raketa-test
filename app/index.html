@@ -32,11 +32,11 @@
 	<!-- <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style> -->
 
 	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K5KHPKL');</script>
+})(window,document,'script','dataLayer','GTM-K5KHPKL');</script> -->
 <!-- End Google Tag Manager -->
 
 </head>
@@ -44,8 +44,8 @@
 <body>
 
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5KHPKL"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5KHPKL"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 		<!-- End Google Tag Manager (noscript) -->
 
 		<header class="header">
@@ -78,6 +78,22 @@
 							</li>
 						</ul>
 					</div>
+					<div class="time-wrap animateHide">
+						<p id="time-text">До конца акции осталось: </p>
+						<div class="timer">
+							<div id="days1"></div>
+							<div>дн</div>
+							<div class="delimiter">:</div>
+							<div id="hours1"></div>
+							<div>ч</div>
+							<div class="delimiter">:</div>
+							<div id="minutes1"></div>
+							<div>мин</div>
+							<div class="delimiter">:</div>
+							<div id="seconds1"></div>
+							<div>сек</div>
+						</div>
+					</div>
 				</div>				
 			</nav>
 
@@ -89,14 +105,9 @@
 							<h3 class="h3">AquaGradus</h3>
 							<span class="standart">Стандарт</span>
 							<h1 class="h1">Готовьте беспохмельные и полностью натуральные <br class="hidden-up"> алкогольные напитки на своей кухне</h1>
-							<ul class="price">
-								<li>от</li>
-								<li class="num"><span>6 890грн</span></li>
-								<!-- <li>₴</li> -->
-								<!-- <li>от</li> -->
-								<li class="num"><strong>6 090</strong></li>
-								<li>грн</li>
-							</ul>
+							<div id="message" class="price num">
+								20л: <span>6 890грн</span>&nbsp;<strong>6 090</strong> грн
+							</div>
 							<ul class="check">
 								<li class="check-item">
 									<i class="fa fa-check-circle"></i>
@@ -216,6 +227,7 @@
 		<section class="tips">
 
 			<div class="container-fluid">
+				<h3 class="h3">Преимущества нашей компании</h3>
 				<div class="row">
 					<div class="tip-item col-lg-3 col-md-3 col-6">
 						<img src="img/icons/004-analytics.png" alt="Собственное конструкторское бюро" class="img-responsive">
@@ -643,11 +655,70 @@
 							<span class="old">89 грн</span><strong> 0 грн</strong>
 						</div>
 					</div>
+					<div class="bonus-timer col-12">
+						<div class="timer">
+							<div id="days2"></div>
+							<div>дн</div>
+							<div class="delimiter">:</div>
+							<div id="hours2"></div>
+							<div>ч</div>
+							<div class="delimiter">:</div>
+							<div id="minutes2"></div>
+							<div>мин</div>
+							<div class="delimiter">:</div>
+							<div id="seconds2"></div>
+							<div>сек</div>
+						</div>
+					</div>
 				</div>
 				<div class="bonus-btn">
-					<a href="#" class="btn">Получить бонус</a>
+					<a href="#" class="btn bonus-btn">Получить бонус</a>
 				</div>
 			</div>
+
+			<div id="bonus" class="modal-mask hide">
+			<div id="mW6" class="modal-wrapper">
+				<div class="modal-container modal-container--buy">
+					<div class="modal-close"></div>
+					<div class="modal-header">
+						<h3 class="modal-title modal-title--buy">Акционное предложение!</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="modal-order-price">
+								<div>
+									<div class="order-price-caption">
+										Экономия:
+									</div>
+									<div class="order-price-value num">
+										1 129₴
+									</div>
+								</div>
+							</div>
+							<p class="modal-text modal-text--buy">Введите Ваш телефон. Специалист позвонит и уточнит адрес доставки и сообщит дату, когда заказ будет у Вас</p>
+							<form id="formBuy" method="post">
+								<!-- Hidden -->
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Акция">
+								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								<!-- Hidden -->
+								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+								<div class="modal-products">
+									<div>
+										<h5 class="modal-products-title">Товары в заказе:</h5>
+										<div id="modal-text-value" class="modal-products-item">Пначенкова 5м, Игольчатый кран и тройник по 2шт, спиртометр</div>
+									</div>
+								</div>
+								<button type="submit" class="btn modal-btn">Получить бонус</button>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						перезвоним Вам в течение 15 минут
+					</div>
+				</div>
+			</div>
+		</div>
 
 		</section> <!-- Bonus End -->
 
@@ -1031,7 +1102,8 @@
 						<div class="row constr-form">
 							<div class="col-lg-6 col-12 price">
 								<div class="constructor-form-label">Цена:</div>
-								<span id="form-value" class="form-value num">6090₴</span>
+								<span id="form-old" class="form-old num">6 890₴</span>&nbsp;
+								<span id="form-value" class="form-value num">6 090₴</span>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12 buy">
 								<a href="#" class="btn constr-btn buy-btn">Купить аппарат</a>

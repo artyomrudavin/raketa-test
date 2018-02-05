@@ -32,11 +32,11 @@
 	<!-- <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style> -->
 
 	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K5KHPKL');</script>
+})(window,document,'script','dataLayer','GTM-K5KHPKL');</script> -->
 <!-- End Google Tag Manager -->
 
 </head>
@@ -44,8 +44,8 @@
 <body>
 
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5KHPKL"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5KHPKL"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 		<!-- End Google Tag Manager (noscript) -->
 
 		<header class="header">
@@ -78,6 +78,22 @@
 							</li>
 						</ul>
 					</div>
+					<div class="time-wrap animateHide">
+						<p id="time-text">До конца акции осталось: </p>
+						<div class="timer">
+							<div id="days1"></div>
+							<div>дн</div>
+							<div class="delimiter">:</div>
+							<div id="hours1"></div>
+							<div>ч</div>
+							<div class="delimiter">:</div>
+							<div id="minutes1"></div>
+							<div>мин</div>
+							<div class="delimiter">:</div>
+							<div id="seconds1"></div>
+							<div>сек</div>
+						</div>
+					</div>
 				</div>				
 			</nav>
 
@@ -89,14 +105,9 @@
 							<h3 class="h3">AquaGradus</h3>
 							<span class="standart">Стандарт</span>
 							<h1 class="h1">Готовьте беспохмельные и полностью натуральные <br class="hidden-up"> алкогольные напитки на своей кухне</h1>
-							<ul class="price">
-								<li>от</li>
-								<li class="num"><span>6 890грн</span></li>
-								<!-- <li>₴</li> -->
-								<!-- <li>от</li> -->
-								<li class="num"><strong>6 090</strong></li>
-								<li>грн</li>
-							</ul>
+							<div id="message" class="price num">
+								20л: <span>6 890грн</span>&nbsp;<strong>6 090</strong> грн
+							</div>
 							<ul class="check">
 								<li class="check-item">
 									<i class="fa fa-check-circle"></i>
@@ -216,6 +227,7 @@
 		<section class="tips">
 
 			<div class="container-fluid">
+				<h3 class="h3">Преимущества нашей компании</h3>
 				<div class="row">
 					<div class="tip-item col-lg-3 col-md-3 col-6">
 						<img src="img/icons/004-analytics.png" alt="Собственное конструкторское бюро" class="img-responsive">
@@ -327,7 +339,7 @@
 									<span class="ch-name">Наполнитель</span>
 								</div>
 								<div class="col-md-6 bg-ch">
-									<strong class="ch-val">Сетка Панченкова (5 м)</strong>
+									<strong class="ch-val">Насадка Панченкова (5 м)</strong>
 								</div>
 
 								<div class="col-md-6">
@@ -387,14 +399,14 @@
 					</div>
 					<div class="char-form col-12">
 						<p>Мы отвечаем за каждую произведенную нами деталь аппарата и даем гарантию <strong class="num">5 лет</strong>. Для получения напитков чистотой <span class="num">92%</span> все необходимое есть в комплекте, никаких оговорок и " * " в конце сайта.</p>
-						<h4 class="h4">Заполните форму чтобы узнать преимущества аппарата AquaGradus</h4>
-						<h5 class="h5">это позволит Вам сэкономить не менее 1500 грн на дополнительных товарах</h5>
+						<h4 class="h4">Заполните форму чтобы<br>узнать преимущества аппарата<br><span class="logo-font">AquaGradus</span> Стандарт</h4>
+						<h5 class="h5">это позволит Вам сэкономить <strong class="num">1129грн</strong> на дополнительных товарах</h5>
 						<form id="char-form" method="post">
 							<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Характеристики">
 							<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
-							<input type="text" class="form-item" name="DATA[NAME]" required placeholder="Ваше имя">
-							<input type="tel" class="form-item" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
-							<button type="submit" class="form-item btn header-btn">Узнать преимущества</button>
+							<input type="text" name="DATA[NAME]" required placeholder="Ваше имя">
+							<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
+							<button type="submit" class="btn">Узнать преимущества</button>
 						</form>
 					</div>
 				</div>
@@ -555,7 +567,7 @@
 					</div>
 					<div class="recipe-book col-md-12">
 						<p>Узнать рецепты подробно Вы можете из книги «100 рецептов алкогольных напитков Мира на самогонном аппарате»</p>
-						<a href="#" class="btn recipe-btn">Скачать книгу рецептов <br class="hidden-up">  и руководство по эксплуатации</a>
+						<a href="#" class="btn recipe-btn">Получить книгу рецептов</a>
 					</div>
 				</div>
 			</div>
@@ -565,17 +577,17 @@
 					<div class="modal-container">
 						<div class="modal-close"></div>
 						<div class="modal-header">
-							<h3 class="modal-title">Скачать книгу / руководство</h3>
+							<h3 class="modal-title">Получить книгу бесплатно</h3>
 						</div>
 						<div class="modal-body">
 							<form id="modalBook" method="post">
-								<p class="modal-text">Введите свой адрес электронной почты. После подтверждения Вам придет книга с рецептами и руководство по эксплуатации.</p>
+								<p class="modal-text">Введите свой телефон. После подтверждения Вам позвонит менеджер и подберет удобный для Вас способ получения книги: "100 рецептов алкогольных напитков мира".</p>
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Книга">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
 
-								<input type="email" name="DATA[EMAIL_WORK]" placeholder="Введите свой e-mail">
-								<button type="submit" class="btn modal-btn">Получить на e-mail</button>
+								<input type="tel" name="DATA[PHONE_MOBILE]" placeholder="Введите свой телефон">
+								<button type="submit" class="btn modal-btn">Получить книгу</button>
 							</form>
 						</div>
 					</div>
@@ -606,6 +618,109 @@
 			</div>
 
 		</section> <!-- Modes End -->
+
+		<section class="bonus">
+			
+			
+			<div class="container-fluid">
+				<h3 class="call">Заказывайте аппарат <strong class="logo-font">AquaGradus</strong> Стандарт и получите бонус стоимостью <strong class="num">1 129 грн</strong>, для более комфортного и точного отделения сивушных масел и ацетиловых спиртов</h3>
+				<div class="row">
+					<div class="col-md-4 col-sm-4 bonus-item">
+						<div class="img-box"><img src="img/bonus/Pancheknova.png" alt="Насадка Панченкова 5 м" class="responsive-img"></div>
+						<h4 class="title">Насадка Панченкова 5 м</h4>
+						<div class="opis">
+							Увеличивает очищающие и укрепляющие свойства за счет увеличения площади взаимодействия возвратного спирта и восходящих паров.
+						</div>
+						<div class="price num">
+							<span class="old">700 грн</span><strong> 0 грн</strong>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 bonus-item">
+						<div class="img-box"><img src="img/bonus/kran.png" alt="Игольчатый кран и тройник по 2 шт." class="responsive-img"></div>
+						<h4 class="title">Игольчатый кран и тройник по 2 шт.</h4>
+						<div class="opis">
+							Кран игольчатый используетсяь для создания раздельного подключения системы охлаждения дефлегматора и холодильника, что обеспечивает точное разделение на фракции.
+						</div>
+						<div class="price num">
+							<span class="old">340 грн</span><strong> 0 грн</strong>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 bonus-item">
+						<div class="img-box"><img src="img/bonus/spirt.png" alt="Спиртометр" class="responsive-img"></div>
+						<h4 class="title">Спиртометр</h4>
+						<div class="opis">
+							Полезен для определения количества этилового спирта в растворе, состоящем из спирта и воды без других примесей, т.е определяет крепость продукта.
+						</div>
+						<div class="price num">
+							<span class="old">89 грн</span><strong> 0 грн</strong>
+						</div>
+					</div>
+					<div class="bonus-timer col-12">
+						<div class="timer">
+							<div id="days2"></div>
+							<div>дн</div>
+							<div class="delimiter">:</div>
+							<div id="hours2"></div>
+							<div>ч</div>
+							<div class="delimiter">:</div>
+							<div id="minutes2"></div>
+							<div>мин</div>
+							<div class="delimiter">:</div>
+							<div id="seconds2"></div>
+							<div>сек</div>
+						</div>
+					</div>
+				</div>
+				<div class="bonus-btn">
+					<a href="#" class="btn bonus-btn">Получить бонус</a>
+				</div>
+			</div>
+
+			<div id="bonus" class="modal-mask hide">
+			<div id="mW6" class="modal-wrapper">
+				<div class="modal-container modal-container--buy">
+					<div class="modal-close"></div>
+					<div class="modal-header">
+						<h3 class="modal-title modal-title--buy">Акционное предложение!</h3>
+					</div>
+					<div class="modal-body">
+						<div>
+							<div class="modal-order-price">
+								<div>
+									<div class="order-price-caption">
+										Экономия:
+									</div>
+									<div class="order-price-value num">
+										1 129₴
+									</div>
+								</div>
+							</div>
+							<p class="modal-text modal-text--buy">Введите Ваш телефон. Специалист позвонит и уточнит адрес доставки и сообщит дату, когда заказ будет у Вас</p>
+							<form id="formBuy" method="post">
+								<!-- Hidden -->
+								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Акция">
+								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								<!-- Hidden -->
+								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+								<div class="modal-products">
+									<div>
+										<h5 class="modal-products-title">Товары в заказе:</h5>
+										<div id="modal-text-value" class="modal-products-item">Пначенкова 5м, Игольчатый кран и тройник по 2шт, спиртометр</div>
+									</div>
+								</div>
+								<button type="submit" class="btn modal-btn">Получить бонус</button>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						перезвоним Вам в течение 15 минут
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</section> <!-- Bonus End -->
 
 		<section id="goto" class="mode-one mode">
 			<div class="container-fluid">
@@ -694,7 +809,7 @@
 								<br><br>
 								В этом режиме активно используется возвратный охладитель или <strong>дефлегматор</strong>. В нем создается обратный поток спирта, который, стекая вниз, забирает из паров все примеси с лишним запахом.
 								<br><br>
-								Сетка Панченкова, установленная в колонне, увеличивает очищающие и укрепляющие свойства за счет увеличения площади взаимодействия возвратного спирта и восходящих паров. Очищенные спиртовые пары, поднимаясь по колонне, забирают из возвратного потока спирт, за счет чего дополнительно укрепляются до 92 градусов.
+								Насадка Панченкова, установленная в колонне, увеличивает очищающие и укрепляющие свойства за счет увеличения площади взаимодействия возвратного спирта и восходящих паров. Очищенные спиртовые пары, поднимаясь по колонне, забирают из возвратного потока спирт, за счет чего дополнительно укрепляются до 92 градусов.
 							</p>
 						</div>
 						<div class="mode-box">
@@ -744,7 +859,7 @@
 							<p>
 								<strong>В режиме ректификации</strong> значительно увеличивается поверхность взаимодействия возвратного спиртового потока и спиртовых паров. За счет этого можно получать кристально чистый продукт высочайшей крепости. Работа прибора аналогична предыдущему режиму.
 								<br><br>
-								Чтобы ректификация проходила более эффективно, в систему устанавливается дополнительная колонна (царга) с сеткой (приобретается отдельно).
+								Чтобы ректификация проходила более эффективно, в систему устанавливается дополнительная колонна (царга) с насадкой (приобретается отдельно).
 							</p>
 							<div class="more">
 								Подробнее о царге в разделе&nbsp;
@@ -787,7 +902,7 @@
 								С этой задачей успешно справляется <strong>медные</strong> кольца Рашига (приобретается отдельно). Медь связывает сернистые соединения, однако аромат виски сохраняет в первозданном виде.
 							</p>
 							<div class="more">
-								Подробнее о медной сетке в разделе&nbsp;
+								Подробнее о кольцах Рашига в разделе&nbsp;
 								<a href="#super" class="link">«Дополнительные товары»</a>
 							</div>
 						</div>
@@ -987,7 +1102,8 @@
 						<div class="row constr-form">
 							<div class="col-lg-6 col-12 price">
 								<div class="constructor-form-label">Цена:</div>
-								<span id="form-value" class="form-value num">6090₴</span>
+								<span id="form-old" class="form-old num">6 890₴</span>&nbsp;
+								<span id="form-value" class="form-value num">6 090₴</span>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12 buy">
 								<a href="#" class="btn constr-btn buy-btn">Купить аппарат</a>
@@ -1196,8 +1312,8 @@
 						<div id="super" class="column-hover">
 							<span><a href="#" class="link tablink">Узнать подробнее</a></span>
 							<div class="sized">
-								<img src="img/additionaly/1.png" alt="Царга + сетка Панченкова">
-								<p>Дополнительная царга+сетка Панченкова</p>
+								<img src="img/additionaly/1.png" alt="Царга + насадка Панченкова">
+								<p>Дополнительная царга+насадка Панченкова</p>
 							</div>
 						</div>
 					</div>
@@ -1228,13 +1344,13 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="img/additionaly/kart_carga.jpg" alt="Дополнительная царга с сеткой Панченкова" class="img-responsive">
+					<img src="img/additionaly/kart_carga.jpg" alt="Дополнительная царга с насадкой Панченкова" class="img-responsive">
 				</div>
 				<div class="col-12 col-sm-7 good-text">
-					<h3 class="title">Дополнительная царга с сеткой Панченкова</h3>
+					<h3 class="title">Дополнительная царга с насадкой Панченкова</h3>
 					<div class="good-content">
 						<h4 class="h4">Спирт максимальной крепости</h4>
-						<p>Добавьте в систему царгу с установленной сеткой Панченкова и превратите свой аппарат в профессиональную ректификационную колонну, чтобы получать напитки с максимальной крепостью. В комплект с царгой входит 4 болта, 4 барашка и прокладка для удобной установки. Также можно приобрести как царгу так и насадки Панченкова отдельно</p>
+						<p>Добавьте в систему царгу с установленной насадкой Панченкова и превратите свой аппарат в профессиональную ректификационную колонну, чтобы получать напитки с максимальной крепостью. В комплект с царгой входит 4 болта, 4 барашка и прокладка для удобной установки. Также можно приобрести как царгу так и насадки Панченкова отдельно</p>
 						<div class="good-params row">
 							<div class="col-lg-6 col-12">
 								<div class="good-params-item">
@@ -1256,7 +1372,7 @@
 							<div class="col-lg-6 col-12">
 								<div class="good-params-complect">
 									<h5 class="h5">Комплектация</h5>
-									<div>Царга, сетка Панченкова 5 м, 4 болта, 4 барашка, прокладка</div>
+									<div>Царга, насадка Панченкова 5 м, 4 болта, 4 барашка, прокладка</div>
 								</div>
 							</div>
 						</div>
@@ -1423,7 +1539,7 @@
 						<p>Крепость обычной браги - 6-9 % об., а браги на специальных дрожжах - до 17% об. Со специальными спиртовыми дрожжами за одну перегонку Вы сможете получить в 2 раза больше напитка!</p>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">95₴ / 100г</div>
+						<div class="price col-md-6 num">135₴ / 135г</div>
 						<div class="col-md-6"><a id="drogi" href="#" class="btn add-btn">Купить</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрыть</a></div>

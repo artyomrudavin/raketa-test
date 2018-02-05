@@ -780,11 +780,11 @@ $(function() {
 
 // Drag img
 
-// $(function() {
+$(function() {
 
-// 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-// });
+});
 
 // Burger bar
 

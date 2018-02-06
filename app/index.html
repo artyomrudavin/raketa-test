@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- version: v2 -->
+<!DOCTYPE html> <!-- version: v3 -->
 <html lang="ru">
 
 <head>
@@ -66,21 +66,21 @@
 					</div>
 					<div class="header-navbar"> 
 						<ul id="menu">
-							<li><a href="#characteristics" class="h-link h-menu">Характеристики</a></li>
+							<li class="headChar"><a href="#characteristics" class="h-link h-menu">Характеристики</a></li>
 							<li><a href="#modes" class="h-link h-menu">Принцип работы</a></li>
 							<li><a href="#constructor" class="h-link h-menu">Каталог</a></li>
 							<li><a href="#reviews" class="h-link h-menu">Отзывы</a></li>
 							<li><a href="#about" class="h-link h-menu">Доставка</a></li>
-							<li class="btnHead"><a href="#" class="btn">Заказать звонок</a></li>
-							<li>
+							<li class="head-ph">
 								<span>+38 (050) 342-00-06</span><br>
 								<span class="brd-btm">+38 (067) 460-40-99</span><br>
 							</li>
+							<li class="btnHead"><a href="#" class="btn">Заказать звонок</a></li>
 						</ul>
 					</div>
 					<div class="time-wrap animateHide">
 						<p id="time-text">До конца акции осталось: </p>
-						<div class="timer">
+						<div class="timer timer--red">
 							<div id="days1"></div>
 							<div>дн</div>
 							<div class="delimiter">:</div>
@@ -101,10 +101,11 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-7">
-							<h2 class="h2">Самогонный аппарат</h2>
+							<h2 class="h2">Модульный дистиллятор</h2>
 							<h3 class="h3">AquaGradus</h3>
 							<span class="standart">Стандарт</span>
-							<h1 class="h1">Готовьте беспохмельные и полностью натуральные <br class="hidden-up"> алкогольные напитки на своей кухне</h1>
+							<!-- <h1 class="h1">Готовьте беспохмельные и полностью натуральные <br class="hidden-up"> алкогольные напитки на своей кухне</h1> -->
+							<h1 class="h1">Получайте до <span class="num">7 литров</span> беспохмельных напитков на своей кухне <span class="num">всего за 1 час</span></h1>
 							<div id="message" class="price num">
 								20л: <span>6 890грн</span>&nbsp;<strong>6 090</strong> грн
 							</div>
@@ -123,11 +124,11 @@
 								</li>
 								<li class="check-item">
 									<i class="fa fa-check-circle"></i>
-									<span>Оплата после проверки при получении. Гарантия <strong class="num">5 лет</strong></span>
+									<span>Оплата после проверки при получении. <strong class="num">Гарантия 5 лет</strong></span>
 								</li>
 							</ul>
 							<img src="img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1">
-							<p class="formAction"><strong>Заполните форму чтобы зафиксировать скидку <span class="num">800 грн</span></strong></p>
+							<p class="formAction"><strong>Заполните форму чтобы зафиксировать скидку <span class="num">-800 грн + Бонус</span></strong></p>
 							<form class="form" method="post" id="headerForm">
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Первый экран">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
@@ -189,40 +190,6 @@
 			</div>
 
 		</header> <!-- Header End -->
-
-<!-- 		<section class="convenience">
-
-			<div class="container-fluid">
-				<div class="row">
-					<div class="wash col-12 col-md-8">
-						<h3 class="h3">Удобно мыть. Удобно хранить.</h3>
-						<p>Каждый элемент аппарата: колонну, дефлегматор, соединительное колено, холодильник, - можно легко разобрать и собрать вручную без гаечных ключей для идеальной промывки после работы.</p>
-					</div>
-					<div class="wash-img col-12">
-						<img src="img/wash.png" alt="Аппарат AquaGradus удобен в использовании и хранении">
-					</div>
-					<div class="wash-icos col-12 col-md-7 offset-md-5">
-						<div class="wre-box">
-							<div class="row">
-								<div class="col-3">
-									<img src="img/wash-1.png" alt="">
-									<div>100% герметичность</div>
-								</div>
-								<div class="col-3">
-									<img src="img/wash-2.png" alt="">
-									<div>Нержавеющая сталь AISI 304</div>
-								</div>
-								<div class="col-3">
-									<img src="img/wash-3.png" alt="">
-									<div>Легкая сборка</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</section> --> <!-- Convenience End -->
 
 		<section class="tips">
 
@@ -332,7 +299,28 @@
 									<span class="ch-name">Скорость перегонки</span>
 								</div>
 								<div class="col-md-6 bg-ch">
-									<strong class="ch-val">3-7 л/час</strong>
+									<strong class="ch-val">7 л/час</strong>
+								</div>
+
+								<div class="col-md-6">
+									<span class="ch-name">Монтаж охлаждения</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">Муфта 1/4"</strong>
+								</div>
+
+								<div class="col-md-6">
+									<span class="ch-name">Емкость</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">Усиленная (ребра жесткости)</strong>
+								</div>
+
+								<div class="col-md-6">
+									<span class="ch-name">Электронагрев</span>
+								</div>
+								<div class="col-md-6 bg-ch">
+									<strong class="ch-val">В комплекте муфта под ТЭН</strong>
 								</div>
 
 								<div class="col-md-6">
@@ -601,11 +589,11 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-5">
-						<img src="img/img-1-1.png" alt="6 в 1. Любые напитки до 96% об." class="img-responsive sm-show">
+						<img src="img/img-1-2.png" alt="6 в 1. Любые напитки до 96% об." class="img-responsive sm-show">
 					</div>
 					<div class="col-md-7 goto">
 						<h3 class="h3">6 в 1. Любые напитки до 96% об.</h3>
-						<img src="img/img-1-1.png" alt="6 в 1. Любые напитки до 96% об." class="img-responsive sm-hidden">
+						<img src="img/img-1-2.png" alt="6 в 1. Любые напитки до 96% об." class="img-responsive sm-hidden">
 						<p>
 							Фланцевое соединение всех узлов аппарата позволяет менять конфигурацию и использовать прибор в 6 режимах работы. Теперь Вы можете готовить ЛЮБЫЕ напитки, в том числе чистый 96% спирт всего на одном аппарате.
 							<br>
@@ -677,48 +665,48 @@
 			</div>
 
 			<div id="bonus" class="modal-mask hide">
-			<div id="mW6" class="modal-wrapper">
-				<div class="modal-container modal-container--buy">
-					<div class="modal-close"></div>
-					<div class="modal-header">
-						<h3 class="modal-title modal-title--buy">Акционное предложение!</h3>
-					</div>
-					<div class="modal-body">
-						<div>
-							<div class="modal-order-price">
-								<div>
-									<div class="order-price-caption">
-										Экономия:
-									</div>
-									<div class="order-price-value num">
-										1 129₴
-									</div>
-								</div>
-							</div>
-							<p class="modal-text modal-text--buy">Введите Ваш телефон. Специалист позвонит и уточнит адрес доставки и сообщит дату, когда заказ будет у Вас</p>
-							<form id="formBuy" method="post">
-								<!-- Hidden -->
-								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Акция">
-								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
-								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
-								<!-- Hidden -->
-								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
-								<div class="modal-products">
-									<div>
-										<h5 class="modal-products-title">Товары в заказе:</h5>
-										<div id="modal-text-value" class="modal-products-item">Пначенкова 5м, Игольчатый кран и тройник по 2шт, спиртометр</div>
-									</div>
-								</div>
-								<button type="submit" class="btn modal-btn">Получить бонус</button>
-							</form>
+				<div id="mW6" class="modal-wrapper">
+					<div class="modal-container modal-container--buy">
+						<div class="modal-close"></div>
+						<div class="modal-header">
+							<h3 class="modal-title modal-title--buy">Акционное предложение!</h3>
 						</div>
-					</div>
-					<div class="modal-footer">
-						перезвоним Вам в течение 15 минут
+						<div class="modal-body">
+							<div>
+								<div class="modal-order-price">
+									<div>
+										<div class="order-price-caption">
+											Экономия:
+										</div>
+										<div class="order-price-value num">
+											1 129₴
+										</div>
+									</div>
+								</div>
+								<p class="modal-text modal-text--buy">Введите Ваш телефон. Специалист позвонит и уточнит адрес доставки и сообщит дату, когда заказ будет у Вас</p>
+								<form id="formBonus" method="post">
+									<!-- Hidden -->
+									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Акция">
+									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+									<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+									<!-- Hidden -->
+									<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+									<div class="modal-products">
+										<div>
+											<h5 class="modal-products-title">Товары в заказе:</h5>
+											<div id="modal-bonus-value" class="modal-products-item">Пначенкова 5м, Игольчатый кран и тройник по 2шт, спиртометр</div>
+										</div>
+									</div>
+									<button type="submit" class="btn modal-btn">Получить бонус</button>
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							перезвоним Вам в течение 15 минут
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
 		</section> <!-- Bonus End -->
 
@@ -932,182 +920,92 @@
 			</div>
 		</section> <!-- Mode-Five End -->
 
-	<!-- <section class="mode-six mode">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-5 col-md-4 block">
-					<img src="img/modes/r06.png" alt="Режим укрепление с ароматизацией" class="img-responsive mode-img sm-show">
-				</div>
-				<div class="col-lg-7 col-md-8 block">
-					<div class="mode-text">
-						<h3 class="h3">6. Режим укрепление с ароматизацией</h3>
-						<img src="img/modes/r06.png" alt="Режим укрепление с ароматизацией" class="img-responsive sm-hidden">
-						<p>
-							Перегонка с сухопарником-ароматором (приобретается отдельно) — идеальная альтернатива настойкам, которые готовятся несколько недель. В этом режиме аромат Ваших напитков будет насыщенным уже сразу после перегонки - ждать не нужно! После очистки и укрепления в колонне и дефлегматоре спиртовые пары проходят через аромакорзину, которую можно наполнить ягодами можжевельника (джин), цедрой лимона или апельсина (лимончелло), гранатовой кожурой (гранатовая настойка) или любыми другими ароматными веществами - и насладиться непревзойденным запахом Вашего уникального шедевра!
-						</p>
-						<div class="more">
-							Подробнее о сухопарнике в разделе&nbsp;
-							<a href="#super" class="link">«Дополнительные товары»</a>
-						</div>
+		<section class="mode-eight mode">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-5 col-md-4 block">
+						<img src="img/modes/r08.png" alt="Режим укрепления с диоптром" class="img-responsive mode-img sm-show">
 					</div>
-					<div class="mode-box">
-						<div class="row">
-							<div class="col-12 col-lg-3 col-md-4 title">Ароматные настойки</div>
-							<div class="col-md-2 col-4 mode-text-img">
-								<img src="img/modes/bootles/brandy.png" alt="Джин">
-								<div>Джин</div>
-							</div>
-							<div class="col-md-2 col-4 mode-text-img">
-								<img src="img/modes/bootles/slivovitz.png" alt="Цитрусовая настойка">
-								<div>Цитрусовая</div>
-							</div>
-							<div class="col-md-2 col-3 mode-text-img lg-show">
-								<img src="img/modes/bootles/granat.png" alt="Гранатовая настойка">
-								<div>Гранатовая</div>
-							</div>
-							<div class="col-md-1 col-3 mode-text lg-show">
-								<div>или</div>
-							</div>
-							<div class="col-md-2 col-4 mode-text-img">
-								<img src="img/modes/bootles/nnt.png" alt="Любой аромат на Ваш выбор с аппаратом aquagradus!">
-								<div>Любой аромат на Ваш выбор!</div>
+					<div class="col-lg-7 col-md-8 block">
+						<div class="mode-text">
+							<h3 class="h3">6. Режим укрепления с диоптром</h3>
+							<img src="img/modes/r08.png" alt="Режим укрепления с диоптром" class="img-responsive sm-hidden">
+							<p>
+								Этот режим полностью идентичен перегонке с укреплением (2 режим).
+								<br><br>
+								Однако перегонка в режиме укрепления с диоптром (приобретается отдельно) отличается особо завораживающим эффектом визуализации процессов в колонне. Один раз увидеть возвратный поток спирта в колонне своими глазами лучше, чем 100 раз прочитать о нем на сайте.
+							</p>
+							<div class="more">
+								Подробнее о диоптре и дополнительных узлах на его базе в разделе&nbsp;
+								<a href="#super" class="link">«Дополнительные товары»</a>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> --> <!-- Mode-Six End -->
-
-	<!-- <section class="mode-seven mode">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 block">
-					<div class="mode-text">
-						<h3 class="h3">7. Режим двойной перегонки</h3>
-						<img src="img/modes/r07.png" alt="Режим двойной перегонки" class="img-responsive sm-hidden">
-						<p>
-							Нижняя часть сухопарника представляет собой медную колпачково-тарельчатую колонну. Простая перегонка с такой колонной позволяет добиться эффекта «двойной перегонки». Пары напитка попадают в сухопарник, расширяются и частично конденсируются на стеклянных стенках. Конденсат стекает на тарелку, где подогревается вновь идущими из бака парами и закипает вновь. Таким образом достигается эффект двойной перегонки.
-							<br><br>
-							Таким способом удобно готовить горилку (самогон из сахара двойной перегонки, полученный за 1 раз в этом режиме) и ром (самогон, только из тростникового сахара), а также медовуху. Приятный «ядрёный» дух дистиллятов при такой перегонке сохраняется на ура и Вы сможете получить их всего за 1 перегонку!
-						</p>
-						<div class="more">
-							Подробнее о сухопарнике в разделе&nbsp;
-							<a href="#super" class="link">«Дополнительные товары»</a>
-						</div>
-					</div>
-					<div class="mode-box">
-						<div class="row">
-							<div class="col-12 col-md-5 title">«Ядреные» классические дистилляты</div>
-							<div class="col-md-2 col-4 mode-text-img">
-								<img src="img/modes/bootles/chacha.png" alt="Горилка">
-								<div>Горилка</div>
-							</div>
-							<div class="col-md-2 col-4 mode-text-img">
-								<img src="img/modes/bootles/brandy.png" alt="Ром">
-								<div>Ром</div>
-							</div>
-							<div class="col-md-2 col-4 mode-text-img">
-								<img src="img/modes/bootles/slivovitz.png" alt="Медовуха">
-								<div>Медовуха</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="col-lg-6 col-md-6 block">
-					<img src="img/modes/r07.png" alt="Режим двойной перегонки" class="img-responsive mode-img sm-show">
-				</div>
-			</div>
-		</div>
-	</section> --> <!-- Mode-Seven End -->
-
-	<section class="mode-eight mode">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-5 col-md-4 block">
-					<img src="img/modes/r08.png" alt="Режим укрепления с диоптром" class="img-responsive mode-img sm-show">
-				</div>
-				<div class="col-lg-7 col-md-8 block">
-					<div class="mode-text">
-						<h3 class="h3">6. Режим укрепления с диоптром</h3>
-						<img src="img/modes/r08.png" alt="Режим укрепления с диоптром" class="img-responsive sm-hidden">
-						<p>
-							Этот режим полностью идентичен перегонке с укреплением (2 режим).
-							<br><br>
-							Однако перегонка в режиме укрепления с диоптром (приобретается отдельно) отличается особо завораживающим эффектом визуализации процессов в колонне. Один раз увидеть возвратный поток спирта в колонне своими глазами лучше, чем 100 раз прочитать о нем на сайте.
-						</p>
-						<div class="more">
-							Подробнее о диоптре и дополнительных узлах на его базе в разделе&nbsp;
-							<a href="#super" class="link">«Дополнительные товары»</a>
-						</div>
-					</div>
-					<div class="mode-box">
-						<div class="row">
-							<div class="col-md-12 title sm-title ctr-title">Ароматные дистилляты с чистотой до 90 градусов + визуализация</div>
-							<div class="col-md-2 col-sm-2 col-6 mode-text-img">
-								<img src="img/modes/bootles/brandy.png" alt="Бренди">
-								<div>Бренди</div>
-							</div>
-							<div class="col-md-2 col-sm-2 col-6 mode-text-img">
-								<img src="img/modes/bootles/slivovitz.png" alt="Сливовица">
-								<div>Сливовица</div>
-							</div>
-							<div class="col-md-2 col-sm-2 col-6 mode-text-img">
-								<img src="img/modes/bootles/chacha.png" alt="Чача">
-								<div>Чача</div>
-							</div>
-							<div class="col-md-2 col-sm-2 col-6 mode-text-img">
-								<img src="img/modes/bootles/cognac.png" alt="Коньяк">
-								<div>Коньяк</div>
-							</div>
-							<div class="col-md-2 col-sm-2 col-6 mode-text-img">
-								<img src="img/modes/bootles/calvados.png" alt="Кальвадос">
-								<div>Кальвадос</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> <!-- Mode-Eight End -->
-
-	<section id="constructor" class="constructor">
-
-		<div class="container">
-			<h3 class="title">Каталог</h3>
-			<div class="row constr-row">
-				<div class="constructor-img"></div>
-				<div class="constructor-control">
-					<h3 class="h3 sm-show">Купить аппарат <span>AquaGradus</span> Стандарт</h3>
-					<div class="constructor-controls-filter">
-						<div class="constructor-controls-filter-valume">
-							<div class="constructor-label">Выберите объем</div>
-							<div class="row constr-filter">
-								<div class="col-lg-6 litre">
-									<ul id="litre">
-										<!-- 	<li><a href="#" class="litre-vl active">12 л</a></li> -->
-										<li><a data-tank="twentyTk" href="#" class="litre-vl active">20 л</a></li>
-										<li><a data-tank="thirtyTk" href="#" class="litre-vl">30 л</a></li>
-										<li><a data-tank="fiftyTk" href="#" class="litre-vl">50 л</a></li>
-									</ul>
+						<div class="mode-box">
+							<div class="row">
+								<div class="col-md-12 title sm-title ctr-title">Ароматные дистилляты с чистотой до 90 градусов + визуализация</div>
+								<div class="col-md-2 col-sm-2 col-6 mode-text-img">
+									<img src="img/modes/bootles/brandy.png" alt="Бренди">
+									<div>Бренди</div>
 								</div>
-								<div class="col-lg-6 choose">
-									<a id="col-val" href="#" class="col-val link">Колонна отдельно</a>
-									<span class="separate">/</span>
-									<a id="bak-val" href="#" class="bak-val link">Бак отдельно</a>
+								<div class="col-md-2 col-sm-2 col-6 mode-text-img">
+									<img src="img/modes/bootles/slivovitz.png" alt="Сливовица">
+									<div>Сливовица</div>
+								</div>
+								<div class="col-md-2 col-sm-2 col-6 mode-text-img">
+									<img src="img/modes/bootles/chacha.png" alt="Чача">
+									<div>Чача</div>
+								</div>
+								<div class="col-md-2 col-sm-2 col-6 mode-text-img">
+									<img src="img/modes/bootles/cognac.png" alt="Коньяк">
+									<div>Коньяк</div>
+								</div>
+								<div class="col-md-2 col-sm-2 col-6 mode-text-img">
+									<img src="img/modes/bootles/calvados.png" alt="Кальвадос">
+									<div>Кальвадос</div>
 								</div>
 							</div>
 						</div>
-						<div class="row constr-form">
-							<div class="col-lg-6 col-12 price">
-								<div class="constructor-form-label">Цена:</div>
-								<span id="form-old" class="form-old num">6 890₴</span>&nbsp;
-								<span id="form-value" class="form-value num">6 090₴</span>
+					</div>
+				</div>
+			</div>
+		</section> <!-- Mode-Eight End -->
+
+		<section id="constructor" class="constructor">
+
+			<div class="container">
+				<h3 class="title">Каталог</h3>
+				<div class="row constr-row">
+					<div class="constructor-img"></div>
+					<div class="constructor-control">
+						<h3 class="h3 sm-show">Купить аппарат <span>AquaGradus</span> Стандарт</h3>
+						<div class="constructor-controls-filter">
+							<div class="constructor-controls-filter-valume">
+								<div class="constructor-label">Выберите объем</div>
+								<div class="row constr-filter">
+									<div class="col-lg-6 litre">
+										<ul id="litre">
+											<!-- 	<li><a href="#" class="litre-vl active">12 л</a></li> -->
+											<li><a data-tank="twentyTk" href="#" class="litre-vl active">20 л</a></li>
+											<li><a data-tank="thirtyTk" href="#" class="litre-vl">30 л</a></li>
+											<li><a data-tank="fiftyTk" href="#" class="litre-vl">50 л</a></li>
+										</ul>
+									</div>
+									<div class="col-lg-6 choose">
+										<a id="col-val" href="#" class="col-val link">Колонна отдельно</a>
+										<span class="separate">/</span>
+										<a id="bak-val" href="#" class="bak-val link">Бак отдельно</a>
+									</div>
+								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-12 buy">
-								<a href="#" class="btn constr-btn buy-btn">Купить аппарат</a>
-							</div>
+							<div class="row constr-form">
+								<div class="col-lg-6 col-12 price">
+									<div class="constructor-form-label">Цена:</div>
+									<span id="form-old" class="form-old num">6 890₴</span>&nbsp;
+									<span id="form-value" class="form-value num">6 090₴</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12 buy">
+									<a href="#" class="btn constr-btn buy-btn">Купить аппарат</a>
+								</div>
 							<!-- <div class="col-lg-4 col-md-6 col-12 add-buy">
 								<a href="#" class="btn constr-btn">Купить аппарат <br>с доп. товарами</a>
 							</div> -->
@@ -1470,44 +1368,6 @@
 				</div>
 			</div>
 
-			<!-- <div class="row details tab-content">
-				<div class="col-12 col-sm-5 good-image">
-					<img src="img/additionaly/kart_nasos.jpg" alt="Насос для автономного охлаждения" class="img-responsive">
-				</div>
-				<div class="col-12 col-sm-7 good-text">
-					<h3 class="title">Насос для автономного охлаждения</h3>
-					<div class="good-content">
-						<h4 class="h4">Используйте аппарат без подключения к водопроводу.</h4>
-						<p>Хотите заняться самогоноварением на даче или в гараже, где нет проточной воды? Аквариумный роторный насос с производительностью 500 л/ч справится с охлаждением аппарата, достаточно просто погрузить его в емкость с водой и подключить к аппарату с помощью шлангов, идущих в комплекте. Минимальный расход электроэнергии - всего 10 Вт.</p>
-					</div>
-					<div class="row good-controls">
-						<div class="price col-md-6 num">490₴</div>
-						<div class="col-md-6"><a href="#" class="btn add-btn">Купить</a></div>
-					</div>
-					<div class="close"><a href="#" class="link tab-close">Закрыть</a></div>
-				</div>
-			</div> -->
-
-			<!-- <div class="row details tab-content">
-				<div class="col-12 col-sm-5 good-image">
-					<img src="img/additionaly/kart_plitka.jpg" alt="Индукционная плита для самогонного аппарата" class="img-responsive">
-				</div>
-				<div class="col-12 col-sm-7 good-text">
-					<h3 class="title">Индукционная плита для самогонного аппарата</h3>
-					<div class="good-content">
-						<h4 class="h4">Автономный ускоренный нагрев.</h4>
-						<p>Незаменимая вещь для тех, у кого высота вытяжки над плитой не позволяет установить высокую колонну для высококачественной перегонки.</p>
-						<p>Индукционная плитка мощностью 2 кВТ позволяет в 2 раза быстрее нагревать аппарат до кипения за счет современной технологии электромагнитного нагрева - нагревается не плита, а ферромагнитное дно кастрюли. Электромагнитные волны активно используются для современных технологий быстрого нагрева: вспомните, что еду себе мы уже давно разогреваем в микроволновке, а не в кастрюльке на плите!</p>
-						<p>Компактный размер позволяет установить плиту на даче или в гараже. Делайте любимые напитки не только на кухне, но и в любом удобном для Вас месте!</p>
-					</div>
-					<div class="row good-controls">
-						<div class="price col-md-6 num">3600₴</div>
-						<div class="col-md-6"><a href="#" class="btn add-btn">Купить</a></div>
-					</div>
-					<div class="close"><a href="#" class="link tab-close">Закрыть</a></div>
-				</div>
-			</div> -->
-
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
 					<img src="img/additionaly/areom.jpg" alt="Набор профессиональных ареометров и мерная колба" class="img-responsive">
@@ -1641,7 +1501,7 @@
 					<p>Акваградус выбрал за простоту и понятность. Классическая брагоректификационная колонна с хорошим холодильником и дефлегматором, да ещё и в таком замечательном исполнении. Твёрдая 5ка.</p>
 				</div>
 				<div class="col-md-3 col-sm-6 rev-img">
-					<img src="img/reviews/o2.jpg" alt="Отзывы о самогонном аппарате Aquagradus Стандарт">
+					<img src="img/reviews/o4.jpg" alt="Отзывы о самогонном аппарате Aquagradus Стандарт">
 					<p class="name">Александр Агарков</p>
 					<p class="city">г. Белая Церковь</p>
 					<p>То, что аппарат дают проверить перед оплатой - просто поразило! Проверил все досконально, остался доволен, все как заявлено. Не думал что в интернете есть такие "прозрачные" продавцы!</p>
@@ -1653,7 +1513,7 @@
 					<p>Диоптр-аромакорзина, выбрал благодаря этому устройству… Идея отличная… Жду полноценную тарельчатую колонну от вас, ребята, жаль что в ассортименте их нет.</p>
 				</div>
 				<div class="col-md-3 col-sm-6 rev-img">
-					<img src="img/reviews/o4.jpg" alt="Отзывы о самогонном аппарате Aquagradus Стандарт">
+					<img src="img/reviews/o2.jpg" alt="Отзывы о самогонном аппарате Aquagradus Стандарт">
 					<p class="name">Владимир Якунин</p>
 					<p class="city">г. Харьков</p>
 					<p>Цены кусачие, но качество того стоит. Заказал 30 ку, тк оптимальный объем для моей дачи (6 яблонь, 5 кустов терновника, ну плюс смородина-крыжовник) - все надо утилизировать…</p>

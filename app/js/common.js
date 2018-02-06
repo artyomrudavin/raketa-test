@@ -762,16 +762,22 @@ $(function() {
 
 	$(window).scroll(function() {
 
-		if ( $(window).width() > 767 ) {
+		var winWidth = $(window).width();
 
+		if ( winWidth > 767 && winWidth < 1090 ) {
 			if ( $(this).scrollTop() > 580 ) {
-				$('.header-navbar li:last-child').hide();
+				$('.header-navbar .btnHead').show();
+				$('.headChar').hide();
+			} else {
+				$('.header-navbar .btnHead').hide();
+				$('.headChar').show();
+			};
+		} else if ( winWidth > 767 ) {
+			if ( $(this).scrollTop() > 580 ) {
 				$('.header-navbar .btnHead').show();
 			} else {
-				$('.header-navbar ul li:last-child').show();
 				$('.header-navbar .btnHead').hide();
 			};
-
 		};
 
 	});
@@ -806,7 +812,7 @@ $(function() {
 
 $(function() {
 
-	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form").submit(function() { //Change
+	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus").submit(function() { //Change
 		var th = $(this);
 
 		$.ajax({
@@ -853,7 +859,7 @@ $(function() {
 
 	function updater(d, h, m, s) {
   // День сброса - 27 сентября 2015 года (и далее каждые три дня)
-  var baseTime = new Date(2018, 2, 8);
+  var baseTime = new Date(2018, 1, 6);
   // Период сброса — 3 дня
   var period = 3*24*60*60*1000;
 
@@ -861,6 +867,7 @@ $(function() {
   	var cur = new Date();
     // сколько осталось миллисекунд
     var diff = period - (cur - baseTime) % period;
+  	// console.log(diff % 1000);
     // сколько миллисекунд до конца секунды
     var millis = diff % 1000;
     diff = Math.floor(diff/1000);
@@ -880,6 +887,13 @@ $(function() {
     h.innerHTML = hours;
     m.innerHTML = min;
     s.innerHTML = sec;
+
+    // console.log(days);
+
+    if ( days < '1' ) {
+    	console.log(days);
+    	$('.timer--red').css('color', '#EE4034');
+    };
 
     // следующий раз вызываем себя, когда закончится текущая секунда
     setTimeout(update, millis);
@@ -907,31 +921,31 @@ $(function() {
 	timeHeader = $('.time-wrap');
 
 	$(window).scroll(function() {
-    
-    var topPos = $(this).scrollTop();
-    
-    if ( $(window).width() > 767 ) {
-    	if ( topPos >= sticky ) {
-    		timeHeader.removeClass('animateHide');
 
-    	} else {
-    		timeHeader.addClass('animateHide');
+		var topPos = $(this).scrollTop();
 
-    	}
-    } else {
-    	if ( topPos >= sticky ) {
-    		timeHeader.addClass('active');
+		if ( $(window).width() > 767 ) {
+			if ( topPos >= sticky ) {
+				timeHeader.removeClass('animateHide');
 
-    	} else {
-    		timeHeader.removeClass('animateHide');
-    		timeHeader.removeClass('active');
-    		timeHeader.addClass('animateHideMob');
-    		$('#time-text').text('Акция: ');
-    	}
-    }
+			} else {
+				timeHeader.addClass('animateHide');
 
-    
+			}
+		} else {
+			if ( topPos >= sticky ) {
+				timeHeader.addClass('active');
 
-});
+			} else {
+				timeHeader.removeClass('animateHide');
+				timeHeader.removeClass('active');
+				timeHeader.addClass('animateHideMob');
+				$('#time-text').text('Акция: ');
+			}
+		}
+
+
+
+	});
 
 });

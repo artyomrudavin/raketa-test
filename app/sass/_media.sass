@@ -163,6 +163,23 @@
 				flex-direction: row
 				.form-item
 					width: 32%
+		.header-bonus
+			top: rem(500)
+			right: rem(10)
+			width: rem(210)
+			padding: rem(10)
+			.bonus-title
+				font-size: 16px
+				margin-bottom: rem(10)
+			ul
+				li
+					p
+						font-size: 14px	
+			.akcii
+				margin-top: rem(10)
+				font-size: 14px
+			.timer
+				font-size: 16px
 
 
 	/* Header End */
@@ -249,6 +266,18 @@
 	.col-sm-7
 		flex: 0 0 58.33333%
 		max-width: 58.33333%
+
+	/* Header Start */
+
+	.header-bonus
+		.bonus-title
+			ul
+				li
+					p
+			.akcii
+			.timer
+
+	/* Header End */
 
 	/* Bonus Start */
 
@@ -355,6 +384,8 @@
 				min-width: rem(36)
 	.header-wellcome
 		.container-fluid
+			.img-2
+				margin-left: rem(-95)
 			.img-1
 				display: none
 			.h2
@@ -365,6 +396,7 @@
 				top: rem(45) // rem(40)
 				left: rem(420) // rem(365)
 				font-size: 20px // 14px
+				z-index: 1
 			.formAction, form
 				min-width: rem(570)
 			.order
@@ -376,6 +408,16 @@
 					bottom: rem(27) // sm rem(27) xs rem(10)
 			.header-col-hd
 				display: block
+		.header-bonus
+			top: rem(90)
+			width: rem(220)
+			.bonus-title
+			ul
+				li
+					p
+			.akcii
+			.timer
+				font-size: 18px
 
 
 	/* Header End */
@@ -415,6 +457,11 @@
 			.char-list, .product
 				margin: 0
 			.char-form
+				.h4
+					font-size: 36px
+					margin-bottom: rem(15)
+					.logo-font
+						font-size: 42px
 				form
 					flex-direction: row
 					input
@@ -582,8 +629,6 @@
 					font-size: 16px
 			.head-ph
 				font-size: 16px
-			
-
 
 	/* Header End */
 	
@@ -664,3 +709,67 @@
 	.lg-show
 		display: block!important
 
+	.header-wellcome
+		.container-fluid
+			.img-2
+				margin-left: initial
+
+/* Very Large Devices, Wide Screens */
+@media only screen and (min-width : 1280px)
+	.header-wellcome
+		.header-bonus
+			right: rem(30)
+			.bonus-title
+			ul
+				li
+					p
+			.akcii
+			.timer
+
+/* Very Large Devices, Wide Screens */
+@media only screen and (min-width : 1366px)
+	.header-wellcome
+		.header-bonus
+			right: rem(55)
+			.bonus-title
+			ul
+				li
+					p
+			.akcii
+			.timer
+
+/* Very Large Devices, Wide Screens */
+@media only screen and (min-width : 1440px)
+	.header-wellcome
+		.header-bonus
+			right: rem(105)
+			.bonus-title
+			ul
+				li
+					p
+			.akcii
+			.timer
+
+/* Very Large Devices, Wide Screens */
+@media only screen and (min-width : 1600px)
+	.header-wellcome
+		.header-bonus
+			right: rem(185)
+			.bonus-title
+			ul
+				li
+					p
+			.akcii
+			.timer
+
+/* Very Large Devices, Wide Screens */
+@media only screen and (min-width : 1920px)
+	.header-wellcome
+		.header-bonus
+			right: rem(345)
+			.bonus-title
+			ul
+				li
+					p
+			.akcii
+			.timer

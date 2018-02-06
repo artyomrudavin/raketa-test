@@ -911,6 +911,11 @@ updater(document.getElementById("days2"),
 	document.getElementById("minutes2"),
 	document.getElementById("seconds2"));
 
+updater(document.getElementById("days3"),
+	document.getElementById("hours3"),
+	document.getElementById("minutes3"),
+	document.getElementById("seconds3"));
+
 });
 
 

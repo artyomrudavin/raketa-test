@@ -954,3 +954,13 @@ $(function() {
 	});
 
 });
+
+$(function() {
+	
+	setInterval(function() {
+
+		$('.header-bonus').toggleClass('blink');
+
+	}, 1000);
+
+});

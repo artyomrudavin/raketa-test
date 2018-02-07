@@ -152,18 +152,18 @@ $(function() {
 	hiddenComAdd = $('#additionally-modal [name="DATA[COMMENTS]"]');
 		// console.log(hiddenComAdd);
 
-		$('#carga, #drogi, #areom, #rashiga, #popugai, #dioptr').on('click', function(e) {
+		$('#carga, #komplOhl, #areom, #rashiga, #popugai, #dioptr, #ugol, #regMosh, #ten').on('click', function(e) {
 			e.preventDefault();
 		// $(this).addClass('active');
 		modal.removeClass('hide');
 
 		if ( $(this).attr('id') == 'carga' ) {
-			addPrice.text('1190₴');
+			addPrice.text('1 190₴');
 			addTextm.text('Дополнительная царга с сеткой Панченкова');
 			hiddenComAdd.val('Дополнительная царга с сеткой Панченкова');
 			// console.log('carga');
 		} else if ( $(this).attr('id') == 'dioptr' ) {
-			addPrice.text('1590₴');
+			addPrice.text('1 590₴');
 			addTextm.text('Инновационный диоптр 4 в 1');
 			hiddenComAdd.val('Инновационный диоптр 4 в 1');
 			// console.log('dioptr');
@@ -182,10 +182,25 @@ $(function() {
 			addTextm.text('Набор профессиональных ареометров и мерная колба');
 			hiddenComAdd.val('Набор профессиональных ареометров и мерная колба');
 			// console.log('areom');
-		} else if ( $(this).attr('id') == 'drogi' ) {
-			addPrice.text('95₴ / 100г');
-			addTextm.text('Специальные спиртовые дрожжи');
-			hiddenComAdd.val('Специальные спиртовые дрожжи');
+		} else if ( $(this).attr('id') == 'komplOhl' ) {
+			addPrice.text('750₴');
+			addTextm.text('Комплект охлождения ДеЛюкс');
+			hiddenComAdd.val('Комплект охлождения ДеЛюкс');
+			// console.log('drogi');
+		} else if ( $(this).attr('id') == 'ugol' ) {
+			addPrice.text('750₴');
+			addTextm.text('Угольная колонна AquaGradus');
+			hiddenComAdd.val('Угольная колонна AquaGradus');
+			// console.log('drogi');
+		} else if ( $(this).attr('id') == 'regMosh' ) {
+			addPrice.text('1 490₴');
+			addTextm.text('Регулятор мощности нагрева АГ-2');
+			hiddenComAdd.val('Регулятор мощности нагрева АГ-2');
+			// console.log('drogi');
+		} else if ( $(this).attr('id') == 'ten' ) {
+			addPrice.text('250₴');
+			addTextm.text('Водяной ТЭН для самогонного аппарат');
+			hiddenComAdd.val('Водяной ТЭН для самогонного аппарат');
 			// console.log('drogi');
 		};
 	});

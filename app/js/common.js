@@ -12,9 +12,9 @@ $(function() {
 	};
 
 	var messages = [
-	"20л: <span>6 890грн</span>&nbsp;<strong>6 090</strong> грн",
-	"30л: <span>7 590грн</span>&nbsp;<strong>6 790</strong> грн",
-	"50л: <span>8 290грн</span>&nbsp;<strong>7 490</strong> грн"
+	"20л: <span>6 650грн</span>&nbsp;<strong>5 750</strong> грн",
+	"30л: <span>7 150грн</span>&nbsp;<strong>6 250</strong> грн",
+	"50л: <span>7 650грн</span>&nbsp;<strong>6 750</strong> грн"
 	];
 
 	$('#message').hide();
@@ -463,7 +463,7 @@ $(function() {
 		if ( bakVal.hasClass('active') ) {
 			formOld.hide();
 			if ( dataTk == 'twentyTk' ) {
-				formValue.text('3 040₴');
+				formValue.text('2 700₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -474,7 +474,7 @@ $(function() {
 				hiddenComment.val('Бак Aquagradus Стандарт на 20л');
 				// console.log(hiddenComment.val());
 			} else if ( dataTk == 'thirtyTk' ) {
-				formValue.text('3 740₴');
+				formValue.text('3 200₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -484,7 +484,7 @@ $(function() {
 				mtextValue.text('Бак Aquagradus Стандарт на 30л');
 				hiddenComment.val('Бак Aquagradus Стандарт на 30л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formValue.text('4 440₴');
+				formValue.text('3 700₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -500,8 +500,8 @@ $(function() {
 			formOld.show();
 
 			if ( dataTk == 'twentyTk' ) {
-				formOld.text('6 890₴');
-				formValue.text('6 090₴');
+				formOld.text('6 650₴');
+				formValue.text('5 750₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -511,8 +511,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 20л');
 				hiddenComment.val('Самогонный аппарат с баком на 20л');
 			} else if ( dataTk == 'thirtyTk' ) {
-				formOld.text('7 590₴');
-				formValue.text('6 790₴');
+				formOld.text('7 150₴');
+				formValue.text('6 250₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -522,8 +522,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 30л');
 				hiddenComment.val('Самогонный аппарат с баком на 30л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formOld.text('8 290₴');
-				formValue.text('7 490₴');
+				formOld.text('7 650₴');
+				formValue.text('6 750₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -546,7 +546,7 @@ $(function() {
 		formOld.hide();
 
 
-		formValue.text('4 090₴');
+		formValue.text('3 950₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/pro_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -569,7 +569,7 @@ $(function() {
 			modalBtn.text('Купить колонну отдельно');
 		} else {
 			colVal.text('Колонна отдельно');
-			formValue.text('6 090₴');
+			formValue.text('5 750₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
@@ -604,7 +604,7 @@ $(function() {
 		formOld.hide();
 
 
-		formValue.text('3 040₴');
+		formValue.text('2 700₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -631,7 +631,7 @@ $(function() {
 			modalBtn.text('Купить бак отдельно');
 		} else {
 			bakVal.text('Бак отдельно');
-			formValue.text('6 090₴');
+			formValue.text('5 750₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',

@@ -83,9 +83,14 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 		'app/sps/*.html',
 		]).pipe(gulp.dest('dist/sps'));
 
+	var buildFilesPc = gulp.src([
+		'app/politika-konfidencialnosti/*.html',
+		]).pipe(gulp.dest('dist/politika-konfidencialnosti'));
+
 	var buildCss = gulp.src([
 		'app/css/main.min.css',
 		'app/css/sps.min.css',
+		'app/css/pc.min.css',
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([

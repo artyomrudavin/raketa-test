@@ -193,7 +193,7 @@ $(function() {
 			hiddenComAdd.val('Угольная колонна AquaGradus');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'regMosh' ) {
-			addPrice.text('1 490₴');
+			addPrice.text('1 550₴');
 			addTextm.text('Регулятор мощности нагрева АГ-2');
 			hiddenComAdd.val('Регулятор мощности нагрева АГ-2');
 			// console.log('drogi');
@@ -570,6 +570,7 @@ $(function() {
 		} else {
 			colVal.text('Колонна отдельно');
 			formValue.text('5 750₴');
+			formOld.text('6 650₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
@@ -632,6 +633,7 @@ $(function() {
 		} else {
 			bakVal.text('Бак отдельно');
 			formValue.text('5 750₴');
+			formOld.text('6 650₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
@@ -849,7 +851,7 @@ $(function() {
 });
 
 $(function() {
-	$('[type="tel"]').mask('+380999999999');
+	$('[type="tel"]').mask('+389999999999');
 });
 
 $(function() {
@@ -906,7 +908,7 @@ $(function() {
     // console.log(days);
 
     if ( days < '1' ) {
-    	console.log(days);
+    	// console.log(days);
     	$('.timer--red').css('color', '#EE4034');
     };
 

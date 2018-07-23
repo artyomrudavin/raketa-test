@@ -166,333 +166,303 @@ textarea
 .header
 	position: relative
 	width: 100%
-	background: #fff url(/img/bg-1.png) no-repeat 100% 0
-	background-size: 50%
-
-.header-nav
-	position: fixed
-	top: 0
-	width: 100%
-	z-index: 500
-	opacity: .95
-	box-shadow: 0 0 10px #ccc
-	background-color: #FFF
-	// display: none
-	
-.header-nav-box
-	display: flex
-	flex-direction: column
-	justify-content: space-between
-	align-items: center
-	max-width: 1240px
-	margin: auto
-	padding: rem(3) rem(5)
-
-.header-brand
-	font-size: 12px
-	display: flex
-	justify-content: space-between
-	align-items: center
-	width: 100%
-	z-index: 100
-	.header-logo
-		img
-			height: rem(30) // sm rem(40) 
-		p
-			margin-top: rem(-4)
-			text-align: center
-			font-size: 7px // sm 8px
-	.phone-mobile
-		font-family: $else-font
-		font-weight: bold
-		font-size: 14px
-		display: flex
-		flex-direction: column
-		flex: 1 1 auto
-		align-items: flex-end
-	a
-		color: #000
-	.icon
-		position: relative
-		width: rem(40)
-		height: rem(50)
-		cursor: pointer
-		.hamburger
-			width: rem(30)
-			height: rem(2)
-			background-color: #000
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-			box-shadow: 0 1px 2px rgba(0,0,0,.2)
-			transition: .1s
-		.hamburger:before, .hamburger:after
-			content: ""
-			width: rem(30)
-			height: rem(2)
-			background-color: #000
-			position: absolute
-			box-shadow: 0 1px 2px rgba(0,0,0,.2)
-			transition: .3s
-		.hamburger:before
-			top: rem(-8)
-		.hamburger:after
-			top: rem(8)
-		&.active
-			.hamburger
-				background-color: rgba(0,0,0,0)
-				box-shadow: 0 1px 2px rgba(0,0,0,0)
-		&.active
-			.hamburger:before
-				top: 0
-				transform: rotate(45deg)
-		&.active
-			.hamburger:after
-				top: 0
-				transform: rotate(135deg)
-.header-navbar
-	#menu
-		// display: flex
-		display: none
-		flex-direction: column
-		align-items: center
-		text-align: center
-		li
-			.h-link
-				display: block
-				padding: rem(5) rem(5)
-				font-size: 14px
-				&:hover
-					color: $accent
-		.head-ph
-			font-family: $else-font
-			font-weight: bold
-			font-size: 14px
-			display: none
-			z-index: 100
-		.btnHead
-			display: none
-			z-index: 100
-			.btn
-				padding: rem(8) rem(10)
-				font-size: 14px
-				background-color: $green
-				margin-left: rem(10)
-			
-
-.header-call
-	text-align: right
-	// font-family: $else-font
-	span
-		font-size: 17px
-		font-weight: bold
-	.brd-btm
-		border-bottom: 2px solid $accent
-	a
-		font-size: 14px
-		color: $accent
-
-.time-wrap
-	display: flex
-	position: absolute
-	width: 100%
-	left: 0
-	// height: 100%
-	justify-content: center
-	align-items: center
-	transition: 0.4s linear
-	background-color: #fff
-	// transform: translate(0, rem(-70))
-	&.animateHide
-		transform: translate(0, rem(-70))
-		opacity: 0
-	&.animateHideMob
-		transform: translate(0, rem(35))
-		height: rem(50)
+	background: #fff
+	.header-nav
 		position: fixed
-		opacity: 0
-		bottom: 0
-		&.active
-			opacity: 1
-			transform: translate(0, 0)
-	p
-		color: $accent
-	.timer
-		display: flex
-		font-size: 18px
-		font-family: $logo-font
-		font-weight: bold
-		text-align: center
-		#days1, #hours1, #minutes1, #seconds1
-			min-width: rem(32)
-			.delimiter
-				width: rem(15)
-
-.header-wellcome
-	padding-top: rem(40) // sm rem(67) xs rem(40)
-	.container-fluid
-		max-width: 1030px
-		margin: 0 auto
-		height: 100%
-		.img-1
-			vertical-align: middle
-			width: 95%
-			margin-left: -70px
-		.h2
-			font-size: 18px // md 36px xs 22px
-			margin-top: rem(25)
-			margin-bottom: rem(-10)
-		.h3
-			font-size: 48px // md 72px xs 48px
-			font-family: $logo-font
-			font-weight: bold
-		.h1
-			font-size: 16px // xs 16px
-		.standart
-				position: absolute
-				padding: none // xs none
-				border: none // xs none
-				top: 0 // md rem(45) rem(32)
-				left: rem(258) // md rem(420) rem(258)
-				font-size: 12px // md 20px xs 12px
-				border-radius: 4px
-		.price
-			font-size: 22px
-			span
-				text-decoration: line-through
-				color: $dark-gray
-			strong
-				font-size: 35px
-				color: $accent
-		.check
-			margin-bottom: rem(5)
-			.check-item
-				display: inline-flex
-				width: 100%
-				vertical-align: middle
-				padding: rem(6) 0
-				// padding: 6px 0
-				.fa
-					font-size: 27px
-					color: $accent
-					margin-right: rem(15)
-					// margin-right: 15px
-				span
-					margin-top: auto
-					margin-bottom: auto
-					font-size: 14px // sm 16px
-		.formAction
-			strong
-				font-size: 14px // sm 16px
-			.num
-				font-size: 22px // sm 22px xs 18px
-				color: $accent
-				white-space: nowrap
-		.form
-			padding: rem(10) rem(10)
-			padding-right: 0
-			border-left: 3px solid $accent
-			width: 100%
+		top: 0
+		width: 100%
+		z-index: 500
+		opacity: .95
+		box-shadow: 0 0 10px #ccc
+		background-color: #FFF
+		.header-nav-box
 			display: flex
-			justify-content: space-between
 			flex-direction: column
-			.form-item
-				width: 100%
-				font-family: $else-font
-				padding-top: 16px
-				color: $black
-				padding-bottom: 16px
-				margin-bottom: rem(5)
-				// flex: 1 0 auto
-				&:not(last-child)
-					// margin-right: rem(10)
-					// margin-right: 10px
-			.header-btn
-				padding: rem(14) rem(8)
-				font-size: 18px
-				background-color: $green
-				cursor: pointer
-				color: #fff
-				&:hover
-					background-color: darken($green, 10%)
-		.order
-			margin-top: rem(85)
-			position: relative
-			// margin-top: 85px
-			.order-bg
-				position: absolute
-				left: rem(-512)
-				bottom: 0
-				z-index: 0
-				// width: 100%
-				display: none
-				// left: -512px
-			.order-ico
-				position: absolute
-				bottom: rem(32)
-				width: 24px
-				// bottom: 32px
-			strong
-				position: absolute
-				left: rem(40) // sm rem(55) xs rem(40)
-				bottom: rem(10) // sm rem(27) xs rem(10)
-				font-style: italic
-				font-size: 14px
-				// bottom: 27px
-				// left: 55px
-				.order-date
-					font-size: 18px
-					color: $accent
-		.header-col-hd
-			display: none
-			.img-2
-				vertical-align: middle
-				width: 95%
-
-	.header-bonus
-		position: absolute
-		top: rem(430)
-		right: rem(5)
-		width: rem(170)
-		padding: rem(5)
-		transition: all .5s ease
-		border: 4px solid $accent
-		&.blink
-			transition: all .5s ease
-			border: 4px solid transparent
-		.bonus-title
-			font-size: 14px
-			text-align: center
-			margin-bottom: rem(5)
-		ul
-			li
-				text-align: center
-				img
-					width: 50%
-					margin: 0 auto
-				p
-					font-size: 12px
-					font-weight: bold
-					margin-top: rem(-10)
-		.akcii
-			margin-top: rem(5)
-			font-size: 12px
-			text-align: center
-			color: $accent
-		.timer
-			display: flex
 			justify-content: space-between
-			font-size: 14px
-			font-family: $logo-font
-			font-weight: bold
-				
-#header-modal
-	#mW3
-		.modal-container
-			.order-price-value
-				font-size: 26px
-
+			align-items: center
+			max-width: 1240px
+			margin: auto
+			padding: rem(3) rem(5)
+			.header-brand
+				font-size: 12px
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 100%
+				z-index: 100
+				.header-logo
+					img
+						height: rem(30)
+					p
+						margin-top: rem(-4)
+						text-align: center
+						font-size: 7px
+				.phone-mobile
+					font-family: $else-font
+					font-weight: bold
+					font-size: 14px
+					display: flex
+					flex-direction: column
+					flex: 1 1 auto
+					align-items: flex-end
+				.icon
+					position: relative
+					width: rem(40)
+					height: rem(50)
+					cursor: pointer
+					.hamburger
+						width: rem(30)
+						height: rem(2)
+						background-color: #000
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						box-shadow: 0 1px 2px rgba(0,0,0,.2)
+						transition: .1s
+					.hamburger:before, .hamburger:after
+						content: ""
+						width: rem(30)
+						height: rem(2)
+						background-color: #000
+						position: absolute
+						box-shadow: 0 1px 2px rgba(0,0,0,.2)
+						transition: .3s
+					.hamburger:before
+						top: rem(-8)
+					.hamburger:after
+						top: rem(8)
+					&.active
+						.hamburger
+							background-color: rgba(0,0,0,0)
+							box-shadow: 0 1px 2px rgba(0,0,0,0)
+					&.active
+						.hamburger:before
+							top: 0
+							transform: rotate(45deg)
+					&.active
+						.hamburger:after
+							top: 0
+							transform: rotate(135deg)
+			.header-navbar
+				#menu
+					display: none
+					flex-direction: column
+					align-items: center
+					text-align: center
+					li
+						.h-link
+							display: block
+							padding: rem(5) rem(5)
+							font-size: 14px
+							&:hover
+								color: $accent
+					.head-ph
+						font-family: $else-font
+						font-weight: bold
+						font-size: 14px
+						display: none
+						z-index: 100
+					.btnHead
+						display: none
+						z-index: 100
+						.btn
+							padding: rem(8) rem(10)
+							font-size: 14px
+							background-color: $green
+							margin-left: rem(10)	
+			.time-wrap
+				display: flex
+				position: absolute
+				width: 100%
+				left: 0
+				justify-content: center
+				align-items: center
+				transition: 0.4s linear
+				background-color: #fff
+				&.animateHide
+					transform: translate(0, rem(-70))
+					opacity: 0
+				&.animateHideMob
+					transform: translate(0, rem(35))
+					height: rem(50)
+					position: fixed
+					opacity: 0
+					bottom: 0
+					&.active
+						opacity: 1
+						transform: translate(0, 0)
+				p
+					color: $accent
+				.timer
+					display: flex
+					font-size: 18px
+					font-family: $logo-font
+					font-weight: bold
+					text-align: center
+					#days1, #hours1, #minutes1, #seconds1
+						min-width: rem(32)
+						.delimiter
+							width: rem(15)
+	.header-wellcome
+		padding-top: rem(40)
+		.header-bonus
+			position: absolute
+			top: rem(430)
+			right: rem(5)
+			width: rem(170)
+			padding: rem(5)
+			transition: all .5s ease
+			border: 4px solid $accent
+			z-index: 100
+			&.blink
+				transition: all .5s ease
+				border: 4px solid transparent
+			.bonus-title
+				font-size: 14px
+				text-align: center
+				margin-bottom: rem(5)
+			ul
+				li
+					text-align: center
+					img
+						width: 50%
+						margin: 0 auto
+					p
+						font-size: 12px
+						font-weight: bold
+						margin-top: rem(-10)
+			.akcii
+				margin-top: rem(5)
+				font-size: 12px
+				text-align: center
+				color: $accent
+			.timer
+				display: flex
+				justify-content: space-between
+				font-size: 14px
+				font-family: $logo-font
+				font-weight: bold
+		.container-fluid
+			max-width: 1030px
+			margin: 0 auto
+			height: 100%
+			.row
+				.header-text
+					z-index: 10
+					position: relative
+					.h2
+						font-size: 18px
+						margin-top: rem(25)
+						margin-bottom: rem(-10)
+					.h3
+						font-size: 48px
+						font-family: $logo-font
+						font-weight: bold
+					.standart
+						position: absolute
+						padding: none
+						border: none
+						top: 0
+						left: rem(258)
+						font-size: 12px
+						border-radius: 4px
+					.h1
+						font-size: 16px
+					.price
+						font-size: 18px
+						span
+							text-decoration: line-through
+							color: $red
+						strong
+							font-size: 26px
+							color: $accent
+					.check
+						margin-bottom: rem(5)
+						.check-item
+							display: inline-flex
+							width: 100%
+							vertical-align: middle
+							padding: rem(6) 0
+							.fa
+								font-size: 27px
+								color: $accent
+								margin-right: rem(15)
+							span
+								margin-top: auto
+								margin-bottom: auto
+								font-size: 14px
+					.img-1
+						vertical-align: middle
+						width: 95%
+						margin-left: -70px
+					.garanty-ph
+						position: absolute
+						bottom: rem(450)
+						left: rem(20)
+						max-width: rem(80)
+					.formAction
+						strong
+							font-size: 14px
+							.num
+								font-size: 22px
+								color: $accent
+								white-space: nowrap
+					.form
+						padding: rem(10) rem(10)
+						padding-right: 0
+						border-left: 3px solid $accent
+						width: 100%
+						display: flex
+						justify-content: space-between
+						flex-direction: column
+						.form-item
+							width: 100%
+							font-family: $else-font
+							padding-top: 16px
+							color: $black
+							padding-bottom: 16px
+							margin-bottom: rem(5)
+						.header-btn
+							padding: rem(14) rem(8)
+							font-size: 18px
+							background-color: $green
+							cursor: pointer
+							color: #fff
+							&:hover
+								background-color: darken($green, 10%)
+					.order
+						margin-top: rem(85)
+						position: relative
+						.order-bg
+							position: absolute
+							left: rem(-512)
+							bottom: 0
+							z-index: 0
+							display: none
+						.order-ico
+							position: absolute
+							bottom: rem(32)
+							width: 24px
+						strong
+							position: absolute
+							left: rem(40)
+							bottom: rem(10)
+							font-style: italic
+							font-size: 14px
+							.order-date
+								font-size: 18px
+								color: $accent
+				.header-col-hd
+					display: none
+					.img-2
+						vertical-align: middle
+						width: 95%
+	#header-modal
+		#mW3
+			.modal-container
+				.order-price-value
+					font-size: 26px
 
 /* Header End */
 
@@ -500,14 +470,15 @@ textarea
 
 .convenience
 	background-color: $light-gray
+	// background: url(../img/bg-9.jpg) no-repeat 50% 50% $light-gray
 	.container-fluid
 		max-width: 1030px
 		.wash
 			padding-top: rem(46)
-			padding-bottom: rem(64)
+			padding-bottom: rem(125)
 			z-index: 1
 			.h3
-				font-size: 40px
+				font-size: 32px
 				font-weight: bold
 				margin-bottom: rem(50)
 				&:after
@@ -524,6 +495,7 @@ textarea
 				margin-bottom: rem(16)
 		.wash-img
 			text-align: right
+			padding-bottom: rem(80)
 			img
 				vertical-align: middle
 				margin-top: rem(-260)
@@ -535,8 +507,8 @@ textarea
 			display: flex
 			justify-content: flex-end
 			.wre-box
-				margin-top: rem(-110)
-				margin-bottom: rem(50)
+				margin-top: rem(-125)
+				margin-bottom: rem(80)
 				.row
 					justify-content: space-between
 					div
@@ -550,6 +522,104 @@ textarea
 
 /* Convenience End */
 
+/* Tank Start */
+
+.tank
+	background-color: $light-gray
+	.bg-transf
+		position: relative
+		overflow: hidden
+		margin-top: -70px
+		&:before
+			content: ""
+			display: block
+			height: rem(340)
+			width: 120%
+			position: absolute
+			left: 50%
+			top: 0
+			transform: rotate(-5deg) translateX(-50%)
+			transform-origin: center top
+			background-color: #fff
+		.container-fluid
+			max-width: 1030px
+			.tank-w
+				padding-top: rem(46)
+				padding-bottom: rem(125)
+				z-index: 1
+				.h3
+					font-size: 32px
+					font-weight: bold
+					margin-bottom: rem(50)
+					&:after
+						content: ""
+						width: rem(150)
+						height: 3px
+						background-color: $accent
+						position: absolute
+						left: rem(15)
+						margin-top: rem(66)
+				p
+					width: 80%
+					margin-top: rem(24)
+					margin-bottom: rem(16)
+			.tank-img
+				text-align: right
+				padding-bottom: rem(60)
+				img
+					vertical-align: middle
+					margin-top: rem(-200)
+					bottom: 0
+					right: 0
+					width: 90%
+			.tank-icos
+				// margin-left: 41.66667%
+				// justify-content: flex-end
+				display: flex
+				.wre-t-box
+					margin-top: rem(-70)
+					margin-bottom: rem(20)
+					.row
+						justify-content: space-between
+						div
+							padding: 0
+							text-align: center
+							flex: 0 0 25%
+							font-size: 15px
+							img
+								max-width: 60px
+								margin-bottom: rem(10)
+			.tank-f
+				margin-bottom: rem(20)
+				// display: flex
+				// justify-content: flex-end
+				.tank-form
+					padding: rem(20)
+					// margin-top: -170px
+					max-width: rem(500)
+					border: 1px solid #CCC
+					background-color: rgba(255,255,255,0.5)
+					box-shadow: 0 5px 10px #CCC 
+					p
+						padding: rem(20)
+					form
+						display: flex
+						flex-direction: column
+						justify-content: center
+						input
+							margin-bottom: rem(5)
+							padding: rem(16) rem(42)
+							font-size: 18px
+						.btn
+							font-size: 18px
+							margin-bottom: rem(5)
+							padding: rem(16) rem(42)
+							background-color: $green
+							&:hover
+								background-color: darken($green, 10%)
+
+/* Tank End */
+
 /* Tips Start */
 
 .tips
@@ -561,7 +631,17 @@ textarea
 		.h3
 			font-size: 32px
 			font-weight: bold
-			margin-bottom: rem(40)
+			margin-bottom: rem(50)
+			position: relative
+			text-align: right
+			&:after
+				content: ""
+				width: rem(150)
+				height: 3px
+				background-color: $accent
+				position: absolute
+				right: 0
+				margin-top: rem(55)
 		.row
 			.tip-item
 				text-align: center
@@ -619,18 +699,18 @@ textarea
 				justify-content: center
 				.h4
 					font-size: 24px
-					padding-bottom: 2rem(20)
+					padding-bottom: rem(20)
 				ul
 					background-color: $light-gray
-					padding: rem(20)
-					margin-bottom: rem(20)
+					padding: rem(10) // 20
+					margin-bottom: rem(10) // 20
 					li
 						display: flex
 						align-items: center
 						&:not(:last-child)
-							margin-bottom: 20px
+							margin-bottom: rem(10) // 20
 						p
-							font-size: 18px
+							font-size: 14px
 							position: relative
 						i
 							width: rem(40)
@@ -653,11 +733,28 @@ textarea
 						height: 100%
 			.col-md-12
 				text-align: center
-				padding: rem(30)
+				padding: rem(12)
 				background-color: $accent
 				p
 					color: #fff
 					font-size: 22px
+					margin-bottom: rem(20)
+				.video-form
+					form
+						display: flex
+						flex-direction: column
+						justify-content: center
+						input
+							margin-bottom: rem(5)
+							padding: rem(16) rem(42)
+							font-size: 18px
+						.btn
+							font-size: 18px
+							margin-bottom: rem(5)
+							padding: rem(16) rem(42)
+							background-color: $green
+							&:hover
+								background-color: darken($green, 10%)
 
 
 /* Video End */
@@ -767,7 +864,7 @@ textarea
 			text-align: center
 			img
 				margin-top: rem(30)
-				width: 80%
+				width: 85%
 				vertical-align: middle
 		.choose
 			margin-top: rem(30)
@@ -916,27 +1013,43 @@ textarea
 		.h3
 			font-size: 32px
 			font-weight: bold
-			margin-bottom: rem(24)
+			margin-bottom: rem(15)
 		.row
+			.tab-menu-r
+				display: flex
+				justify-content: center
+				width: 100%
+				padding: 10px 5px
+				.tab-r
+					.tab-link-r
+						border: 2px solid #CCC
+						padding: rem(5) rem(5)
+						border-radius: 5px
+						margin: rem(10) rem(5)
+						&.active
+							border: 2px solid $accent
+							color: $accent
 			.recipe-box
 				padding: rem(15)
 				margin-bottom: rem(20)
 				background-color: #fff
+				.img-recipe
+					width: 30%
 				.recipe-text
 					position: relative
 					padding: 0
 					padding-left: rem(15)
 					padding-bottom: rem(8)
 					&:after
-							content: ""
-							display: block
-							width: 98%
-							height: 1px
-							background-color: #e5e5e5
-							position: absolute
-							top: 50%
-							margin-top: rem(-1)
-							z-index: 0
+						content: ""
+						display: block
+						width: 98%
+						height: 1px
+						background-color: #e5e5e5
+						position: absolute
+						top: 50%
+						margin-top: rem(-1)
+						z-index: 0
 					span
 						position: relative
 						background-color: #fff
@@ -945,7 +1058,7 @@ textarea
 				.recipe-img
 					text-align: center
 					.w-xs
-						width: 100%
+						// width: 100%
 						max-width: rem(298)
 				.recipe-ch
 					.ch-item
@@ -967,10 +1080,10 @@ textarea
 						div
 							padding: 0
 							&:first-child
-								font-size: 80px
+								font-size: 40px
 								color: #bfbfbf
 							.accent
-								font-size: 64px
+								font-size: 36px // 64
 								color: $accent
 							p
 								font-weight: bold
@@ -979,6 +1092,9 @@ textarea
 								font-size: 13px
 								line-height: 1em
 								color: $accent
+							.img-bottle
+								width: 10%
+								max-width: rem(55)
 			.recipe-book
 				text-align: center
 				// padding-top: rem(48)
@@ -1082,7 +1198,7 @@ textarea
 						background-color: #fff
 						border: 5px solid $accent
 						border-radius: 100%
-						width: 80%
+						width: 40%
 						margin: 0 auto
 				.title
 					font-size: 16px // 576 16px
@@ -1094,12 +1210,13 @@ textarea
 					color: #fff
 					margin-bottom: rem(20)
 				.price
-					color: #fff
+					color: $black
 					margin-bottom: rem(20)
+					background-color: #fff
 					.old
 						font-size: 16px // 576 16px
 						text-decoration: line-through
-						color: $black
+						color: $red
 					strong
 						font-size: 20px // 576 20px
 			.bonus-timer
@@ -1116,15 +1233,32 @@ textarea
 						min-width: rem(32) // 576 rem(44) // 320 rem(32)
 					.delimiter
 						width: rem(15)
-		.bonus-btn
-			display: flex
-			justify-content: center
-			.btn
-				padding: rem(16) rem(42)
-				background-color: $green
-				margin-top: rem(-29)
-				&:hover
-					background-color: darken($green, 10%)
+		.bonus-form
+			margin-top: rem(-30)
+			form
+				display: flex
+				flex-direction: column
+				justify-content: center
+				input
+					margin-bottom: rem(5)
+					padding: rem(16) rem(42)
+					font-size: 18px
+				.btn
+					font-size: 18px
+					margin-bottom: rem(5)
+					padding: rem(16) rem(42)
+					background-color: $green
+					&:hover
+						background-color: darken($green, 10%)
+		// .bonus-btn
+		// 	display: flex
+		// 	justify-content: center
+		// 	.btn
+		// 		padding: rem(16) rem(42)
+		// 		background-color: $green
+		// 		margin-top: rem(-29)
+		// 		&:hover
+		// 			background-color: darken($green, 10%)
 
 
 /* Bonus End */
@@ -1133,9 +1267,9 @@ textarea
 
 // Structure
 
-// .mode-one
+// .mode
 // 	.container-fluid
-// 		.row
+// 		.row mode-n
 // 			.block
 // 				.mode-text
 // 					.h3
@@ -1149,8 +1283,22 @@ textarea
 // 			.mode-img
 .mode
 	margin-bottom: rem(32)
+	margin-top: rem(26)
 	.container-fluid
 		max-width: 1030px
+		.h2
+			font-size: 40px
+			font-weight: bold
+			margin-bottom: rem(30)
+			position: relative
+			&:after
+				content: ""
+				width: rem(150)
+				height: 3px
+				background-color: $accent
+				position: absolute
+				left: 0
+				margin-top: rem(66)
 		.row
 			justify-content: center
 			.block
@@ -1210,44 +1358,103 @@ textarea
 				margin: 0 auto
 				display: none
 
-.mode-one, 
-.mode-two, 
-.mode-four
+.mode
 	.container-fluid
 		.row
+			.tab-menu
+				display: flex
+				justify-content: center
+				width: 100%
+				padding: 30px 5px
+				.tab
+					.tab-link,
+					.tab-link-d
+						border: 2px solid #CCC
+						padding: rem(5) rem(5)
+						border-radius: 5px
+						margin: rem(10) rem(5)
+						&:before
+							font-size: 13px
+							// border: 2px solid #CCC
+							// padding: rem(3) rem(7)
+							border-radius: 100%
+							color: #CCC
+							font-weight: bold
+						&:after
+							font-size: 12px
+							color: #CCC
+						&.active
+							border: 2px solid $accent
+							&:before
+								color: $accent
+								// border: 2px solid $accent
+							&:after
+								color: #000
+					&:nth-child(1)
+						.tab-link,
+						.tab-link-d
+							&:before
+								content: "1"
+					&:nth-child(2)
+						.tab-link,
+						.tab-link-d
+							&:before
+								content: "2"
+					&:nth-child(3)
+						.tab-link,
+						.tab-link-d
+							&:before
+								content: "3"
+					&:nth-child(4)
+						.tab-link,
+						.tab-link-d
+							&:before
+								content: "4"
+					&:nth-child(5)
+						.tab-link,
+						.tab-link-d
+							&:before
+								content: "5"
+					&:nth-child(6)
+						.tab-link,
+						.tab-link-d
+							&:before
+								content: "6"
+
+.mode
+	.container-fluid
+		.mode-one, 
+		.mode-two, 
+		.mode-four
 			.block
 				.mode-box
 					padding: rem(15) rem(40)
 
-.mode-three, 
-.mode-seven, 
-.mode-four, 
-.mode-eight
+.mode
 	.container-fluid
-		.row
+		.mode-three, 
+		.mode-seven, 
+		.mode-four, 
+		.mode-eight
 			.block
 				.mode-box
 					.row
 						.title
 							font-size: 20px
 
-.mode-three, 
-.mode-eight
+.mode
 	.container-fluid
-		.row
+		.mode-three, 
+		.mode-eight
 			.block
 				.mode-box
 					.row
 						.title
 							text-align: center
 
-.mode-four
+.mode
 	.container-fluid
-		max-width: 1000px
-
-.mode-six
-	.container-fluid
-		.row
+		.mode-six
 			.block
 				.mode-box
 					padding: rem(20) rem(30)
@@ -1257,9 +1464,9 @@ textarea
 						.mode-text-img
 							margin-right: rem(-5)
 
-.mode-seven
+.mode
 	.container-fluid
-		.row
+		.mode-seven
 			.block
 				.mode-text
 					.more
@@ -1362,7 +1569,7 @@ textarea
 								font-size: 13px
 							.form-old
 								font-size: 26px
-								color: $dark-gray
+								color: $red
 								text-decoration: line-through
 							.form-value
 								font-size: 36px
@@ -1710,8 +1917,6 @@ textarea
 								text-decoration: none
 							&-one
 								width: 100%
-
-
 
 /* FAQ End */
 

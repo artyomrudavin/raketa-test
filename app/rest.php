@@ -97,7 +97,7 @@ $strmailPostData = '';
 		foreach ($postmailData as $key => $value)
 			$strmailPostData .= ($strmailPostData == '' ? '' : '').$key.'= '.$value."\r\n";
 
-$recepient = "leads@aquagradus.com";
+$recepient = "aquagradus@gmail.com";
 $sitename = "standart.aquagradus.com";
 
 $pagetitle = "Новая заявка \"$sitename\"";

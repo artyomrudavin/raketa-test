@@ -1,27 +1,27 @@
 // Price changer
 
-$(function() {
+// $(function() {
 
-	function nextMsg(i) {
-		if (messages.length == i) {
-			i = 0;
-		}
-		$('#message').html(messages[i]).fadeIn(500).delay(2000).fadeOut(500, function() {
-			nextMsg(i + 1);
-		});
-	};
+// 	function nextMsg(i) {
+// 		if (messages.length == i) {
+// 			i = 0;
+// 		}
+// 		$('#message').html(messages[i]).fadeIn(500).delay(2000).fadeOut(500, function() {
+// 			nextMsg(i + 1);
+// 		});
+// 	};
 
-	var messages = [
-	"20л: <span>6 650грн</span>&nbsp;<strong>5 750</strong> грн",
-	"30л: <span>7 150грн</span>&nbsp;<strong>6 250</strong> грн",
-	"50л: <span>7 650грн</span>&nbsp;<strong>6 750</strong> грн"
-	];
+// 	var messages = [
+// 	"25л: <span>6 650грн</span>&nbsp;<strong>5 750</strong> грн",
+// 	"35л: <span>7 150грн</span>&nbsp;<strong>6 250</strong> грн",
+// 	"50л: <span>7 650грн</span>&nbsp;<strong>6 750</strong> грн"
+// 	];
 
-	$('#message').hide();
+// 	$('#message').hide();
 
-	nextMsg(0);
+// 	nextMsg(0);
 
-});
+// });
 
 
 
@@ -265,10 +265,10 @@ $(function() {
 		weightS: '10 кг',
 		weightCs: '11 кг',
 		weightT: '5 кг',
-		inTank: '16 л',
-		cleanSpirt: '1.6 л',
-		inside: '4.0 л',
-		insideButle: '8 бутылок по 0.5'
+		inTank: '20 л',
+		cleanSpirt: '2 л',
+		inside: '5.0 л',
+		insideButle: '10 бутылок по 0.5'
 	};
 
 	var thirtyTank = {
@@ -282,10 +282,10 @@ $(function() {
 		weightS: '12 кг',
 		weightCs: '13 кг',
 		weightT: '7 кг',
-		inTank: '24 л',
-		cleanSpirt: '2.4 л',
-		inside: '6.0 л',
-		insideButle: '12 бутылок по 0.5'
+		inTank: '30 л',
+		cleanSpirt: '3 л',
+		inside: '7.5 л',
+		insideButle: '15 бутылок по 0.5'
 	};
 
 	var fiftyTank = {
@@ -470,8 +470,8 @@ $(function() {
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Бак Aquagradus Стандарт на 20л');
-				hiddenComment.val('Бак Aquagradus Стандарт на 20л');
+				mtextValue.text('Бак Aquagradus Стандарт на 25л');
+				hiddenComment.val('Бак Aquagradus Стандарт на 25л');
 				// console.log(hiddenComment.val());
 			} else if ( dataTk == 'thirtyTk' ) {
 				formValue.text('3 200₴');
@@ -481,8 +481,8 @@ $(function() {
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Бак Aquagradus Стандарт на 30л');
-				hiddenComment.val('Бак Aquagradus Стандарт на 30л');
+				mtextValue.text('Бак Aquagradus Стандарт на 35л');
+				hiddenComment.val('Бак Aquagradus Стандарт на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
 				formValue.text('3 700₴');
 				imgConstr.css({
@@ -501,29 +501,29 @@ $(function() {
 
 			if ( dataTk == 'twentyTk' ) {
 				formOld.text('6 650₴');
-				formValue.text('5 750₴');
+				formValue.text('5 950₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Самогонный аппарат с баком на 20л');
-				hiddenComment.val('Самогонный аппарат с баком на 20л');
+				mtextValue.text('Самогонный аппарат с баком на 25л');
+				hiddenComment.val('Самогонный аппарат с баком на 25л');
 			} else if ( dataTk == 'thirtyTk' ) {
 				formOld.text('7 150₴');
-				formValue.text('6 250₴');
+				formValue.text('6 450₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Самогонный аппарат с баком на 30л');
-				hiddenComment.val('Самогонный аппарат с баком на 30л');
+				mtextValue.text('Самогонный аппарат с баком на 35л');
+				hiddenComment.val('Самогонный аппарат с баком на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
 				formOld.text('7 650₴');
-				formValue.text('6 750₴');
+				formValue.text('6 950₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -569,7 +569,7 @@ $(function() {
 			modalBtn.text('Купить колонну отдельно');
 		} else {
 			colVal.text('Колонна отдельно');
-			formValue.text('5 750₴');
+			formValue.text('5 950₴');
 			formOld.text('6 650₴');
 			formOld.show();
 			imgConstr.css({
@@ -578,8 +578,8 @@ $(function() {
 				backgroundSize: 'contain',
 				backgroundPosition: 'top center'
 			});
-			mtextValue.text('Самогонный аппарат с баком на 20л');
-			hiddenComment.val('Самогонный аппарат с баком на 20л');
+			mtextValue.text('Самогонный аппарат с баком на 25л');
+			hiddenComment.val('Самогонный аппарат с баком на 25л');
 			$(litreVl).removeClass('active');
 			$(litreVl[0]).addClass('active');
 			$(arrCompl).removeClass('hide');
@@ -612,8 +612,8 @@ $(function() {
 			backgroundSize: 'contain',
 			backgroundPosition: 'top center'
 		});
-		mtextValue.text('Бак Aquagradus Стандарт на 20л');
-		hiddenComment.val('Бак Aquagradus Стандарт на 20л');
+		mtextValue.text('Бак Aquagradus Стандарт на 25л');
+		hiddenComment.val('Бак Aquagradus Стандарт на 25л');
 		$(litreVl).removeClass('active');
 		$(litreVl[0]).addClass('active');
 
@@ -632,7 +632,7 @@ $(function() {
 			modalBtn.text('Купить бак отдельно');
 		} else {
 			bakVal.text('Бак отдельно');
-			formValue.text('5 750₴');
+			formValue.text('5 950₴');
 			formOld.text('6 650₴');
 			formOld.show();
 			imgConstr.css({
@@ -641,8 +641,8 @@ $(function() {
 				backgroundSize: 'contain',
 				backgroundPosition: 'top center'
 			});
-			mtextValue.text('Самогонный аппарат с баком на 20л');
-			hiddenComment.val('Самогонный аппарат с баком на 20л');
+			mtextValue.text('Самогонный аппарат с баком на 25л');
+			hiddenComment.val('Самогонный аппарат с баком на 25л');
 			$(litreVl).removeClass('active');
 			$(litreVl[0]).addClass('active');
 			$(arrCompl).removeClass('hide');
@@ -674,6 +674,189 @@ $(function() {
 		$('.layer-1').css('left',(( 280-(xpos/50))+"px"));
 
 	});
+
+});
+
+// Tab Recipe
+
+$(function() {
+
+	var winWidth = $(window).width();
+
+	if ( winWidth < 767 ) {
+		$('.tab-cont-r').not(':first').hide();
+	} else {
+		$('.tab-menu-r').hide();
+	};
+
+
+	$('.tab-link-r').each(function(i) {
+		$(this).attr('data-tab', 'tab'+i)
+	});
+
+	$('.tab-cont-r').each(function(i) {
+		$(this).attr('data-tab', 'tab'+i)
+	});
+
+	$('.tab-link-r').on('click', function(e) {
+		
+		e.preventDefault();
+
+		var dataTab = $(this).data('tab');
+		var getWrapper = $(this).closest('.tab-recipe');
+		var tabLink = $('.tab-link-r[data-tab='+dataTab+']');
+
+		getWrapper.find('.tab-link-r').removeClass('active');
+		tabLink.addClass('active');
+
+		getWrapper.find('.tab-cont-r').hide();
+		getWrapper.find('.tab-cont-r[data-tab='+dataTab+']').fadeIn('slow');
+	});
+
+	$(".swipe-r").swipe( {
+
+		swipeLeft: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+			// $(this).text("You swiped " + direction );
+			var dataTab = $(this).data('tab');
+			var dataTabNext = dataTab.split("");
+			dataTabNext[3] = +dataTabNext[3] + 1;
+
+			dataTabNext = dataTabNext.join("");
+
+
+			var getWrapper = $(this).closest('.tab-recipe');
+			var tabLink = $('.tab-link-r[data-tab='+dataTabNext+']');
+
+
+			// console.log(dataTab);
+			// console.log(dataTabNext);
+
+			if ( dataTab !== 'tab2' ) {
+				getWrapper.find('.tab-cont-r').hide();
+				getWrapper.find('.tab-cont-r[data-tab='+dataTabNext+']').fadeIn('slow');
+
+				getWrapper.find('.tab-link-r').removeClass('active');
+				tabLink.addClass('active');
+			}
+			
+    	},
+
+    	swipeRight: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+			var dataTab = $(this).data('tab');
+			var dataTabNext = dataTab.split("");
+			dataTabNext[3] = +dataTabNext[3] - 1;
+			dataTabNext = dataTabNext.join("");
+
+
+			var getWrapper = $(this).closest('.tab-recipe');
+			var tabLink = $('.tab-link-r[data-tab='+dataTabNext+']');
+			
+			if ( dataTab !== 'tab0' ) {
+
+				getWrapper.find('.tab-cont-r').hide();
+				getWrapper.find('.tab-cont-r[data-tab='+dataTabNext+']').fadeIn('slow');
+
+				getWrapper.find('.tab-link-r').removeClass('active');
+				tabLink.addClass('active');
+    		}
+    	}
+
+  	});
+
+  	//Set some options later
+  	$(".swipe-r").swipe( {fingers:1} );
+
+});
+
+// Tab Modes
+
+$(function() {
+
+	$('.tab-cont').not(':first').hide();
+
+	$('.tab-link').each(function(i) {
+		$(this).attr('data-tab', 'tab'+i)
+	});
+
+	$('.tab-link-d').each(function(i) {
+		$(this).attr('data-tab', 'tab'+i)
+	});
+
+	$('.tab-cont').each(function(i) {
+		$(this).attr('data-tab', 'tab'+i)
+	});
+
+	$('.tab-link, .tab-link-d').on('click', function(e) {
+		
+		e.preventDefault();
+
+		var dataTab = $(this).data('tab');
+		var getWrapper = $(this).closest('.mode');
+		var tabLink = $('.tab-link[data-tab='+dataTab+'], .tab-link-d[data-tab='+dataTab+']');
+
+		getWrapper.find('.tab-link, .tab-link-d').removeClass('active');
+		tabLink.addClass('active');
+
+		getWrapper.find('.tab-cont').hide();
+		getWrapper.find('.tab-cont[data-tab='+dataTab+']').fadeIn('slow');
+	});
+
+	$(".swipe").swipe( {
+
+		swipeLeft: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+			// $(this).text("You swiped " + direction );
+			var dataTab = $(this).data('tab');
+			var dataTabNext = dataTab.split("");
+			dataTabNext[3] = +dataTabNext[3] + 1;
+
+			dataTabNext = dataTabNext.join("");
+
+
+			var getWrapper = $(this).closest('.mode');
+			var tabLink = $('.tab-link[data-tab='+dataTabNext+'], .tab-link-d[data-tab='+dataTabNext+']');
+
+
+			// console.log(dataTab);
+			console.log(dataTabNext);
+
+			if ( dataTab !== 'tab5' ) {
+				getWrapper.find('.tab-cont').hide();
+				getWrapper.find('.tab-cont[data-tab='+dataTabNext+']').fadeIn('slow');
+
+				getWrapper.find('.tab-link, .tab-link-d').removeClass('active');
+				tabLink.addClass('active');
+			}
+			
+    	},
+
+    	swipeRight: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+			var dataTab = $(this).data('tab');
+			var dataTabNext = dataTab.split("");
+			dataTabNext[3] = +dataTabNext[3] - 1;
+			dataTabNext = dataTabNext.join("");
+
+
+			var getWrapper = $(this).closest('.mode');
+			var tabLink = $('.tab-link[data-tab='+dataTabNext+'], .tab-link-d[data-tab='+dataTabNext+']');
+			
+			if ( dataTab !== 'tab0' ) {
+
+				getWrapper.find('.tab-cont').hide();
+				getWrapper.find('.tab-cont[data-tab='+dataTabNext+']').fadeIn('slow');
+
+				getWrapper.find('.tab-link, .tab-link-d').removeClass('active');
+				tabLink.addClass('active');
+    		}
+    	}
+
+  	});
+
+  	//Set some options later
+  	$(".swipe").swipe( {fingers:1} );
 
 });
 
@@ -829,7 +1012,7 @@ $(function() {
 
 $(function() {
 
-	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus").submit(function() { //Change
+	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus, #formVideo, #formTank").submit(function() { //Change
 		var th = $(this);
 
 		$.ajax({

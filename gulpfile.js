@@ -37,7 +37,8 @@ gulp.task('ua.common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/phoneMask.min.js',
+		'app/js/modules/min/phoneMask.min.js',
+		'app/libs/swipe/jquery.touchSwipe.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
@@ -49,7 +50,8 @@ gulp.task('js', ['common-js'], function() {
 gulp.task('js-ua', ['ua.common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/phoneMask.min.js',
+		'app/js/modules/min/phoneMask.min.js',
+		'app/libs/swipe/jquery.touchSwipe.js',
 		'app/js/ua.common.min.js', // Всегда в конце
 		])
 	.pipe(concat('ua.scripts.min.js'))
@@ -137,9 +139,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js', 'js-ua'], function()
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'акваградус.com',
-		user:      'com12',
-		password:  'bh9Q05dj5C',
+		host:      '51.15.19.20',
+		user:      'aquagradususer',
+		password:  'JqD9F2dF9J41SoN',
 		parallel:  10,
 		log: gutil.log
 	});
@@ -149,7 +151,8 @@ gulp.task('deploy', function() {
 	'dist/.htaccess',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/domains/aquagradus.com/public_html/standart'));
+	.pipe(conn.dest('/www/standart.aquagradus.com/'));
+	// .pipe(conn.dest('/www/www.standart.aquagradus.com/'));
 
 });
 

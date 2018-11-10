@@ -165,33 +165,313 @@ textarea
 /* Main Start */
 
 .main
-	padding-top: rem(30)
-	padding-bottom: rem(100)
+	padding-top: rem(10)
+	padding-bottom: rem(20)
 	.container
 		.row
 			justify-content: center
 			.phone
 				text-align: center
-				margin-bottom: rem(50)
+				// margin-bottom: rem(15)
 				.num
 					display: inline-block
-					padding: rem(10) rem(30)
+					padding: rem(10) rem(10)
 					font-size: 18px
 					font-weight: bold
 			.m-logo
 				img
 					margin: auto
-					margin-bottom: rem(30)
+					max-width: rem(200)
+					margin-bottom: rem(10)
 			.h1
 				text-align: center
 				font-size: 48px
 			p
 				font-size: 20px
-				margin-bottom: rem(30)
+				margin-bottom: rem(26)
 				text-align: center
-
+				max-width: 70%
+			.youtube
+				text-align: center
+				position: relative
+				// padding: rem(50)
+				&:after
+					content: ""
+					display: block
+					width: rem(100)
+					height: rem(88)
+					background: url(../img/arrow.png)
+					position: absolute
+					top: rem(-90)
+					left: rem(10)
 
 /* Main End */
+
+/* Additionally Start */
+
+.additionally
+	.container-fluid
+		overflow: hidden
+		max-width: 1300px
+		.row
+			.h3
+				padding-top: rem(24)
+				font-size: 32px
+				margin-bottom: rem(50)
+				position: relative
+				&:after
+					content: ""
+					width: rem(150)
+					height: 3px
+					background-color: $accent
+					position: absolute
+					left: 0
+					margin-top: rem(40)
+			.add-box
+				padding: rem(24)
+				margin-top: rem(24)
+				border: 5px solid lighten($accent, 40%)
+			img
+				width: 130%
+.additionally-goods
+	background-color: $light-gray
+	padding-top: rem(30)
+	padding-bottom: rem(30)
+	.container-fluid
+		max-width: 1030px
+		.row
+			.col-md-4
+				padding: rem(8)
+				&.active
+					.column-hover
+						transition: .5s
+						opacity: .25
+				.bg-white
+					background-color: #FFF
+					.column-hover
+						position: relative
+						&:hover span
+							opacity: 1
+							transition: .5s
+						&:hover .sized
+							transition: .5s
+							opacity: .25
+						span
+							margin: 0
+							color: #000
+							position: absolute
+							top: 0
+							left: 0
+							bottom: 0
+							right: 0
+							z-index: 10
+							opacity: 0
+							a
+								position: absolute
+								top: 0
+								left: 0
+								bottom: 0
+								right: 0
+								text-align: center
+								line-height: rem(320)
+								&:hover
+									border: none
+						.sized
+							background-color: #fff
+							padding: rem(14) rem(16) rem(13)
+							font-size: 14px
+							font-weight: bold
+							height: rem(320)
+							text-align: center
+							img
+								max-height: rem(250)
+								max-width: rem(250)
+								width: 100%
+							p
+								margin-top: 0
+								margin-bottom: rem(1)
+		.details
+			background-color: #FFF
+			padding-top: rem(20)
+			padding-bottom: rem(20)
+			.good-image
+				display: flex
+				justify-content: center
+				align-items: center
+				text-align: right
+				img
+					align-self: flex-start
+			.good-text
+				.title
+					font-size: 36px
+					margin-bottom: rem(8)
+				.good-content
+					margin-top: rem(30)
+					border: 5px solid lighten($accent, 40%)
+					border-bottom: none
+					padding: rem(25) rem(45)
+					.h4
+						font-size: 24px
+						margin-bottom: rem(20)
+					p
+						margin-top: 0
+						margin-bottom: rem(16)
+					.good-params
+						.good-params-item
+							display: flex
+							align-items: center
+							margin-bottom: rem(15)
+							.label
+								font-size: 16px
+								flex: 0 0
+								font-weight: bold
+							.separator
+								height: rem(18)
+								flex: 1 1
+								border-bottom: 1px dashed #9b9b9b
+							.valey
+								font-weight: bold
+								min-width: rem(90)
+
+						.good-params-complect
+							.h5
+								font-size: 16px
+				.good-controls
+					margin: 0
+					border: 5px solid $accent
+					padding: rem(20) rem(30)
+					margin-bottom: rem(16)
+					text-align: center
+					align-items: center
+					.price
+						font-size: 24px
+						font-weight: bold
+					.add-btn
+						font-size: 20px
+						padding: 7px 50px
+						background-color: $green
+						&:hover
+							background-color: darken($green, 10%)
+
+
+/* Additionally End */
+
+/* Modal Start */
+
+/* Modal Start */
+
+.modal-mask
+	position: fixed
+	z-index: 9998
+	top: 0
+	left: 0
+	width: 100%
+	min-height: 100%
+	background-color: rgba(0,0,0,.5)
+	transition: opacity .3s ease
+	.modal-wrapper
+		vertical-align: middle
+		padding-top: rem(32)
+		.modal-container
+			max-height: 100vh
+			overflow: auto
+			position: relative
+			width: rem(900)
+			max-width: 90%
+			margin: 0 auto
+			padding: rem(20) rem(30)
+			background-color: #fff
+			border-radius: 2px
+			box-shadow: 0 2px 8px rgba(0,0,0,.33)
+			transition: all .3s ease
+			&--buy
+				width: rem(800)
+			.modal-close
+				cursor: pointer
+				position: absolute
+				width: rem(20)
+				height: rem(20)
+				top: rem(10)
+				right: rem(10)
+				&:after
+					content: "\2716"
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					line-height: 100%
+					cursor: pointer
+					text-align: center
+			.modal-header
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding: rem(15)
+				.modal-title
+					font-size: 28px
+					font-weight: bold
+					text-align: center
+					width: 100%
+					&--buy
+						font-size: 20px
+			.modal-body
+				position: relative
+				flex: 1 1 auto
+				text-align: center
+				.modal-order-price
+					margin: rem(20) 0
+					border: 5px solid lighten($accent, 40%)
+					position: relative
+					flex: 1 1 auto
+					padding: rem(15)
+					.order-price-value
+						font-size: 30px
+						font-weight: bold
+						&--about
+							font-size: 26px
+				.modal-text
+					margin-top: 0
+					margin-bottom: rem(16)
+					&--buy
+						font-size: 13px
+						font-weight: bold
+						margin-bottom: rem(10)
+				input
+					height: rem(56)
+					margin: rem(13) auto rem(13)
+					padding: 0 0 0 rem(20)
+					width: rem(388)
+					max-width: 100%
+					margin-right: rem(5)
+					&.buy
+						width: 100%
+						margin: 0
+						height: inherit
+						padding: rem(10) rem(20)
+						color: $black
+				.modal-products
+					margin-top: rem(15)
+					.modal-products-title
+						margin-bottom: rem(8)
+						font-weight: bold
+				.modal-btn
+					font-size: 18px
+					height: rem(53)
+					max-width: 100%
+					margin: rem(13) auto rem(13)
+					padding: 0 rem(25)
+					cursor: pointer
+					background-color: $green
+					&:hover
+						darken($green, 10%)
+			.modal-footer
+				text-align: center
+				padding: rem(15)
+				border-top: 1px solid #eceeef
+				font-size: 12px
+
+/* Modal End */
 
 /* Footer Start */
 
@@ -236,3 +516,12 @@ textarea
 					margin-bottom: rem(8)
 
 /* Footer End */
+
+@media only screen and (min-width : 768px)
+	.main
+		.container
+			.row
+				.youtube
+					&:after
+						top: rem(-40)
+						left: rem(290)

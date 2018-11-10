@@ -34,6 +34,15 @@ gulp.task('ua.common-js', function() {
 	.pipe(gulp.dest('app/js'));
 });
 
+gulp.task('sps.common-js', function() {
+	return gulp.src([
+		'app/js/sps.common.js',
+		])
+	.pipe(concat('sps.common.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('app/js'));
+});
+
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
@@ -60,6 +69,18 @@ gulp.task('js-ua', ['ua.common-js'], function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('js-sps', ['sps.common-js'], function() {
+	return gulp.src([
+		'app/libs/jquery/dist/jquery.min.js',
+		'app/js/modules/min/phoneMask.min.js',
+		'app/js/sps.common.min.js', // Всегда в конце
+		])
+	.pipe(concat('sps.scripts.min.js'))
+	// .pipe(uglify()) // Минимизировать весь js (на выбор)
+	.pipe(gulp.dest('app/js'))
+	.pipe(browserSync.reload({stream: true}));
+});
+
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
@@ -81,10 +102,11 @@ gulp.task('sass', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', ['sass', 'js', 'js-ua', 'browser-sync'], function() {
+gulp.task('watch', ['sass', 'js', 'js-ua', 'js-sps', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch(['libs/**/*.js', 'app/js/ua.common.js'], ['js-ua']);
+	gulp.watch(['libs/**/*.js', 'app/js/sps.common.js'], ['js-sps']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 
@@ -94,7 +116,7 @@ gulp.task('imagemin', function() {
 	.pipe(gulp.dest('dist/img')); 
 });
 
-gulp.task('build', ['removedist', 'imagemin', 'sass', 'js', 'js-ua'], function() {
+gulp.task('build', ['removedist', 'imagemin', 'sass', 'js', 'js-ua', 'js-sps'], function() {
 
 	var buildFiles = gulp.src([
 		'app/*.html',
@@ -106,6 +128,10 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js', 'js-ua'], function()
 	var buildFilesSps = gulp.src([
 		'app/sps/*.html',
 		]).pipe(gulp.dest('dist/sps'));
+
+	var buildFilesSpsYouTube = gulp.src([
+		'app/sps-youtube/*.html',
+		]).pipe(gulp.dest('dist/sps-youtube'));
 
 	var buildFilesUA = gulp.src([
 		'app/ua/*.html',
@@ -128,6 +154,10 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js', 'js-ua'], function()
 
 	var buildJsUa = gulp.src([
 		'app/js/ua.scripts.min.js',
+		]).pipe(gulp.dest('dist/js'));
+
+	var buildJsSps = gulp.src([
+		'app/js/sps.scripts.min.js',
 		]).pipe(gulp.dest('dist/js'));
 
 	var buildFonts = gulp.src([

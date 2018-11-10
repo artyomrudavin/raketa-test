@@ -1024,8 +1024,8 @@ $(function() {
 			setTimeout(function() {
 				// Done Functions
 				th.trigger("reset");
-			}, 1000);
-			location.href = "http://standart.aquagradus.com/sps/";
+			}, 500);
+			location.href = "https://standart.aquagradus.com/sps/";
 		});
 		return false;
 	});

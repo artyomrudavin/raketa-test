@@ -32,6 +32,9 @@
 
 	<!-- <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style> -->
 
+	<!--NEXTEL - Коллтрекинг и виджеты-->
+	<script async src="https://cstat.nextel.com.ua:8443/tracking/script/766/390"></script>
+
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -49,8 +52,20 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
+		<!--<div class="banner"> <!~~ fridayblack ~~>
+			<a href="#blackfriday">
+				<img src="../img/bf-ua.jpg" alt="black friday">
+			</a>
+		</div>
+
+		<div class="bannerm">
+			<a href="#blackfriday">
+				<img src="../img/bf-sm-ua.jpg" alt="black friday">
+			</a>
+		</div>-->
+
 		<header class="header">
-			<nav class="header-nav">
+			<nav class="header-nav" id="navbar"> <!-- fridayblack -->
 				<div class="header-nav-box">
 					<div class="header-brand">
 						<div class="header-logo">
@@ -58,8 +73,8 @@
 							<p>Фабрика дистиляторів і пивоварень</p>
 						</div>
 						<div class="phone-mobile">
-							<a href="tel:+380501811050">+38 (050) 181-10-50</a>
-							<a href="tel:+380672506779">+38 (067) 250-67-79</a>
+							<span class="ct-phone">+38 (050) 011-30-84</span>
+							<span class="ct-phone">+38 (067) 759-63-26</span>
 						</div>
 						<div class="icon" id="burg">
 							<div class="hamburger"></div>
@@ -73,8 +88,8 @@
 							<li><a href="#reviews" class="h-link h-menu">Відгуки</a></li>
 							<li><a href="#about" class="h-link h-menu">Доставка</a></li>
 							<li class="head-ph">
-								<span>+38 (050) 181-10-50</span><br>
-								<span class="brd-btm">+38 (067) 250-67-79</span><br>
+								<span class="ct-phone">+38 (050) 011-30-84</span><br>
+								<span class="brd-btm ct-phone">+38 (067) 759-63-26</span><br>
 							</li>
 							<li class="btnHead"><a href="#" class="btn">Замовити дзвінок</a></li>
 						</ul>
@@ -134,7 +149,7 @@
 
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-7 header-text">
+						<div class="col-md-7 header-text" id="header-text"> <!-- fridayblack -->
 							<h2 class="h2">Самогонний апарат</h2>
 							<h3 class="h3">AquaGradus</h3>
 							<span class="standart">Стандарт</span>
@@ -165,9 +180,9 @@
 							<img src="../img/5years.png" alt="5 лет гарантия" class="img-responsive garanty-ph">
 							<p class="formAction"><strong>Заповніть форму щоб отримати знижку <span class="num">700 грн + Подарунок</span></strong></p>
 							<div id="message1" class="price num">
-								<div>25л: <span>6 650грн</span>&nbsp;<strong>5 950</strong> грн</div>
-								<div>35л: <span>7 150грн</span>&nbsp;<strong>6 450</strong> грн</div>
-								<div>50л: <span>7 650грн</span>&nbsp;<strong>6 950</strong> грн</div>
+								<div>25л: <span>7 150грн</span>&nbsp;<strong>6 450</strong> грн</div>
+								<div>35л: <span>7 650грн</span>&nbsp;<strong>6 950</strong> грн</div>
+								<div>50л: <span>8 150грн</span>&nbsp;<strong>7 450</strong> грн</div>
 							</div>
 							<form class="form" method="post" id="headerForm">
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Первый экран">
@@ -183,7 +198,7 @@
 							</div> -->
 						</div>
 						<div class="col-md-5 header-col-hd">
-							<img src="../img/full-1.gif" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-2">
+							<img src="../img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-2">
 							<img src="../img/5years.png" alt="5 лет гарантия" class="img-responsive garanty">
 						</div>
 					</div>
@@ -329,8 +344,63 @@
 
 			</div>
 
-		</section><!-- Tips End -->
+		</section><!-- Video End -->
 
+		<!--<section class="blackfriday" id="blackfriday"> <!~~ fridayblack ~~>
+			<div class="container">
+				<div class="row bf-row">
+					<div class="bf-img-block">
+						<img src="../img/bf-standart-img-ua.png" alt="" class="img-responsive">
+					</div>
+					<div class="bf-text-block">
+						<p class="small-h">В чорну п'ятницю</p>
+						<img src="../img/bolshe-ua.png" alt="" class="img-responsive">
+						<p class="aqua">разом з <span class="logo-font">AquaGradus</span></p>
+						<p class="bf-adds">Ще більше подарунків! Найточніший покраплений відбір з Охолодженням Делюкс, вугільне пом'якшення вкусу, максимальна міцність та очистка завдяки регулярним насадкам Панченкова!</p>
+						<a href="#" class="btn bf-btn">Отримати корисні подарунки</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="blackfriday-modal" class="modal-mask hide">
+				<div id="mW3" class="modal-wrapper">
+					<div class="modal-container modal-container--buy">
+						<div class="modal-close"></div>
+						<div class="modal-header">
+							<h3 class="modal-title modal-title--buy">Акція в чорну п'ятницю!</h3>
+						</div>
+						<div class="modal-body">
+							<div>
+								<div class="modal-order-price" style="border: 5px solid #0011ff">
+									<div>
+										<div class="order-price-value num">
+											Залиште замовлення та отримуйте більше за ті ж грощі!
+										</div>
+									</div>
+								</div>
+								<form id="bf-call" method="post">
+
+									<!~~ Hidden Required Fields ~~>
+									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Черная пятница;">
+									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+									<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+									<!~~ END Hidden Required Fields ~~>
+
+									<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+
+									<button type="submit" class="btn modal-btn" style="background-color: #c01926">Отримати корисні подарунки</button>
+
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							перезвоним Вам в течение 15 минут
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> <!~~ Blackfriday End ~~>
+-->
 		<section class="convenience">
 
 			<div class="container-fluid">
@@ -1211,8 +1281,8 @@
 							<div class="row constr-form">
 								<div class="col-lg-6 col-12 price">
 									<div class="constructor-form-label">Ціна:</div>
-									<span id="form-old" class="form-old num">6 650₴</span>&nbsp;
-									<span id="form-value" class="form-value num">5 950₴</span>
+									<span id="form-old" class="form-old num">7 150₴</span>&nbsp;
+									<span id="form-value" class="form-value num">6 450₴</span>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12 buy">
 									<a href="#" class="btn constr-btn buy-btn">Купити апарат</a>
@@ -1728,7 +1798,7 @@
 						<p>Існує небагато способів вимірювання концентрації спирту в самогоні або будь-якому іншому розчині. Ареометр найбільш вірний і точний вимірювальний прилад, здатний визначити зміст нейтрального спирту в рідині в діапазоні від 0 до 100% об. Прилад має велику кількість позитивних відгуків від досвідчених самогонників.</p>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">350₴</div>
+						<div class="price col-md-6 num">450₴</div>
 						<div class="col-md-6"><a href="#" class="btn add-btn" id="areom">Купити</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрити</a></div>
@@ -1881,7 +1951,7 @@
 					</div>
 					<div class="collapse">
 						<div class="card-block">
-							<p>Ціна на 25 л - 5950₴, 35 л - 6450₴, 50 л - 6950₴. Щоб довідатися про ціни на апарат натисніть на кнопку купити.
+							<p>Ціна на 25 л - 6450₴, 35 л - 6950₴, 50 л - 7450₴. Щоб довідатися про ціни на апарат натисніть на кнопку купити.
 							</p>
 							<br>
 							<a href="#constructor" class="link link-one">Купити апарат</a>
@@ -1966,7 +2036,7 @@
 				<div class="f-contact col-12">
 					<h5 class="title">Контакти</h5>
 					<div>
-						<a href="tel:+380501811050" class="num">+38 (050) 181-10-50</a><a href="tel:+380672506779" class="num">+38 (067) 250-67-79</a>
+						<span class="num ct-phone">+38 (050) 011-30-84</span><span class="num ct-phone">+38 (067) 759-63-26</span>
 					</div>
 					<p>вул. Шиллингера 3, г. Харків</p>
 					<p>aquagradus@gmail.com</p>
@@ -1977,29 +2047,14 @@
 		</div>
 	</footer>
 
-	<!-- <link rel="stylesheet" href="css/main.min.css"> -->
-	<script type="text/javascript">
-  (function(d, w, s) {
-	var widgetHash = 'ua3lrjxlxt9mmko5k3xh', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
-	gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
-	var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
-  })(document, window, 'script');
-</script>
-
-<script type="text/javascript">
-  (function(d, w, s) {
-	var widgetHash = 's86q6hsme05nr5hke1l3', ctw = d.createElement(s); ctw.type = 'text/javascript'; ctw.async = true;
-	ctw.src = '//widgets.binotel.com/calltracking/widgets/'+ widgetHash +'.js';
-	var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(ctw, sn);
-  })(document, window, 'script');
-</script>
-
+	<!-- Bitrix widget -->
 	<script data-skip-moving="true">
 		(function(w,d,u){
 			var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
 			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 		})(window,document,'https://cdn.bitrix24.ua/b6001361/crm/site_button/loader_4_am3pb7.js');
 	</script>
+	<!-- Bitrix widget -->
 
 	<script src="../js/ua.scripts.min.js"></script>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html> <!-- version: v5 -->
-<html lang="ru">
+<html lang="ru" class="no-js">
 
 <head>
 
@@ -31,12 +31,23 @@
 
 	<!-- <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style> -->
 
+	<!--NEXTEL - Коллтрекинг и виджеты-->
+	<script async src="https://cstat.nextel.com.ua:8443/tracking/script/766/563"></script>
+
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K5KHPKL');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NGR64NJ');</script>
 <!-- End Google Tag Manager -->
 
 </head>
@@ -48,8 +59,25 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGR64NJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+		<!--<div class="banner"> <!~~ fridayblack ~~>
+			<a href="#blackfriday">
+				<img src="img/bf.jpg" alt="black friday">
+			</a>
+		</div>
+
+		<div class="bannerm">
+			<a href="#blackfriday">
+				<img src="img/bf-sm.jpg" alt="black friday">
+			</a>
+		</div>-->
+
 		<header class="header">
-			<nav class="header-nav">
+			<nav class="header-nav" id="navbar"> <!-- fridayblack -->
 				<div class="header-nav-box">
 					<div class="header-brand">
 						<div class="header-logo">
@@ -57,8 +85,8 @@
 							<p>Фабрика дистилляторов и пивоварен</p>
 						</div>
 						<div class="phone-mobile">
-							<a href="tel:+380501811050">+38 (050) 181-10-50</a>
-							<a href="tel:+380672506779">+38 (067) 250-67-79</a>
+							<!-- <span class="ct-phone">+38 (050) 011-30-84</span> -->
+							<span class="ct-phone">+38 (067) 759-63-26</span>
 						</div>
 						<div class="icon" id="burg">
 							<div class="hamburger"></div>
@@ -72,8 +100,8 @@
 							<li><a href="#reviews" class="h-link h-menu">Отзывы</a></li>
 							<li><a href="#about" class="h-link h-menu">Доставка</a></li>
 							<li class="head-ph">
-								<span>+38 (050) 181-10-50</span><br>
-								<span class="brd-btm">+38 (067) 250-67-79</span><br>
+								<!-- <span class="ct-phone">+38 (050) 011-30-84</span><br> -->
+								<span class="ct-phone">+38 (067) 759-63-26</span><br>
 							</li>
 							<li class="btnHead"><a href="#" class="btn">Заказать звонок</a></li>
 						</ul>
@@ -99,19 +127,34 @@
 
 			<div class="header-wellcome">
 
-				<div class="header-bonus blink">
+				<div class="header-bonus blink"> <!-- ny -->
 					<h3 class="bonus-title">Заказывай комплект 25, 35 или 50 литров и получи Подарок!</h3>
 					<ul>
 						<li>
-							<img src="img/bonus/Pancheknova.png" alt="" class="img-responsive">
+							<picture>
+								<source type="image/webp" srcset="img/bonus/Pancheknova.webp">
+								<source type="image/png" srcset="img/bonus/Pancheknova.png">
+								<img src="img/bonus/Pancheknova.png" alt="Подарок Насадка Панченкова" class="img-responsive">
+							</picture>
+							<!-- <img src="img/bonus/Pancheknova.png" alt="" class="img-responsive"> -->
 							<p>Насадка Панченкова 5 м</p>
 						</li>
 						<li>
-							<img src="img/bonus/kran.png" alt="" class="img-responsive">
+							<picture>
+								<source type="image/webp" srcset="img/bonus/kran.webp">
+								<source type="image/png" srcset="img/bonus/kran.png">
+								<img src="img/bonus/kran.png" alt="Подарок Игольчатый кран" class="img-responsive">
+							</picture>
+							<!-- <img src="img/bonus/kran.png" alt="" class="img-responsive"> -->
 							<p>Игольчатый кран и тройник.</p>
 						</li>
 						<li>
-							<img src="img/bonus/spirt.png" alt="" class="img-responsive">
+							<picture>
+								<source type="image/webp" srcset="img/bonus/spirt.webp">
+								<source type="image/png" srcset="img/bonus/spirt.png">
+								<img src="img/bonus/spirt.png" alt="Подарок Спиртометр бытовой" class="img-responsive">
+							</picture>
+							<!-- <img src="img/bonus/spirt.png" alt="" class="img-responsive"> -->
 							<p>Спиртометр</p>
 						</li>
 					</ul>
@@ -133,7 +176,7 @@
 
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-7 header-text">
+						<div class="col-md-7 header-text" id="header-text"> <!-- fridayblack -->
 							<h2 class="h2">Самогонный аппарат</h2>
 							<h3 class="h3">AquaGradus</h3>
 							<span class="standart">Стандарт</span>
@@ -156,18 +199,29 @@
 									<span>Закажи сейчас, а оплати при получении</span>
 								</li>
 							</ul>
-							<img src="img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1"> <!-- phone -->
-							<img src="img/5years.png" alt="5 лет гарантия" class="img-responsive garanty-ph">
+							<picture>
+								<source type="image/webp" srcset="img/img-1-2.webp">
+								<source type="image/png" srcset="img/img-1-2.png">
+								<img src="img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1">
+							</picture>
+							<!-- <img src="img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1"> --> <!-- phone --> <!-- ny -->
+							<picture>
+								<source type="image/webp" srcset="img/5years.webp">
+								<source type="image/png" srcset="img/5years.png">
+								<img src="img/img/5years.png" alt="5 лет гарантия" class="img-responsive garanty-ph">
+							</picture>
+							<!-- <img src="img/5years.png" alt="5 лет гарантия" class="img-responsive garanty-ph"> -->
 							<p class="formAction"><strong>Заполните форму чтобы получить скидку <span class="num">700 грн + Подарок</span></strong></p>
 							<div id="message1" class="price num">
-								<div>25л: <span>6 650грн</span>&nbsp;<strong>5 950</strong> грн</div>
-								<div>35л: <span>7 150грн</span>&nbsp;<strong>6 450</strong> грн</div>
-								<div>50л: <span>7 650грн</span>&nbsp;<strong>6 950</strong> грн</div>
+								<div>25л: <span>7 150грн</span>&nbsp;<strong>6 450</strong> грн</div>
+								<div>35л: <span>7 650грн</span>&nbsp;<strong>6 950</strong> грн</div>
+								<div>50л: <span>8 150грн</span>&nbsp;<strong>7 450</strong> грн</div>
 							</div>
 							<form class="form" method="post" id="headerForm">
 								
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Первый экран">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+								
 
 								<input type="text" class="form-item" name="DATA[NAME]" required placeholder="Ваше имя">
 								<input type="tel" class="form-item" name="DATA[PHONE_MOBILE]" required placeholder="Ваш телефон">
@@ -175,8 +229,18 @@
 							</form>
 						</div>
 						<div class="col-md-5 header-col-hd">
-							<img src="img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-2">
-							<img src="img/5years.png" alt="5 лет гарантия" class="img-responsive garanty">
+							<picture>
+								<source type="image/webp" srcset="img/img-1-2.webp">
+								<source type="image/png" srcset="img/img-1-2.png">
+								<img src="img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-2">
+							</picture>
+							<!-- <img src="img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-2"> --> <!-- ny -->
+							<picture>
+								<source type="image/webp" srcset="img/5years.webp">
+								<source type="image/png" srcset="img/5years.png">
+								<img src="img/img/5years.png" alt="5 лет гарантия" class="img-responsive garanty">
+							</picture>
+							<!-- <img src="img/5years.png" alt="5 лет гарантия" class="img-responsive garanty"> -->
 						</div>
 					</div>
 				</div>
@@ -205,6 +269,7 @@
 									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Обратный звонок;">
 									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 									<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+									
 									<!-- END Hidden Required Fields -->
 
 									<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
@@ -295,7 +360,7 @@
 					<div class="col-md-8">
 						
 						<div class="videoWrapper">
-    						<iframe width="560" height="315" src="https://www.youtube.com/embed/RysVHwwo_Ek" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/RysVHwwo_Ek" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						</div>
 
 					</div>
@@ -309,6 +374,7 @@
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Видео">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								
 								<!-- Hidden -->
 								<input type="text" class="form-item" name="DATA[NAME]" required placeholder="Ваше имя">
 								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
@@ -322,6 +388,62 @@
 			</div>
 
 		</section><!-- Video End -->
+
+		<!--<section class="blackfriday" id="blackfriday"> <!~~ fridayblack ~~>
+			<div class="container">
+				<div class="row bf-row">
+					<div class="bf-img-block">
+						<img src="img/bft-standart-img.png" alt="" class="img-responsive">
+					</div>
+					<div class="bf-text-block">
+						<p class="small-h">Получай больше в черную пятницу</p>
+						<!~~ <img src="img/bolshe-ny.png" alt="" class="img-responsive"> ~~>
+						<p class="aqua">от <span class="logo-font">AquaGradus</span></p>
+						<p class="bf-adds">Еще больше подарков!<br><strong>Угольгое смягчение вкуса, Ароматизация во время перегонки либо Контроль крепости онлайн!</strong><br>
+						Выбирай подходящий тебе подарок!</p>
+						<a href="#" class="btn bf-btn">Получить полезные подарки</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="blackfriday-modal" class="modal-mask hide">
+				<div id="mW3" class="modal-wrapper">
+					<div class="modal-container modal-container--buy">
+						<div class="modal-close"></div>
+						<div class="modal-header">
+							<h3 class="modal-title modal-title--buy">Акция в Черную пятницу!</h3>
+						</div>
+						<div class="modal-body">
+							<div>
+								<div class="modal-order-price" style="border: 5px solid #c01926">
+									<div>
+										<div class="order-price-value num">
+											Оставьте заявку и получайте больше за те же деньги!
+										</div>
+									</div>
+								</div>
+								<form id="bf-call" method="post">
+
+									<!~~ Hidden Required Fields ~~>
+									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Черная пятница;">
+									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+									<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+									<!~~ END Hidden Required Fields ~~>
+
+									<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
+
+									<button type="submit" class="btn modal-btn" style="background-color: #c01926">Получить полезные подарки</button>
+
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							перезвоним Вам в течение 15 минут
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> <!~~ Blackfriday End ~~>-->
 
 		<section class="convenience">
 
@@ -394,6 +516,7 @@
 									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Преимущества">
 									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 									<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+									
 									<!-- Hidden -->
 									<input type="text" class="form-item" name="DATA[NAME]" required placeholder="Ваше имя">
 									<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
@@ -472,7 +595,7 @@
 		<section id="characteristics" class="characteristics">
 
 			<div class="container-fluid">
-				<h3 class="h3">Характеристики и размеры <span>AquaGradus™</span> Стандарт</span></h3>
+				<h3 class="h3">Характеристики и размеры <span>AquaGradus™</span> Стандарт</h3>
 				<div class="row">
 					<div class="char-img col-6">
 						<img src="img/20/20.jpg" alt="Самогонный аппарат AquaGradus Стандарт 12л">
@@ -698,6 +821,7 @@
 						<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Акция">
 						<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 						<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+						
 						<!-- Hidden -->
 						<input type="text" class="form-item" name="DATA[NAME]" required placeholder="Ваше имя">
 						<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
@@ -889,6 +1013,7 @@
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Книга">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								
 
 								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон">
 								<button type="submit" class="btn modal-btn">Получить бесплатно</button>
@@ -1217,8 +1342,8 @@
 							<div class="row constr-form">
 								<div class="col-lg-6 col-12 price">
 									<div class="constructor-form-label">Цена:</div>
-									<span id="form-old" class="form-old num">6 650₴</span>&nbsp;
-									<span id="form-value" class="form-value num">5 950₴</span>
+									<span id="form-old" class="form-old num">7 150₴</span>&nbsp;
+									<span id="form-value" class="form-value num">6 450₴</span>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12 buy">
 									<a href="#" class="btn constr-btn buy-btn">Купить аппарат</a>
@@ -1303,6 +1428,7 @@
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Каталог">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								
 								<!-- Hidden -->
 								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
 								<div class="modal-products">
@@ -1323,6 +1449,88 @@
 		</div>
 
 	</section> <!-- Constructor End -->
+
+	<section class="certificat"> <!-- Certificat Start -->
+		<div class="bg-transf">
+			<div class="container-fluid">
+				<h3 class="title">Гарантия качества и обязательств</h3>
+				<p class="subtitle"><span>мы работаем исключительно в рамках правового поля Украины – Вы 100% получите товар заявленного качества и <strong>гарантию обслуживания 5 лет!</strong></span></p>
+				<div class="row">
+					<div class="col-md-3 cert-cert">
+						<p class="m-title">Зарегистрированная и сертифицированная торговая марка на продукцию</p>
+						<div class="slideshow-container">
+							<!-- Full-width images with number and caption text -->
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 3</div>
+								<img src="../img/sert/1sert-s.jpg" style="width:100%" alt="Сертификат">
+								<!-- <div class="text">Caption Text</div> -->
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 3</div>
+								<img src="../img/sert/2sert-s.jpg" style="width:100%" alt="Сертификат">
+								<!-- <div class="text">Caption Two</div> -->
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 3</div>
+								<img src="../img/sert/3sert-s.jpg" style="width:100%" alt="Сертификат">
+								<!-- <div class="text">Caption Three</div> -->
+							</div>
+							<!-- Next and previous buttons -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+						<br>
+						<!-- The dots/circles -->
+						<div style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+						</div>
+					</div>
+					<div class="col-md-4 cert-urik">
+						<p class="m-title">Мы юридическое лицо - все сделки выполняются согласно всем требованиям закона Украины</p>
+						<ul>
+							<li>
+								<i class="gar"></i>
+								<p>Гарантия соблюдения Закона Украины "О защите прав потребителей". Вы имеете право обменять или вернуть непродовольственный товар</p>
+							</li>
+							<li>
+								<i class="check"></i>
+								<p>При покупке аппарата, Вы получаете гарантийный талон и фискальный чек, юридически подтверждающий факт осуществления между продавцом покупателем денежного расчета</p>
+							</li>
+							<li>
+								<i class="pay"></i>
+								<p>Все виды оплаты: наличный, картой (без дополнительного % даже в счет кредитных средств), на расчетный счет</p>
+							</li>
+							<li>
+								<i class="bill"></i>
+								<p>Мы платим налоги с каждой продажи. Поддержка отечественного украинского производителя</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-5 cert-prod">
+						<p class="m-title">Производство открытого типа - хотим чтобы Вы удостоверились сами, что у нас не "гаражное" производство</p>
+						<div class="video-container" id="myBtn">
+							<img src="img/video-plant/placeholder-video.jpg" alt="" class="img-responsive embed-responsive embed-responsive-16by9 plh-video">
+							<div class="btn-video"></div>
+						</div>
+						<p>В этом видео мы показали наше производство: цех лазерной порезки металла, гибочный станок и штамповочный пресс, сварочны и полировачные цеха, слесарный цех, ОТК и склад готовой продукции.</p>
+						<p><strong>Мы растем, развиваемся и следим за качеством нашей продукции!</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<!-- <span class="close">&times;</span> -->
+				<div class="videoWrapper embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/J4hHh8Qp55M" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</section> <!-- Certificat End -->
 
 	<section id="about" class="about layer-0">
 
@@ -1385,6 +1593,7 @@
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Обратный звонок как работаем">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								
 								<!-- Hidden -->
 								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
 								<button type="submit" class="btn modal-btn">Заказать обратный звонок</button>
@@ -1494,7 +1703,7 @@
 						</div>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">400₴</div>
+						<div class="price col-md-6 num">500₴</div>
 						<div class="col-md-6"><a href="#" class="btn add-btn" id="carga">Купить</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрыть</a></div>
@@ -1734,7 +1943,7 @@
 						<p>Существует не много способов измерения концентрации спирта в самогоне или любом другом растворе. Ареометр наиболее верный и точный измерительный прибор, способный определить содержание нейтрального спирта в жидкости в диапазоне от 0 до 100 % об. Прибор имеет большое количество положительных отзывов от опытных самогонщиков.</p>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">350₴</div>
+						<div class="price col-md-6 num">450₴</div>
 						<div class="col-md-6"><a href="#" class="btn add-btn" id="areom">Купить</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрыть</a></div>
@@ -1753,7 +1962,7 @@
 						<p>Однако практичность, надежность и безопасность относят ТЭН к устройствам, которые чаще всего используются в качестве нагревателя в самогонном аппарате.</p>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">250₴</div>
+						<div class="price col-md-6 num">300₴</div>
 						<div class="col-md-6"><a id="ten" href="#" class="btn add-btn">Купить</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрыть</a></div>
@@ -1786,6 +1995,7 @@
 								<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Дополнительно">
 								<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 								<textarea class="hide" name="DATA[COMMENTS]"></textarea>
+								
 								<!-- Hidden -->
 								<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
 								<div class="modal-products">
@@ -1887,7 +2097,7 @@
 					</div>
 					<div class="collapse">
 						<div class="card-block">
-							<p>Цена на 25 л - 5950₴, 35 л - 6450₴, 50 л - 6950₴. Чтобы узнать цены на аппарат нажмите на кнопку купить.
+							<p>Цена на 25 л - 6450₴, 35 л - 6950₴, 50 л - 7450₴. Чтобы узнать цены на аппарат нажмите на кнопку купить.
 							</p>
 							<br>
 							<a href="#constructor" class="link link-one">Купить аппарат</a>
@@ -1932,6 +2142,7 @@
 				<!-- Hidden Required Fields -->
 				<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Задать вопрос;">
 				<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
+				
 				<!-- END Hidden Required Fields -->
 
 				<div class="row">
@@ -1972,7 +2183,7 @@
 				<div class="f-contact col-12">
 					<h5 class="title">Контакты</h5>
 					<div>
-						<a href="tel:+380501811050" class="num">+38 (050) 181-10-50</a><a href="tel:+380672506779" class="num">+38 (067) 250-67-79</a>
+						<span class="num ct-phone">+38 (067) 759-63-26</span>
 					</div>
 					<p>ул. Шиллингера 3, г. Харьков</p>
 					<p>aquagradus@gmail.com</p>
@@ -1982,33 +2193,14 @@
 			</div>
 		</div>
 	</footer>
-
-	<!-- <link rel="stylesheet" href="css/main.min.css"> -->
-	
-	<script type="text/javascript">
-  (function(d, w, s) {
-	var widgetHash = 'rgryb8e26bpfc4f4i404', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
-	gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
-	var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
-  })(document, window, 'script');
-</script>
-<script type="text/javascript">
-  (function(d, w, s) {
-	var widgetHash = 's86q6hsme05nr5hke1l3', ctw = d.createElement(s); ctw.type = 'text/javascript'; ctw.async = true;
-	ctw.src = '//widgets.binotel.com/calltracking/widgets/'+ widgetHash +'.js';
-	var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(ctw, sn);
-  })(document, window, 'script');
-</script>
+	<!-- Bitrix widget -->
 	<script data-skip-moving="true">
 		(function(w,d,u){
 			var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
 			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 		})(window,document,'https://cdn.bitrix24.ua/b6001361/crm/site_button/loader_4_am3pb7.js');
 	</script>
-
-	<!-- <script src="js/jquery.touchSwipe.js"></script> -->
-
-
+	<!-- Bitrix widget -->
 
 	<script src="js/scripts.min.js"></script>
 

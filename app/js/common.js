@@ -23,9 +23,28 @@
 
 // });
 
+// $(function() { // fridayblack
 
+// 	// When the user scrolls the page, execute myFunction
+// 	window.onscroll = function() {myFunction()};
 
+// 	// Get the navbar
+// 	var wehave = document.getElementById("header-text");
+// 	var navbar = document.getElementById("navbar");
 
+// 	// Get the offset position of the navbar
+// 	var showMenu = wehave.offsetTop;
+
+// 	// Add the sticky class to the navbar
+// 	function myFunction() {
+// 		if (window.pageYOffset >= showMenu) {
+// 			navbar.classList.add("showMenu")
+// 		} else {
+// 			navbar.classList.remove("showMenu");
+// 		}
+// 	}
+
+// });
 
 // Modal Control - Book
 
@@ -50,7 +69,7 @@ $(function() {
 
 });
 
-// Modal Control - Catalog
+// Modal Control - Catalog 
 
 $(function() {
 
@@ -119,6 +138,29 @@ $(function() {
 
 });
 
+// Modal Control - Black friday
+
+// $(function() { // fridayblack
+
+// 	var modal = $('#blackfriday-modal.modal-mask');
+
+// 	$('.bf-text-block .bf-btn').on('click', function(e) {
+// 		e.preventDefault();
+// 		modal.removeClass('hide');
+// 	});
+
+// 	$('.modal-close').on('click', function() {
+// 		modal.addClass('hide');
+// 	});
+
+// 	$(document).on('click', function(event) {
+// 		if ( event.target.id == 'mW3' ) {
+// 			modal.addClass('hide');
+// 		}
+// 	});
+
+// });
+
 // Modal Control - About
 
 $(function() {
@@ -178,7 +220,7 @@ $(function() {
 			hiddenComAdd.val('Кольца Рашига 1 кг');
 			// console.log('rashiga');
 		} else if ( $(this).attr('id') == 'areom' ) {
-			addPrice.text('350₴');
+			addPrice.text('450₴');
 			addTextm.text('Набор профессиональных ареометров и мерная колба');
 			hiddenComAdd.val('Набор профессиональных ареометров и мерная колба');
 			// console.log('areom');
@@ -500,8 +542,8 @@ $(function() {
 			formOld.show();
 
 			if ( dataTk == 'twentyTk' ) {
-				formOld.text('6 650₴');
-				formValue.text('5 950₴');
+				formOld.text('7 150₴');
+				formValue.text('6 450₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -511,8 +553,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 25л');
 				hiddenComment.val('Самогонный аппарат с баком на 25л');
 			} else if ( dataTk == 'thirtyTk' ) {
-				formOld.text('7 150₴');
-				formValue.text('6 450₴');
+				formOld.text('7 650₴');
+				formValue.text('6 950₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -522,8 +564,8 @@ $(function() {
 				mtextValue.text('Самогонный аппарат с баком на 35л');
 				hiddenComment.val('Самогонный аппарат с баком на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formOld.text('7 650₴');
-				formValue.text('6 950₴');
+				formOld.text('8 150₴');
+				formValue.text('7 450₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -546,7 +588,7 @@ $(function() {
 		formOld.hide();
 
 
-		formValue.text('3 950₴');
+		formValue.text('4 450₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/pro_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -569,8 +611,8 @@ $(function() {
 			modalBtn.text('Купить колонну отдельно');
 		} else {
 			colVal.text('Колонна отдельно');
-			formValue.text('5 950₴');
-			formOld.text('6 650₴');
+			formOld.text('7 150₴');
+			formValue.text('6 450₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
@@ -632,8 +674,8 @@ $(function() {
 			modalBtn.text('Купить бак отдельно');
 		} else {
 			bakVal.text('Бак отдельно');
-			formValue.text('5 950₴');
-			formOld.text('6 650₴');
+			formOld.text('7 150₴');
+			formValue.text('6 450₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
@@ -904,9 +946,9 @@ $(function() {
 
 // Scroll to
 
-$(function() {
+$(function() { // fridayblack
 
-	$('.more a, #menu a, .goto a, .card-block a').click( function(){ // ловим клик по ссылке с классом go_to
+	$('.more a, #menu a, .goto a, .card-block a, .banner a, .bannerm a').click( function(){ // ловим клик по ссылке с классом go_to
 	var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
 	    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 75}, 2000); // анимируем скроолинг к элементу scroll_el
@@ -1010,10 +1052,14 @@ $(function() {
 
 //E-mail Ajax Send
 
-$(function() {
+$(function() { // fridayblack
 
-	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus, #formVideo, #formTank").submit(function() { //Change
+	$("#headerCall, #bf-call, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus, #formVideo, #formTank").submit(function() { //Change
 		var th = $(this);
+		var submitButton = th.find("button[type='submit']");
+		console.log(submitButton);
+		submitButton.addClass('btn-disable').prop("disabled", true);
+
 
 		$.ajax({
 			type: "POST",
@@ -1023,9 +1069,9 @@ $(function() {
 			// alert("Thank you!");
 			setTimeout(function() {
 				// Done Functions
-				th.trigger("reset");
+				// th.trigger("reset");
+				location.href = "https://standart.aquagradus.com/sps/";
 			}, 500);
-			location.href = "https://standart.aquagradus.com/sps/";
 		});
 		return false;
 	});
@@ -1164,3 +1210,59 @@ $(function() {
 	}, 1000);
 
 });
+
+
+var slideIndex = 1;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("dot");
+	if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "flex";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

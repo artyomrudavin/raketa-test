@@ -161,6 +161,42 @@ textarea
 		background-color: darken($accent, 10%)
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 
+.btn-disable
+	background-color: $dark-gray!important
+	&:hover
+		cursor: default!important
+		box-shadow: none!important
+
+// .showMenu
+// 	top: 0!important // fridayblack
+
+/* BlackFriday Banner Start */
+
+// .banner
+// 	display: none
+
+// .banner, .bannerm
+// 	margin: 0
+// 	padding: 0
+// 	text-align: center
+// 	a
+// 		text-decoration: none
+// 		display: block
+// 		background: #000
+// 		height: 60px
+// 		width: 100%
+// 		img
+// 			display: block
+// 			max-width: 1316px
+// 			margin: 0 auto
+// 			width: 100%
+
+// .bannerm
+// 	a
+// 		height: auto
+
+/* BlackFriday Banner End */
+
 /* Header Start */
 
 .header
@@ -169,7 +205,9 @@ textarea
 	background: #fff
 	.header-nav
 		position: fixed
-		top: 0
+		top: 0 // fridayblack
+		transition: .4s // fridayblack
+		// display: none
 		width: 100%
 		z-index: 500
 		opacity: .95
@@ -205,6 +243,21 @@ textarea
 					flex-direction: column
 					flex: 1 1 auto
 					align-items: flex-end
+					.ct-phone
+						position: relative
+						padding-left: rem(25)
+						&:before
+							content: ""
+							width: rem(20)
+							height: rem(20)
+							top: 50%
+							transform: translateY(-50%)
+							position: absolute
+							left: 0
+							margin: 0
+							// background: url(/img/phone-contact.png)
+							// background-repeat: no-repeat
+							// background-size: contain
 				.icon
 					position: relative
 					width: rem(40)
@@ -263,6 +316,21 @@ textarea
 						font-size: 14px
 						display: none
 						z-index: 100
+						.ct-phone
+							position: relative
+							padding-left: rem(40)
+							&:before
+								content: ""
+								width: rem(30)
+								height: rem(30)
+								top: 50%
+								transform: translateY(-50%)
+								position: absolute
+								left: 0
+								margin: 0
+								// background: url(/img/phone-contact.png)
+								// background-repeat: no-repeat
+								// background-size: contain
 					.btnHead
 						display: none
 						z-index: 100
@@ -270,7 +338,7 @@ textarea
 							padding: rem(8) rem(10)
 							font-size: 14px
 							background-color: $green
-							margin-left: rem(10)	
+							margin-left: rem(10)
 			.time-wrap
 				display: flex
 				position: absolute
@@ -395,7 +463,7 @@ textarea
 					.img-1
 						vertical-align: middle
 						width: 95%
-						margin-left: -70px
+						margin-left: -70px // fridayblack
 					.garanty-ph
 						position: absolute
 						bottom: rem(450)
@@ -463,6 +531,46 @@ textarea
 			.modal-container
 				.order-price-value
 					font-size: 26px
+
+.no-webp, .no-js
+	.header
+		.header-nav
+			.header-nav-box
+				.header-brand
+					.phone-mobile
+						.ct-phone
+							&:before
+								background: url(/img/phone-contact.png)
+								background-repeat: no-repeat
+								background-size: contain
+				.header-navbar
+					#menu
+						.head-ph
+							.ct-phone
+								&:before
+									background: url(/img/phone-contact.png)
+									background-repeat: no-repeat
+									background-size: contain
+
+.webp, .no-js
+	.header
+		.header-nav
+			.header-nav-box
+				.header-brand
+					.phone-mobile
+						.ct-phone
+							&:before
+								background: url(/img/phone-contact.webp)
+								background-repeat: no-repeat
+								background-size: contain
+				.header-navbar
+					#menu
+						.head-ph
+							.ct-phone
+								&:before
+									background: url(/img/phone-contact.webp)
+									background-repeat: no-repeat
+									background-size: contain
 
 /* Header End */
 
@@ -758,6 +866,51 @@ textarea
 
 
 /* Video End */
+
+/* Blackfriday Start */
+
+// .blackfriday
+// 	padding: rem(30) rem(30)
+// 	// background: url(../img/right.jpg) center left no-repeat, url(../img/left.jpg) center right no-repeat, #ffc801
+// 	background-color: #ffc801
+// 	// background-size: contain
+// 	// background: url(../img/chrismas.jpg) repeat
+// 	.container
+// 		.bf-row
+// 			flex-direction: column
+// 			.bf-img-block
+// 				// width: 50%
+// 			.bf-text-block
+// 				// width: 50%
+// 				color: #fff
+// 				text-align: center
+// 				display: flex
+// 				flex-direction: column
+// 				justify-content: center
+// 				align-items: center
+// 				.aqua, .small-h
+// 					color: #000
+// 					font-size: 38px
+// 					line-height: 38px
+// 					font-weight: bold
+// 				.aqua
+// 					color: #c01926
+// 					margin-bottom: rem(20)
+// 					.logo-font
+// 						font-size: 42px
+// 				.img-responsive
+// 					margin: 0 auto
+// 				.small-h
+// 				.bf-adds
+// 					font-size: 18px
+// 					margin-bottom: rem(30)
+// 					color: #000
+// 				.bf-btn
+// 					background-color: #c01926
+// 					// max-width: rem(200)
+// 					padding: rem(15) rem(30)
+
+/* Blackfriday End */
 
 /* Standart Start */
 
@@ -1569,7 +1722,7 @@ textarea
 								font-size: 13px
 							.form-old
 								font-size: 26px
-								color: $red
+								color: $red // $red
 								text-decoration: line-through
 							.form-value
 								font-size: 36px
@@ -1612,6 +1765,191 @@ textarea
 								margin: 0 auto
 
 /* Constructor End */
+
+/* Certificat Start */
+
+.certificat
+	padding-top: rem(30)
+	padding-bottom: rem(60)
+	background-color: #f2f2f2
+	.bg-transf
+		position: relative
+		overflow: hidden
+		// margin-top: -70px
+		&:before
+			content: ""
+			display: block
+			height: rem(440)
+			width: 120%
+			position: absolute
+			left: 50%
+			top: 20%
+			transform: rotate(-5deg) translateX(-50%)
+			transform-origin: center top
+			background-color: #fff
+		.container-fluid
+			padding-right: rem(20)
+			padding-left: rem(20)
+			max-width: rem(1240)
+			.title
+				font-size: 40px
+				position: relative
+				margin-bottom: rem(60)
+				text-align: right
+				&:after
+					content: ""
+					width: rem(150)
+					height: 3px
+					background-color: $accent
+					position: absolute
+					right: 0
+					margin-top: rem(66)
+			.subtitle
+				display: flex
+				justify-content: flex-end
+				span
+					max-width: 70%
+					font-size: rem(18)
+					margin-top: rem(24)
+					margin-bottom: rem(46)
+					text-align: right
+			.row
+				position: relative
+				.cert-cert
+					.slideshow-container
+						max-width: rem(350)
+						position: relative
+						margin: auto
+						.mySlides
+							display: none
+							box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75)
+							.text
+								color: #f2f2f2
+								font-size: 15px
+								padding: 8px 12px
+								position: absolute
+								bottom: 8px
+								width: 100%
+								text-align: center
+							.numbertext
+								color: #f2f2f2
+								font-size: 12px
+								padding: 8px 12px
+								position: absolute
+								top: 0
+						.prev, .next
+							cursor: pointer
+							position: absolute
+							top: 50%
+							width: auto
+							margin-top: -22px
+							padding: 16px
+							color: white
+							font-weight: bold
+							font-size: 18px
+							transition: 0.6s ease
+							border-radius: 0 3px 3px 0
+							user-select: none
+							background-color: rgba(0,0,0,0.4)
+						.next
+							right: 0
+							border-radius: 3px 0 0 3px
+						.prev:hover, .next:hover
+							background-color: rgba(0,0,0,0.8)
+					.dot
+						cursor: pointer
+						height: 15px
+						width: 15px
+						margin: 0 2px
+						background-color: #bbb
+						border-radius: 50%
+						display: inline-block
+						transition: background-color 0.6s ease
+					.active, .dot:hover
+						background-color: $accent
+					.fade
+						animation-name: fade
+						animation-duration: 1.5s
+					@keyframes fade
+						from
+							opacity: .2
+						to
+							opacity: 1
+				.cert-prod
+					.video-container
+						position: relative
+						margin-bottom: rem(15)
+						// border-radius: 9px
+						overflow: hidden
+						cursor: pointer
+						box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75)
+						.plh-video
+							cursor: pointer
+						.btn-video
+							position: absolute
+							width: rem(126)
+							height: rem(126)
+							background: top url(../img/video-plant/play-1.png) no-repeat
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%)
+							cursor: pointer
+							z-index: 50
+							&:hover
+								background: bottom url(../img/video-plant/play-1.png) no-repeat
+				.cert-urik
+					ul
+						li
+							display: flex
+							margin-bottom: rem(20)
+							i
+								width: rem(30)
+								height: rem(30)
+								margin-right: .625rem
+								flex: 0 0 auto
+							.gar
+								background: url(/img/sert/gar.png) no-repeat 50% 50%
+							.check
+								background: url(/img/sert/check.png) no-repeat 50% 50%
+							.pay
+								background: url(/img/sert/pay.png) no-repeat 50% 50%
+							.bill
+								background: url(/img/sert/bill.png) no-repeat 50% 50%
+				.cert-cert, .cert-prod, .cert-urik
+					.m-title
+						font-size: rem(16)
+						font-weight: bold
+						margin-bottom: rem(20)
+	.modal
+		display: none
+		position: fixed
+		z-index: 60
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		overflow: auto
+		background-color: rgb(0,0,0)
+		background-color: rgba(0,0,0,0.4)
+		.modal-content
+			max-width: 720px
+			position: relative
+			margin: auto
+			padding: 5px
+			width: 100%
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+			animation-name: animatetop
+			animation-duration: 0.4s
+		@keyframes animatetop
+			from
+				top: -300px
+				opacity: 0
+			to
+				top: 0
+				opacity: 1
+			
+
+/* Certificat End */ 
 
 /* About Start */
 
@@ -1987,14 +2325,15 @@ textarea
 				div
 					width: 100% // lg 35% xs 100%
 					margin: 0 auto
-					a
+					display: flex
+					span
 						display: block // lg inline-block xs block
 						width: 100% // lg 50% xs 100%
 						font-family: $else-font
 						color: #fff
 				p, div, .title
 					margin-bottom: rem(8)
-				a
+				span
 					color: #fff
 				.politic
 					font-size: 14px

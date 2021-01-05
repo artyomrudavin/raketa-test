@@ -1,5 +1,5 @@
 <!DOCTYPE html> <!-- version: v4 -->
-<html lang="ru">
+<html lang="ua" class="no-js">
 
 <head>
 
@@ -20,11 +20,19 @@
 	<link rel="apple-touch-icon" href="../img/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png">
+
+	<link rel="preload" href="../fonts/font-roboto/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="../fonts/font-roboto/roboto-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="../fonts/font-roboto/roboto-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="../fonts/font-roboto/roboto-bolditalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="../fonts/magistral/magistral-medium-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="../css/main.min.css">
 	<link rel="stylesheet" href="../css/ua.min.css">
 
 	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
+	<meta name="theme-color" content="#fff">
 	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
@@ -33,7 +41,7 @@
 	<!-- <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style> -->
 
 	<!--NEXTEL - Коллтрекинг и виджеты-->
-	<script async src="https://cstat.nextel.com.ua:8443/tracking/script/766/390"></script>
+	<script async src="https://cstat.nextel.com.ua:8443/tracking/script/766/563"></script>
 
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -41,6 +49,14 @@
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K5KHPKL');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NGR64NJ');</script>
 <!-- End Google Tag Manager -->
 
 </head>
@@ -52,28 +68,43 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
-		<!--<div class="banner"> <!~~ fridayblack ~~>
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGR64NJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+		<div class="banner"> <!-- fridayblack -->
 			<a href="#blackfriday">
-				<img src="../img/bf-ua.jpg" alt="black friday">
+				<picture>
+					<source type="image/webp" srcset="../img/header/ny/webp/ny-ua.webp">
+					<source type="image/jpg" srcset="../img/header/ny/ny-ua.jpg">
+					<img src="../img/header/ny/ny-ua.jpg" alt="Новый год" class="h-img">
+				</picture>
+				<!-- <img src="img/header/ny/ny.jpg" alt="black friday"> -->
 			</a>
 		</div>
 
 		<div class="bannerm">
 			<a href="#blackfriday">
-				<img src="../img/bf-sm-ua.jpg" alt="black friday">
+				<picture>
+					<source type="image/webp" srcset="../img/header/ny/webp/ny-sm-ua.webp">
+					<source type="image/jpg" srcset="../img/header/ny/ny-sm-ua.jpg">
+					<img src="../img/header/ny/ny-sm-ua.jpg" alt="Новый год" class="h-img">
+				</picture>
+				<!-- <img src="img/header/ny/ny-sm.jpg" alt="black friday"> -->
 			</a>
-		</div>-->
+		</div>
 
 		<header class="header">
 			<nav class="header-nav" id="navbar"> <!-- fridayblack -->
 				<div class="header-nav-box">
 					<div class="header-brand">
 						<div class="header-logo">
-							<a href="#"><img src="../img/AquaGradusLogo.png" alt="Самогоный аппарат Aquagradus Standart"></a>
+							<a href="#"><img src="../img/header/AquaGradusLogo.png" alt="Самогоный аппарат Aquagradus Standart"></a>
 							<p>Фабрика дистиляторів і пивоварень</p>
 						</div>
 						<div class="phone-mobile">
-							<span class="ct-phone">+38 (050) 011-30-84</span>
+							<!-- <span class="ct-phone">+38 (050) 011-30-84</span> -->
 							<span class="ct-phone">+38 (067) 759-63-26</span>
 						</div>
 						<div class="icon" id="burg">
@@ -88,8 +119,8 @@
 							<li><a href="#reviews" class="h-link h-menu">Відгуки</a></li>
 							<li><a href="#about" class="h-link h-menu">Доставка</a></li>
 							<li class="head-ph">
-								<span class="ct-phone">+38 (050) 011-30-84</span><br>
-								<span class="brd-btm ct-phone">+38 (067) 759-63-26</span><br>
+								<!-- <span class="ct-phone">+38 (050) 011-30-84</span><br> -->
+								<span class="ct-phone">+38 (067) 759-63-26</span><br>
 							</li>
 							<li class="btnHead"><a href="#" class="btn">Замовити дзвінок</a></li>
 						</ul>
@@ -115,7 +146,7 @@
 
 			<div class="header-wellcome">
 
-				<div class="header-bonus blink">
+				<!-- <div class="header-bonus blink">
 					<h3 class="bonus-title">Замовляй комплект 25, 35 или 50 літрів та отримуй Подарунок!</h3>
 					<ul>
 						<li>
@@ -145,7 +176,7 @@
 						<div id="seconds3"></div>
 						<div>сек</div>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="container-fluid">
 					<div class="row">
@@ -176,8 +207,18 @@
 									<span>Закажи зараз, а сплати при отриманні</span>
 								</li>
 							</ul>
-							<img src="../img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1"> <!-- phone -->
-							<img src="../img/5years.png" alt="5 лет гарантия" class="img-responsive garanty-ph">
+							<picture>
+								<source type="image/webp" srcset="../img/header/ny/webp/img-1-2.webp">
+								<source type="image/png" srcset="../img/header/ny/img-1-2.png">
+								<img src="../img/header/ny/img-1-2.png" alt="Самогоний аппарат Aquagradus Standart" class="img-responsive img-1">
+							</picture>
+							<!-- <picture> 
+								<source type="image/webp" srcset="img/header/webp/5years.webp">
+								<source type="image/png" srcset="img/header/5years.png">
+								<img src="img/img/header/5years.png" alt="5 лет гарантия" class="img-responsive garanty-ph">
+							</picture> --> <!-- ny -->
+							<!--<img src="../img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-1"> <!~~ phone ~~>
+							<img src="../img/5years.png" alt="5 лет гарантия" class="img-responsive garanty-ph">-->
 							<p class="formAction"><strong>Заповніть форму щоб отримати знижку <span class="num">700 грн + Подарунок</span></strong></p>
 							<div id="message1" class="price num">
 								<div>25л: <span>7 150грн</span>&nbsp;<strong>6 450</strong> грн</div>
@@ -198,8 +239,18 @@
 							</div> -->
 						</div>
 						<div class="col-md-5 header-col-hd">
-							<img src="../img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-2">
-							<img src="../img/5years.png" alt="5 лет гарантия" class="img-responsive garanty">
+							<picture>
+								<source type="image/webp" srcset="../img/header/ny/webp/img-1-2.webp">
+								<source type="image/png" srcset="../img/header/ny/img-1-2.png">
+								<img src="../img/header/ny/img-1-2.png" alt="Самогоний аппарат Aquagradus Standart" class="img-responsive img-2">
+							</picture>
+							<!-- <img src="img/img-1-2.png" alt="Самогоный аппарат Aquagradus Standart" class="img-responsive img-2"> --> <!-- ny -->
+							<!-- <picture>
+								<source type="image/webp" srcset="img/header/webp/5years.webp">
+								<source type="image/png" srcset="img/header/5years.png">
+								<img src="img/header/5years.png" alt="5 лет гарантия" class="img-responsive garanty">
+							</picture> --> <!-- ny -->
+							<!-- <img src="img/5years.png" alt="5 лет гарантия" class="img-responsive garanty"> -->
 						</div>
 					</div>
 				</div>
@@ -252,22 +303,38 @@
 				<h3 class="h3">Що Ви отримаєте?</h3>
 				<div class="row">
 					<div class="tip-item col-lg-3 col-md-3 col-6">
-						<img src="../img/icons/001-keywords.png" alt="Самогонный аппарат под ключ" class="img-responsive">
+						<picture>
+							<source type="image/webp" srcset="../img/icons/webp/001-keywords.webp">
+							<source type="image/png" srcset="../img/icons/001-keywords.png">
+							<img src="../img/icons/001-keywords.png" alt="Самогонный аппарат под ключ" class="img-responsive">
+						</picture>
 						<h4 class="title">Самогонний апарат "під ключ", Повна комплектація!</h4>
 						<p>Дозволяє відразу приступити до приготування улюблених напоїв. Нічого докупати не треба!</p>
 					</div>
 					<div class="tip-item col-lg-3 col-md-3 col-6">
-						<img src="../img/icons/003-analysis.png" alt="Легкая сборка" class="img-responsive">
+						<picture>
+							<source type="image/webp" srcset="../img/icons/webp/003-analysis.webp">
+							<source type="image/png" srcset="../img/icons/003-analysis.png">
+							<img src="../img/icons/003-analysis.png" alt="Легкая сборка" class="img-responsive">
+						</picture>
 						<h4 class="title">Легка збірка, збирається за 10 хвилин</h4>
 						<p>Кожен елемент апарату можна легко розібрати і зібрати вручну для ідеальної промивання після роботи.</p>
 					</div>
 					<div class="tip-item col-lg-3 col-md-3 col-6">
-						<img src="../img/icons/002-pot.png" alt="100% герметичность" class="img-responsive">
+						<picture>
+							<source type="image/webp" srcset="../img/icons/webp/002-pot.webp">
+							<source type="image/png" srcset="../img/icons/002-pot.png">
+							<img src="../img/icons/002-pot.png" alt="100% герметичность" class="img-responsive">
+						</picture>
 						<h4 class="title">Работает на всех видах плит, поместится везде</h4>
 						<p>Для приготовления напитков на аппарате Стандарт подойдет любая плита: газовая, электро и индукционная.</p>
 					</div>
 					<div class="tip-item col-lg-3 col-md-3 col-6">
-						<img src="../img/icons/008-engineer.png" alt="Квалифицированный персонал с профильным образованием" class="img-responsive">
+						<picture>
+							<source type="image/webp" srcset="../img/icons/webp/008-engineer.webp">
+							<source type="image/png" srcset="../img/icons/008-engineer.png">
+							<img src="../img/icons/008-engineer.png" alt="Квалифицированный персонал с профильным образованием" class="img-responsive">
+						</picture>
 						<h4 class="title">Жодних зайвих запахів на Вашій кухні</h4>
 						<p>Лазерне різання і зварювання металу за Стандартом EN ISO 9692-1, силіконові прокладки.</p>
 					</div>
@@ -297,7 +364,7 @@
 			</div>
 		</section> <!-- Tips End -->
 
-		<section class="video">
+		<section class="video-block">
 			
 			<div class="container-fluid">
 				
@@ -317,8 +384,19 @@
 					</div>
 					<div class="col-md-8">
 						
-						<div class="videoWrapper">
-    						<iframe width="560" height="315" src="https://www.youtube.com/embed/90TXMQ41P44?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<div class="video">
+							<a class="video__link" href="https://youtu.be/RysVHwwo_Ek">
+								<picture>
+									<source srcset="https://i.ytimg.com/vi_webp/RysVHwwo_Ek/maxresdefault.webp" type="image/webp">
+									<img class="video__media" src="https://i.ytimg.com/vi/RysVHwwo_Ek/maxresdefault.jpg" alt="Обзор самогонного аппарата AquaGradus Стандарт">
+								</picture>
+							</a>
+							<button class="video__button" aria-label="Запустить видео">
+								<svg width="68" height="48" viewBox="0 0 68 48">
+									<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+									<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+								</svg>
+							</button>
 						</div>
 
 					</div>
@@ -346,17 +424,23 @@
 
 		</section><!-- Video End -->
 
-		<!--<section class="blackfriday" id="blackfriday"> <!~~ fridayblack ~~>
+		<section class="blackfriday" id="blackfriday"> <!-- fridayblack -->
 			<div class="container">
 				<div class="row bf-row">
 					<div class="bf-img-block">
-						<img src="../img/bf-standart-img-ua.png" alt="" class="img-responsive">
+						<picture>
+							<source type="image/webp" srcset="../img/holiday/webp/img-1-1-ua.webp">
+							<source type="image/png" srcset="../img/holiday/img-1-1-ua.png">
+							<img src="../img/holiday/img-1-1-ua.png" alt="Подарок в Новый год" class="img-responsive">
+						</picture>
+						<!-- <img src="img/holiday/img-1-1.png" alt="" class="img-responsive"> -->
 					</div>
 					<div class="bf-text-block">
-						<p class="small-h">В чорну п'ятницю</p>
-						<img src="../img/bolshe-ua.png" alt="" class="img-responsive">
-						<p class="aqua">разом з <span class="logo-font">AquaGradus</span></p>
-						<p class="bf-adds">Ще більше подарунків! Найточніший покраплений відбір з Охолодженням Делюкс, вугільне пом'якшення вкусу, максимальна міцність та очистка завдяки регулярним насадкам Панченкова!</p>
+						<p class="small-h">Отримуй більше в Новий Рік!</p>
+						<!-- <img src="img/bolshe-ny.png" alt="" class="img-responsive"> -->
+						<p class="aqua">від <span class="logo-font">AquaGradus</span></p>
+						<p class="bf-adds">Ще більше подарунків!<br><strong>Угольгое пом'якшення смаку, Ароматизація під час перегонки або Контроль міцності онлайн!</strong><br>
+						Вибирай відповідний тобі подарунок!</p>
 						<a href="#" class="btn bf-btn">Отримати корисні подарунки</a>
 					</div>
 				</div>
@@ -367,24 +451,24 @@
 					<div class="modal-container modal-container--buy">
 						<div class="modal-close"></div>
 						<div class="modal-header">
-							<h3 class="modal-title modal-title--buy">Акція в чорну п'ятницю!</h3>
+							<h3 class="modal-title modal-title--buy">Акція в Новий Рік!</h3>
 						</div>
 						<div class="modal-body">
 							<div>
-								<div class="modal-order-price" style="border: 5px solid #0011ff">
+								<div class="modal-order-price" style="border: 5px solid #c01926">
 									<div>
 										<div class="order-price-value num">
-											Залиште замовлення та отримуйте більше за ті ж грощі!
+											Залиште заявку і отримуйте більше за ті ж гроші!
 										</div>
 									</div>
 								</div>
 								<form id="bf-call" method="post">
 
-									<!~~ Hidden Required Fields ~~>
-									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Черная пятница;">
+									<!-- Hidden Required Fields -->
+									<input type="hidden" name="DATA[TITLE]" value="Новый лид: Аппарат - Стандарт; Форма - Новый Год;">
 									<input type="hidden" name="DATA[SOURCE_ID]" value="Веб-сайт Стандарт">
 									<textarea class="hide" name="DATA[COMMENTS]"></textarea>
-									<!~~ END Hidden Required Fields ~~>
+									<!-- END Hidden Required Fields -->
 
 									<input type="tel" name="DATA[PHONE_MOBILE]" required placeholder="Введите свой телефон" class="buy">
 
@@ -394,13 +478,13 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							перезвоним Вам в течение 15 минут
+							передзвонимо Вам протягом 15 хвилин
 						</div>
 					</div>
 				</div>
 			</div>
-		</section> <!~~ Blackfriday End ~~>
--->
+		</section> <!-- Blackfriday End -->
+
 		<section class="convenience">
 
 			<div class="container-fluid">
@@ -410,7 +494,12 @@
 						<p>Технологія стандартного кріплення на фланцях 2" дюйма дозволяє модернізувати пристрій дод. комплектуючими <strong class="logo">AquaGradus</strong> або сторонніх виробників.<br><br>Незважаючи на те, що апарат вже в базовій комплектації виробляє будб які міцні напої, Ви маєте можливість вдосконалити його, зробив процес роботи більш комфортним або эстетично вдосконаленним.</p>
 					</div>
 					<div class="wash-img col-12">
-						<img src="../img/wash.png" alt="Аппарат AquaGradus удобен в использовании и хранении">
+						<picture>
+							<source type="image/webp" srcset="../img/wash/webp/wash.webp">
+							<source type="image/png" srcset="../img/wash/wash.png">
+							<img src="../img/wash/wash.png" alt="Аппарат AquaGradus удобен в использовании и хранении">
+						</picture>
+						<!-- <img src="../img/wash.png" alt="Аппарат AquaGradus удобен в использовании и хранении"> -->
 					</div>
 					<div class="wash-icos col-12 col-md-7 offset-md-5">
 						<div class="wre-box">
@@ -444,7 +533,12 @@
 							<p>Штамповоное днище дозволяє уникнути деформації при нагріванні, що дозволяє використовувати ємність на всіх нагрівальних поверхнях: газо-, електро- плитах та <strong>індукція!</strong> </p>
 						</div>
 						<div class="tank-img col-12">
-							<img src="../img/wash-t.png" alt="Емкость AquaGradus подходит для индукции">
+							<picture>
+								<source type="image/webp" srcset="../img/wash/webp/wash-t.webp">
+								<source type="image/png" srcset="../img/wash/wash-t.png">
+								<img src="../img/wash/wash-t.png" alt="Емкость AquaGradus подходит для индукции" class="img-tank">
+							</picture>
+							<!-- <img src="../img/wash-t.png" alt="Емкость AquaGradus подходит для индукции"> -->
 						</div>
 						<div class="tank-icos col-12 col-md-7">
 							<div class="wre-t-box">
@@ -795,7 +889,12 @@
 								<span>Класичний самогон з цукру</span>
 							</div>
 							<div class="recipe-img col-md-4 textout">
-								<img src="../img/five-1.png" alt="Класичний самогон з цукру" class="w-xs img-recipe">
+								<picture>
+									<source type="image/webp" srcset="../img/recipe/webp/five-1.webp">
+									<source type="image/png" srcset="../img/recipe/five-1.png">
+									<img src="../img/recipe/five-1.png" alt="Класичний самогон з цукру" class="w-xs img-recipe">
+								</picture>
+								<!-- <img src="../img/five-1.png" alt="Класичний самогон з цукру" class="w-xs img-recipe"> -->
 							</div>
 							<div class="recipe-ch md-6 textout">
 								<div class="row">
@@ -845,7 +944,12 @@
 								<span>Кальвадос з яблук</span>
 							</div>
 							<div class="recipe-img col-md-4 textout">
-								<img src="../img/five-2.png" alt="Кальвадос из яблок" class="img-recipe">
+								<picture>
+									<source type="image/webp" srcset="../img/recipe/webp/five-2.webp">
+									<source type="image/png" srcset="../img/recipe/five-2.png">
+									<img src="../img/recipe/five-2.png" alt="Кальвадос из яблок" class="img-recipe">
+								</picture>
+								<!-- <img src="../img/five-2.png" alt="Кальвадос из яблок" class="img-recipe"> -->
 							</div>
 							<div class="recipe-ch md-6 textout">
 								<div class="row">
@@ -890,7 +994,12 @@
 								<span>Чача, ракія, коньяк з винограду</span>
 							</div>
 							<div class="recipe-img col-md-4 textout">
-								<img src="../img/five-3.png" alt="Чача, ракі, коньяк з винограду" class="img-recipe">
+								<picture>
+									<source type="image/webp" srcset="../img/recipe/webp/five-3.webp">
+									<source type="image/png" srcset="../img/recipe/five-3.png">
+									<img src="../img/recipe/five-3.png" alt="Чача, ракі, коньяк з винограду" class="img-recipe">
+								</picture>
+								<!-- <img src="../img/five-3.png" alt="Чача, ракі, коньяк з винограду" class="img-recipe"> -->
 							</div>
 							<div class="recipe-ch md-6 textout">
 								<div class="row">
@@ -969,7 +1078,7 @@
 		<section id="goto" class="mode">
 			<div class="container-fluid">
 
-				<h3 class="h2">6 в 1. Любые напитки до 96% об.</h3>
+				<h3 class="h2">6 в 1. Будь-які напої до 96% об.</h3>
 
 				<div class="row">
 					<ul class="tab-menu">
@@ -1357,7 +1466,7 @@
 										Сума замовлення
 									</div>
 									<div id="modal-value" class="order-price-value num">
-										6090₴
+										6450₴
 									</div>
 								</div>
 							</div>
@@ -1387,6 +1496,133 @@
 		</div>
 
 	</section> <!-- Constructor End -->
+
+		<section class="certificat"> <!-- Certificat Start -->
+		<div class="bg-transf">
+			<div class="container-fluid">
+				<h3 class="title">Гарантія якості і зобов'язань</h3>
+				<p class="subtitle"><span>ми працюємо виключно в рамках правового поля України - Ви 100% отримаєте товар заявленої якості та <strong>гарантію обслуговування 5 років!</strong></span></p>
+				<div class="row">
+					<div class="col-md-3 cert-cert">
+						<p class="m-title">Зареєстрована і сертифікована торговельна марка на продукцію</p>
+						<div class="slideshow-container">
+							<!-- Full-width images with number and caption text -->
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 3</div>
+								<picture>
+									<source type="image/webp" srcset="../img/sert/webp/1sert-s.webp">
+									<source type="image/jpg" srcset="../img/sert/1sert-s.jpg">
+									<img src="../img/sert/1sert-s.jpg" style="width:100%" alt="Сертификат">
+								</picture>
+								<!-- <img src="../img/sert/1sert-s.jpg" style="width:100%" alt="Сертификат"> -->
+								<!-- <div class="text">Caption Text</div> -->
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 3</div>
+								<picture>
+									<source type="image/webp" srcset="../img/sert/webp/2sert-s.webp">
+									<source type="image/jpg" srcset="../img/sert/2sert-s.jpg">
+									<img src="../img/sert/2sert-s.jpg" style="width:100%" alt="Сертификат">
+								</picture>
+								<!-- <img src="../img/sert/2sert-s.jpg" style="width:100%" alt="Сертификат"> -->
+								<!-- <div class="text">Caption Two</div> -->
+							</div>
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 3</div>
+								<picture>
+									<source type="image/webp" srcset="../img/sert/webp/3sert-s.webp">
+									<source type="image/jpg" srcset="../img/sert/3sert-s.jpg">
+									<img src="../img/sert/3sert-s.jpg" style="width:100%" alt="Сертификат">
+								</picture>
+								<!-- <img src="../img/sert/3sert-s.jpg" style="width:100%" alt="Сертификат"> -->
+								<!-- <div class="text">Caption Three</div> -->
+							</div>
+							<!-- Next and previous buttons -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+						<br>
+						<!-- The dots/circles -->
+						<div style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+						</div>
+					</div>
+					<div class="col-md-4 cert-urik">
+						<p class="m-title">Ми юридична особа - усі угоди виконуються згідно з усіма вимогами закону України</p>
+						<ul>
+							<li>
+								<i class="gar"></i>
+								<p>Гарантія дотримання Закону України "Про захист прав споживачів". Ви маєте право обміняти або повернути непродовольчий товар</p>
+							</li>
+							<li>
+								<i class="check"></i>
+								<p>При покупці апарату, Ви отримуєте гарантійний талон і фіскальний чек, юридично підтверджує факт здійснення між продавцем покупцем грошового розрахунку</p>
+							</li>
+							<li>
+								<i class="pay"></i>
+								<p>Всі види розрахунку: готівковий, картою (без додаткового % навіть в рахунок кредитних коштів), на розрахунковий рахунок</p>
+							</li>
+							<li>
+								<i class="bill"></i>
+								<p>Ми платимо податки з кожного продажу. Підтримка вітчизняного українського виробника</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-5 cert-prod">
+						<p class="m-title">Виробництво відкритого типу - хочемо щоб Ви переконалися самі, що у нас не "гаражне" виробництво</p>
+						<div class="video-container" id="myBtn">
+							<img src="../img/video-plant/placeholder-video.jpg" alt="" class="img-responsive embed-responsive embed-responsive-16by9 plh-video">
+							<div class="btn-video"></div>
+						</div>
+						<!-- <div class="video">
+							<a class="video__link" href="https://youtu.be/J4hHh8Qp55M">
+								<picture>
+									<source srcset="https://i.ytimg.com/vi_webp/J4hHh8Qp55M/maxresdefault.webp" type="image/webp">
+									<img class="video__media" src="https://i.ytimg.com/vi/J4hHh8Qp55M/maxresdefault.jpg" alt="Фабрика самогонных аппаратов AquaGradus">
+								</picture>
+							</a>
+							<button class="video__button" aria-label="Запустить видео">
+								<svg width="68" height="48" viewBox="0 0 68 48">
+									<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+									<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+								</svg>
+							</button>
+						</div> -->
+						<p>У цьому відео ми показали наше виробництво: цех лазерної порізки металу, гибочний верстат і штампувальний прес, зварювальний та поліровачний цеха, слюсарний цех, ВТК і склад готової продукції.</p>
+						<p><strong>Ми ростемо, розвиваємося і стежимо за якістю нашої продукції!</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<!-- <span class="close">&times;</span> -->
+				<!-- <div class="videoWrapper embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/J4hHh8Qp55M" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div> -->
+
+				<div class="video">
+					<a class="video__link" href="https://youtu.be/J4hHh8Qp55M">
+						<picture>
+							<source srcset="https://i.ytimg.com/vi_webp/J4hHh8Qp55M/maxresdefault.webp" type="image/webp">
+							<img class="video__media" src="https://i.ytimg.com/vi/J4hHh8Qp55M/maxresdefault.jpg" alt="Фабрика самогонных аппаратов AquaGradus">
+						</picture>
+					</a>
+					<button class="video__button" aria-label="Запустить видео">
+						<svg width="68" height="48" viewBox="0 0 68 48">
+							<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+							<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+						</svg>
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</section> <!-- Certificat End -->
 
 	<section id="about" class="about layer-0">
 
@@ -1476,7 +1712,12 @@
 					</div>
 				</div>
 				<div class="col-md-5">
-					<img src="../img/top.png" alt="Деревенский самогон">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/webp/top.webp">
+						<source type="image/png" srcset="../img/additionaly/top.png">
+						<img src="../img/additionaly/top.png" alt="Деревенский самогон">
+					</picture>
+					<!-- <img src="../img/top.png" alt="Деревенский самогон"> -->
 				</div>
 			</div>
 		</div>
@@ -1491,7 +1732,12 @@
 						<div id="super" class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/15.png" alt="Отвод под вытяжку">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/15.webp">
+									<source type="image/png" srcset="../img/additionaly/small/15.png">
+									<img src="../img/additionaly/small/15.png" alt="Відвід під витяжку">
+								</picture>
+								<!-- <img src="../img/additionaly/15.png" alt="Отвод под вытяжку"> -->
 								<p>Відвід під витяжку</p>
 							</div>
 						</div>
@@ -1502,7 +1748,12 @@
 						<div class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/2.png" alt="Диоптр Aquagradus">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/2.webp">
+									<source type="image/png" srcset="../img/additionaly/small/2.png">
+									<img src="../img/additionaly/small/2.png" alt="Діоптр Aquagradus™">
+								</picture>
+								<!-- <img src="../img/additionaly/2.png" alt="Диоптр Aquagradus"> -->
 								<p>Діоптр Aquagradus™</p>
 							</div>
 						</div>
@@ -1513,7 +1764,12 @@
 						<div class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/11.png" alt="Регулятор мощности нагрева АГ-2">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/11.webp">
+									<source type="image/png" srcset="../img/additionaly/small/11.png">
+									<img src="../img/additionaly/small/11.png" alt="Регулятор потужності нагріву АГ-2">
+								</picture>
+								<!-- <img src="../img/additionaly/11.png" alt="Регулятор мощности нагрева АГ-2"> -->
 								<p>Регулятор потужності нагріву АГ-2</p>
 							</div>
 						</div>
@@ -1523,7 +1779,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/otvod.jpg" alt="Отвод под вытяжку" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/otvod.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/otvod.jpg">
+						<img src="../img/additionaly/big/otvod.jpg" alt="Отвод под вытяжку" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/otvod.jpg" alt="Отвод под вытяжку" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Відвід під витяжку</h3>
@@ -1558,7 +1819,7 @@
 						</div>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">400₴</div>
+						<div class="price col-md-6 num">500₴</div>
 						<div class="col-md-6"><a href="#" class="btn add-btn" id="carga">Купити</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрити</a></div>
@@ -1567,7 +1828,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/kart_suhoparnik.jpg" alt="Диоптр Aquagradus" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/kart_suhoparnik.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/kart_suhoparnik.jpg">
+						<img src="../img/additionaly/big/kart_suhoparnik.jpg" alt="Диоптр Aquagradus" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/kart_suhoparnik.jpg" alt="Диоптр Aquagradus" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Діоптр Aquagradus™</h3>
@@ -1601,7 +1867,7 @@
 						</div>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">1 590₴</div>
+						<div class="price col-md-6 num">1 650₴</div>
 						<div class="col-md-6"><a href="#" class="btn add-btn" id="dioptr">Купити</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрыть</a></div>
@@ -1610,7 +1876,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/RM.jpg" alt="Регулятор мощности нагрева АГ-2" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/RM.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/RM.jpg">
+						<img src="../img/additionaly/big/RM.jpg" alt="Регулятор мощности нагрева АГ-2" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/RM.jpg" alt="Регулятор мощности нагрева АГ-2" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Регулятор потужності нагріву АГ-2</h3>
@@ -1620,7 +1891,7 @@
 						<p>Електроніка розміщена в надійному корпусі з нержавіючої сталі з потужним охолоджувачем. Обладнаний зручним вимикачем. Дисплей з відображенням режиму роботи, напругою в мережі, що подається потужності на ТЕН. Надійне кріплення клем Тена.</p>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">1 550₴</div>
+						<div class="price col-md-6 num">1 600₴</div>
 						<div class="col-md-6"><a href="#" class="btn add-btn" id="regMosh">Купити</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрити</a></div>
@@ -1633,7 +1904,12 @@
 						<div class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/12.png" alt="Угольная колонна AquaGradus">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/12.webp">
+									<source type="image/png" srcset="../img/additionaly/small/12.png">
+									<img src="../img/additionaly/small/12.png" alt="Вугільна колона AquaGradus™">
+								</picture>
+								<!-- <img src="../img/additionaly/12.png" alt="Угольная колонна AquaGradus"> -->
 								<p>Вугільна колона AquaGradus™</p>
 							</div>
 						</div>
@@ -1644,7 +1920,12 @@
 						<div class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/3.png" alt="Непрерывный контроль крепости (Попугай)">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/3.webp">
+									<source type="image/png" srcset="../img/additionaly/small/3.png">
+									<img src="../img/additionaly/small/3.png" alt="Безперервний контроль міцністі (Папуга)">
+								</picture>
+								<!-- <img src="../img/additionaly/3.png" alt="Непрерывный контроль крепости (Попугай)"> -->
 								<p>Безперервний контроль міцністі (Папуга)</p>
 							</div>
 						</div>
@@ -1655,7 +1936,12 @@
 						<div class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/14.png" alt="Комплект охлаждения ДеЛюкс">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/14.webp">
+									<source type="image/png" srcset="../img/additionaly/small/14.png">
+									<img src="../img/additionaly/small/14.png" alt="Комплект охолодження ДеЛюкс">
+								</picture>
+								<!-- <img src="../img/additionaly/14.png" alt="Комплект охлаждения ДеЛюкс"> -->
 								<p>Комплект охолодження ДеЛюкс</p>
 							</div>
 						</div>
@@ -1665,7 +1951,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/ugol.jpg" alt="Угольная колонна AquaGradus" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/ugol.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/ugol.jpg">
+						<img src="../img/additionaly/big/ugol.jpg" alt="Угольная колонна AquaGradus" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/ugol.jpg" alt="Угольная колонна AquaGradus" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Вугільна колона AquaGradus™</h3>
@@ -1691,7 +1982,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/kart_popugai.jpg" alt="Непрерывный контроль крепости попугай" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/kart_popugai.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/kart_popugai.jpg">
+						<img src="../img/additionaly/big/kart_popugai.jpg" alt="Непрерывный контроль крепости попугай" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/kart_popugai.jpg" alt="Непрерывный контроль крепости попугай" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Безперервний контроль фортеці (Папуга)</h3>
@@ -1699,13 +1995,13 @@
 						<h4 class="h4">Найзручніший спосіб відстежити кінець перегонки</h4>
 						<p>Тепер в процесі перегонки Вам не доведеться наповнювати мірні ємності, щоб зняти показання спірометра - Ви будете бачити міцність прямо в процесі перегону!</p>
 						<p>Також за допомогою пристрою ви не проґавите закінчення перегонки. Коли спирту в брагу не залишається, міцність вашого напою почне різко падатиь</p>
-						<div>
+						<!-- <div>
 							<div>Спиртомер в подарунок!</div>
 							<img src="../img/additionaly/spirtometr.png" alt="Спиртомер в подарок!" class="img-responsive">
-						</div>
+						</div> -->
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">690₴</div>
+						<div class="price col-md-6 num">750₴</div>
 						<div class="col-md-6"><a href="#" class="btn add-btn" id="popugai">Купити</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрити</a></div>
@@ -1714,7 +2010,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/kompl.jpg" alt="Комплект охлаждения ДеЛюкс" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/kompl.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/kompl.jpg">
+						<img src="../img/additionaly/big/kompl.jpg" alt="Комплект охлаждения ДеЛюкс" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/kompl.jpg" alt="Комплект охлаждения ДеЛюкс" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Комплект охолодження ДеЛюкс</h3>
@@ -1737,7 +2038,12 @@
 						<div class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/7.png" alt="Кольца рашига 1 к">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/7.webp">
+									<source type="image/png" srcset="../img/additionaly/small/7.png">
+									<img src="../img/additionaly/small/7.png" alt="Кільця рашига 1 кг">
+								</picture>
+								<!-- <img src="../img/additionaly/7.png" alt="Кольца рашига 1 к"> -->
 								<p>Кільця рашига 1 кг</p>
 							</div>
 						</div>
@@ -1748,7 +2054,12 @@
 						<div class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/10.png" alt="Набор профессиональных ареометров и мерная колба">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/10.webp">
+									<source type="image/png" srcset="../img/additionaly/small/10.png">
+									<img src="../img/additionaly/small/10.png" alt="Набір професійних ареометрів та мірна колба">
+								</picture>
+								<!-- <img src="../img/additionaly/10.png" alt="Набор профессиональных ареометров и мерная колба"> -->
 								<p>Набір професійних ареометрів та мірна колба</p>
 							</div>
 						</div>
@@ -1759,7 +2070,12 @@
 						<div class="column-hover">
 							<span><a href="#" class="link tablink">Дізнатись детальніше</a></span>
 							<div class="sized">
-								<img src="../img/additionaly/13.png" alt="Водяной ТЭН для самогонного аппарат">
+								<picture>
+									<source type="image/webp" srcset="../img/additionaly/small/webp/13.webp">
+									<source type="image/png" srcset="../img/additionaly/small/13.png">
+									<img src="../img/additionaly/small/13.png" alt="Водяний ТЕН для самогонного апарату">
+								</picture>
+								<!-- <img src="../img/additionaly/13.png" alt="Водяной ТЭН для самогонного аппарат"> -->
 								<p>Водяний ТЕН для самогонного апарату</p>
 							</div>
 						</div>
@@ -1769,7 +2085,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/col_rash.jpg" alt="Кольца Рашига 1 кг" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/col_rash.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/col_rash.jpg">
+						<img src="../img/additionaly/big/col_rash.jpg" alt="Кольца Рашига 1 кг" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/col_rash.jpg" alt="Кольца Рашига 1 кг" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Кільця Рашига 1 кг</h3>
@@ -1788,7 +2109,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/areom.jpg" alt="Набор профессиональных ареометров и мерная колба" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/areom.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/areom.jpg">
+						<img src="../img/additionaly/big/areom.jpg" alt="Набор профессиональных ареометров и мерная колба" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/areom.jpg" alt="Набор профессиональных ареометров и мерная колба" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Набір професійних ареометрів та мірна колба</h3>
@@ -1807,7 +2133,12 @@
 
 			<div class="row details tab-content">
 				<div class="col-12 col-sm-5 good-image">
-					<img src="../img/additionaly/ten.jpg" alt="Водяной ТЭН для самогонного аппарат" class="img-responsive">
+					<picture>
+						<source type="image/webp" srcset="../img/additionaly/big/webp/ten.webp">
+						<source type="image/jpg" srcset="../img/additionaly/big/ten.jpg">
+						<img src="../img/additionaly/big/ten.jpg" alt="Водяной ТЭН для самогонного аппарат" class="img-responsive">
+					</picture>
+					<!-- <img src="../img/additionaly/ten.jpg" alt="Водяной ТЭН для самогонного аппарат" class="img-responsive"> -->
 				</div>
 				<div class="col-12 col-sm-7 good-text">
 					<h3 class="title">Водяний ТЕН для самогонного апарату</h3>
@@ -1817,7 +2148,7 @@
 						<p>Однак практичність, надійність і безпеку відносять ТЕН до пристроїв, які найчастіше використовуються в якості нагрівача в самогонному апараті.</p>
 					</div>
 					<div class="row good-controls">
-						<div class="price col-md-6 num">250₴</div>
+						<div class="price col-md-6 num">300₴</div>
 						<div class="col-md-6"><a id="ten" href="#" class="btn add-btn">Купити</a></div>
 					</div>
 					<div class="close"><a href="#" class="link tab-close">Закрити</a></div>
@@ -2036,7 +2367,7 @@
 				<div class="f-contact col-12">
 					<h5 class="title">Контакти</h5>
 					<div>
-						<span class="num ct-phone">+38 (050) 011-30-84</span><span class="num ct-phone">+38 (067) 759-63-26</span>
+						<span class="num ct-phone">+38 (067) 759-63-26</span>
 					</div>
 					<p>вул. Шиллингера 3, г. Харків</p>
 					<p>aquagradus@gmail.com</p>
@@ -2048,7 +2379,7 @@
 	</footer>
 
 	<!-- Bitrix widget -->
-	<script data-skip-moving="true">
+	<script type="module" data-skip-moving="true">
 		(function(w,d,u){
 			var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
 			var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);

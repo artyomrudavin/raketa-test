@@ -132,7 +132,7 @@ textarea
 	height: auto
 
 .num
-	font-family: $else-font
+	// font-family: $else-font
 
 .hide
 	display: none
@@ -167,33 +167,33 @@ textarea
 		cursor: default!important
 		box-shadow: none!important
 
-// .showMenu
-// 	top: 0!important // fridayblack
+.showMenu
+	top: 0!important // fridayblack
 
 /* BlackFriday Banner Start */
 
-// .banner
-// 	display: none
+.banner
+	display: none
 
-// .banner, .bannerm
-// 	margin: 0
-// 	padding: 0
-// 	text-align: center
-// 	a
-// 		text-decoration: none
-// 		display: block
-// 		background: #000
-// 		height: 60px
-// 		width: 100%
-// 		img
-// 			display: block
-// 			max-width: 1316px
-// 			margin: 0 auto
-// 			width: 100%
+.banner, .bannerm
+	margin: 0
+	padding: 0
+	text-align: center
+	a
+		text-decoration: none
+		display: block
+		background: #d9172f
+		height: 60px
+		width: 100%
+		.h-img
+			display: block
+			max-width: 1316px
+			margin: 0 auto
+			width: 100%
 
-// .bannerm
-// 	a
-// 		height: auto
+.bannerm
+	a
+		height: auto
 
 /* BlackFriday Banner End */
 
@@ -205,7 +205,7 @@ textarea
 	background: #fff
 	.header-nav
 		position: fixed
-		top: 0 // fridayblack
+		top: -100px // fridayblack
 		transition: .4s // fridayblack
 		// display: none
 		width: 100%
@@ -236,7 +236,7 @@ textarea
 						text-align: center
 						font-size: 7px
 				.phone-mobile
-					font-family: $else-font
+					// font-family: $else-font
 					font-weight: bold
 					font-size: 14px
 					display: flex
@@ -311,7 +311,7 @@ textarea
 							&:hover
 								color: $accent
 					.head-ph
-						font-family: $else-font
+						// font-family: $else-font
 						font-weight: bold
 						font-size: 14px
 						display: none
@@ -462,8 +462,8 @@ textarea
 								font-size: 14px
 					.img-1
 						vertical-align: middle
-						width: 95%
-						margin-left: -70px // fridayblack
+						// width: 95% // ny
+						// margin-left: -70px // ny
 					.garanty-ph
 						position: absolute
 						bottom: rem(450)
@@ -486,7 +486,7 @@ textarea
 						flex-direction: column
 						.form-item
 							width: 100%
-							font-family: $else-font
+							// font-family: $else-font
 							padding-top: 16px
 							color: $black
 							padding-bottom: 16px
@@ -516,7 +516,7 @@ textarea
 							position: absolute
 							left: rem(40)
 							bottom: rem(10)
-							font-style: italic
+							// font-style: italic
 							font-size: 14px
 							.order-date
 								font-size: 18px
@@ -525,7 +525,7 @@ textarea
 					display: none
 					.img-2
 						vertical-align: middle
-						width: 95%
+						// width: 95% // ny
 	#header-modal
 		#mW3
 			.modal-container
@@ -540,7 +540,7 @@ textarea
 					.phone-mobile
 						.ct-phone
 							&:before
-								background: url(/img/phone-contact.png)
+								background: url(/img/header/phone-contact.png)
 								background-repeat: no-repeat
 								background-size: contain
 				.header-navbar
@@ -548,7 +548,7 @@ textarea
 						.head-ph
 							.ct-phone
 								&:before
-									background: url(/img/phone-contact.png)
+									background: url(/img/header/phone-contact.png)
 									background-repeat: no-repeat
 									background-size: contain
 
@@ -560,7 +560,7 @@ textarea
 					.phone-mobile
 						.ct-phone
 							&:before
-								background: url(/img/phone-contact.webp)
+								background: url(/img/header/webp/phone-contact.webp)
 								background-repeat: no-repeat
 								background-size: contain
 				.header-navbar
@@ -568,7 +568,7 @@ textarea
 						.head-ph
 							.ct-phone
 								&:before
-									background: url(/img/phone-contact.webp)
+									background: url(/img/header/webp/phone-contact.webp)
 									background-repeat: no-repeat
 									background-size: contain
 
@@ -674,7 +674,7 @@ textarea
 			.tank-img
 				text-align: right
 				padding-bottom: rem(60)
-				img
+				.img-tank
 					vertical-align: middle
 					margin-top: rem(-200)
 					bottom: 0
@@ -762,6 +762,8 @@ textarea
 					margin-bottom: rem(32)
 				.title
 					margin-bottom: rem(16)
+					// color: red
+					// font-weight: 700
 				p
 					font-size: 14px
 					margin-bottom: rem(16)
@@ -783,7 +785,7 @@ textarea
 
 /* Video Start */
 
-.video
+.video-block
 	padding-top: rem(30)
 	padding-bottom: rem(60)
 	.container-fluid
@@ -827,18 +829,50 @@ textarea
 							margin-right: rem(10)
 							flex: 0 0 auto
 			.col-md-8
-				.videoWrapper
+				.video
 					position: relative
-					padding-bottom: 56.25%
+					width: 100%
 					height: 0
+					padding-bottom: 56.25%
 					border: 2px solid $accent
 					margin-bottom: rem(20)
-					iframe
+					&:hover
+						.video__button
+							.video__button-shape
+								fill: #ff0000
+								fill-opacity: 1
+					.video__media
 						position: absolute
 						top: 0
 						left: 0
 						width: 100%
 						height: 100%
+						border: 0
+					.video__button
+						position: absolute
+						top: 50%
+						left: 50%
+						padding: 0
+						width: rem(68)
+						height: rem(48)
+						border: none
+						background-color: transparent
+						transform: translate(-50%,-50%)
+						outline: none
+						display: none
+						.video__button-shape
+							fill: #212121
+							fill-opacity: .8
+						.video__button-icon
+							fill: #fff
+						&:focus
+							.video__button-shape
+								fill: #ff0000
+								fill-opacity: 1
+				.video--enabled
+					cursor: pointer
+					.video__button
+						display: block
 			.col-md-12
 				text-align: center
 				padding: rem(12)
@@ -869,46 +903,46 @@ textarea
 
 /* Blackfriday Start */
 
-// .blackfriday
-// 	padding: rem(30) rem(30)
-// 	// background: url(../img/right.jpg) center left no-repeat, url(../img/left.jpg) center right no-repeat, #ffc801
-// 	background-color: #ffc801
-// 	// background-size: contain
-// 	// background: url(../img/chrismas.jpg) repeat
-// 	.container
-// 		.bf-row
-// 			flex-direction: column
-// 			.bf-img-block
-// 				// width: 50%
-// 			.bf-text-block
-// 				// width: 50%
-// 				color: #fff
-// 				text-align: center
-// 				display: flex
-// 				flex-direction: column
-// 				justify-content: center
-// 				align-items: center
-// 				.aqua, .small-h
-// 					color: #000
-// 					font-size: 38px
-// 					line-height: 38px
-// 					font-weight: bold
-// 				.aqua
-// 					color: #c01926
-// 					margin-bottom: rem(20)
-// 					.logo-font
-// 						font-size: 42px
-// 				.img-responsive
-// 					margin: 0 auto
-// 				.small-h
-// 				.bf-adds
-// 					font-size: 18px
-// 					margin-bottom: rem(30)
-// 					color: #000
-// 				.bf-btn
-// 					background-color: #c01926
-// 					// max-width: rem(200)
-// 					padding: rem(15) rem(30)
+.blackfriday
+	padding: rem(30) rem(30)
+	// background: url(../img/right.jpg) center left no-repeat, url(../img/left.jpg) center right no-repeat, #ffc801
+	background-color: #89cde4
+	// background-size: contain
+	// background: url(../img/chrismas.jpg) repeat
+	.container
+		.bf-row
+			flex-direction: column
+			.bf-img-block
+				// width: 50%
+			.bf-text-block
+				// width: 50%
+				color: #fff
+				text-align: center
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				.aqua, .small-h
+					color: #000
+					font-size: 38px
+					line-height: 38px
+					font-weight: bold
+				.aqua
+					color: #c01926
+					margin-bottom: rem(20)
+					.logo-font
+						font-size: 42px
+				.img-responsive
+					margin: 0 auto
+				.small-h
+				.bf-adds
+					font-size: 18px
+					margin-bottom: rem(30)
+					color: #000
+				.bf-btn
+					background-color: #c01926
+					// max-width: rem(200)
+					padding: rem(15) rem(30)
 
 /* Blackfriday End */
 
@@ -1049,7 +1083,7 @@ textarea
 			.bk-val, .car-val, .suh-val
 				font-size: 14px
 				span
-					font-family: $else-font
+					// font-family: $else-font
 			.car-val, .suh-val
 				&.active
 					color: $green
@@ -1131,7 +1165,7 @@ textarea
 					font-size: 32px
 			.h5
 				font-size: 24px
-				font-weight: 300
+				font-weight: 400
 				max-width: rem(400)
 				margin: 0 auto
 				margin-bottom: rem(30)
@@ -1236,7 +1270,7 @@ textarea
 								font-size: 40px
 								color: #bfbfbf
 							.accent
-								font-size: 36px // 64
+								font-size: 36px // 64 
 								color: $accent
 							p
 								font-weight: bold
@@ -1329,7 +1363,7 @@ textarea
 	.container-fluid
 		max-width: 1030px
 		.call
-			font-weight: 300
+			font-weight: 400
 			text-align: center
 			font-size: 16px // 576 18px // 320 16px
 			line-height: 1.5
@@ -1940,6 +1974,49 @@ textarea
 			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 			animation-name: animatetop
 			animation-duration: 0.4s
+			.video
+				position: relative
+				width: 100%
+				height: 0
+				padding-bottom: 56.25%
+				border: none
+				&:hover
+					.video__button
+						.video__button-shape
+							fill: #ff0000
+							fill-opacity: 1
+				.video__media
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					border: 0
+				.video__button
+					position: absolute
+					top: 50%
+					left: 50%
+					padding: 0
+					width: rem(68)
+					height: rem(48)
+					border: none
+					background-color: transparent
+					transform: translate(-50%,-50%)
+					outline: none
+					display: none
+					.video__button-shape
+						fill: #212121
+						fill-opacity: .8
+					.video__button-icon
+						fill: #fff
+					&:focus
+						.video__button-shape
+							fill: #ff0000
+							fill-opacity: 1
+			.video--enabled
+				cursor: pointer
+				.video__button
+					display: block
 		@keyframes animatetop
 			from
 				top: -300px
@@ -2238,7 +2315,7 @@ textarea
 								left: rem(-50)
 								position: absolute
 								font-size: 48px
-								font-weight: 300
+								font-weight: 400
 							&.collapsed:before
 								content: "+"
 				.collapse
@@ -2329,7 +2406,7 @@ textarea
 					span
 						display: block // lg inline-block xs block
 						width: 100% // lg 50% xs 100%
-						font-family: $else-font
+						// font-family: $else-font
 						color: #fff
 				p, div, .title
 					margin-bottom: rem(8)

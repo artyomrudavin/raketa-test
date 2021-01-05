@@ -1,50 +1,25 @@
-// Price changer
+$(function() { // fridayblack
 
-// $(function() {
+	// When the user scrolls the page, execute myFunction
+	window.onscroll = function() {myFunction()};
 
-// 	function nextMsg(i) {
-// 		if (messages.length == i) {
-// 			i = 0;
-// 		}
-// 		$('#message').html(messages[i]).fadeIn(500).delay(2000).fadeOut(500, function() {
-// 			nextMsg(i + 1);
-// 		});
-// 	};
+	// Get the navbar
+	var wehave = document.getElementById("header-text");
+	var navbar = document.getElementById("navbar");
 
-// 	var messages = [
-// 	"25л: <span>6 650грн</span>&nbsp;<strong>5 750</strong> грн",
-// 	"35л: <span>7 150грн</span>&nbsp;<strong>6 250</strong> грн",
-// 	"50л: <span>7 650грн</span>&nbsp;<strong>6 750</strong> грн"
-// 	];
+	// Get the offset position of the navbar
+	var showMenu = wehave.offsetTop;
 
-// 	$('#message').hide();
+	// Add the sticky class to the navbar
+	function myFunction() {
+		if (window.pageYOffset >= showMenu) {
+			navbar.classList.add("showMenu")
+		} else {
+			navbar.classList.remove("showMenu");
+		}
+	}
 
-// 	nextMsg(0);
-
-// });
-
-// $(function() { // fridayblack
-
-// 	// When the user scrolls the page, execute myFunction
-// 	window.onscroll = function() {myFunction()};
-
-// 	// Get the navbar
-// 	var wehave = document.getElementById("header-text");
-// 	var navbar = document.getElementById("navbar");
-
-// 	// Get the offset position of the navbar
-// 	var showMenu = wehave.offsetTop;
-
-// 	// Add the sticky class to the navbar
-// 	function myFunction() {
-// 		if (window.pageYOffset >= showMenu) {
-// 			navbar.classList.add("showMenu")
-// 		} else {
-// 			navbar.classList.remove("showMenu");
-// 		}
-// 	}
-
-// });
+});
 
 // Modal Control - Book
 
@@ -140,26 +115,26 @@ $(function() {
 
 // Modal Control - Black friday
 
-// $(function() { // fridayblack
+$(function() { // fridayblack
 
-// 	var modal = $('#blackfriday-modal.modal-mask');
+	var modal = $('#blackfriday-modal.modal-mask');
 
-// 	$('.bf-text-block .bf-btn').on('click', function(e) {
-// 		e.preventDefault();
-// 		modal.removeClass('hide');
-// 	});
+	$('.bf-text-block .bf-btn').on('click', function(e) {
+		e.preventDefault();
+		modal.removeClass('hide');
+	});
 
-// 	$('.modal-close').on('click', function() {
-// 		modal.addClass('hide');
-// 	});
+	$('.modal-close').on('click', function() {
+		modal.addClass('hide');
+	});
 
-// 	$(document).on('click', function(event) {
-// 		if ( event.target.id == 'mW3' ) {
-// 			modal.addClass('hide');
-// 		}
-// 	});
+	$(document).on('click', function(event) {
+		if ( event.target.id == 'mW3' ) {
+			modal.addClass('hide');
+		}
+	});
 
-// });
+});
 
 // Modal Control - About
 
@@ -205,12 +180,12 @@ $(function() {
 			hiddenComAdd.val('Дополнительная царга с сеткой Панченкова');
 			// console.log('carga');
 		} else if ( $(this).attr('id') == 'dioptr' ) {
-			addPrice.text('1 590₴');
+			addPrice.text('1 650₴');
 			addTextm.text('Инновационный диоптр 4 в 1');
 			hiddenComAdd.val('Инновационный диоптр 4 в 1');
 			// console.log('dioptr');
 		} else if ( $(this).attr('id') == 'popugai' ) {
-			addPrice.text('690₴');
+			addPrice.text('750₴');
 			addTextm.text('Непрерывный контроль крепости (Попугай)');
 			hiddenComAdd.val('Непрерывный контроль крепости (Попугай)');
 			// console.log('popugai');
@@ -235,14 +210,14 @@ $(function() {
 			hiddenComAdd.val('Угольная колонна AquaGradus');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'regMosh' ) {
-			addPrice.text('1 550₴');
+			addPrice.text('1 600₴');
 			addTextm.text('Регулятор мощности нагрева АГ-2');
 			hiddenComAdd.val('Регулятор мощности нагрева АГ-2');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'ten' ) {
-			addPrice.text('250₴');
-			addTextm.text('Водяной ТЭН для самогонного аппарат');
-			hiddenComAdd.val('Водяной ТЭН для самогонного аппарат');
+			addPrice.text('300₴');
+			addTextm.text('Водяной ТЭН для самогонного аппарата');
+			hiddenComAdd.val('Водяной ТЭН для самогонного аппарата');
 			// console.log('drogi');
 		};
 	});
@@ -1081,6 +1056,7 @@ $(function() { // fridayblack
 
 $(function() {
 	$('[type="tel"]').mask('+389999999999');
+	// $('img.lazy').lazyload();
 });
 
 $(function() {
@@ -1157,10 +1133,10 @@ updater(document.getElementById("days2"),
 	document.getElementById("minutes2"),
 	document.getElementById("seconds2"));
 
-updater(document.getElementById("days3"),
-	document.getElementById("hours3"),
-	document.getElementById("minutes3"),
-	document.getElementById("seconds3"));
+// updater(document.getElementById("days3"),
+// 	document.getElementById("hours3"),
+// 	document.getElementById("minutes3"),
+// 	document.getElementById("seconds3"));
 
 });
 

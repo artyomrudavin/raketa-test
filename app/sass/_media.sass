@@ -62,6 +62,20 @@
 							height: rem(40)
 						p
 							font-size: 10px
+					.phone-mobile
+						.ct-phone
+							position: relative
+							padding-left: rem(25)
+							&:before
+								content: ""
+				.header-navbar
+					#menu
+						.head-ph
+							.ct-phone
+								position: relative
+								padding-left: rem(35)
+								&:before
+									content: ""	
 		.header-wellcome
 			padding-top: rem(67)
 			.header-bonus
@@ -357,11 +371,11 @@
 
 	/* BlackFriday Banner Start */
 
-	.banner
-		display: block // fridayblack
+	// .banner
+	// 	display: block // fridayblack
 
-	.bannerm
-		display: none // fridayblack
+	// .bannerm
+	// 	display: none // fridayblack
 
 	/* BlackFriday Banner End */
 
@@ -373,7 +387,7 @@
 				flex-direction: row
 				.header-brand
 					width: inherit
-					.phone-mobile, .icon
+					.phone-mobile, .icon, .local-mob
 						display: none
 				.header-navbar
 					#menu
@@ -394,7 +408,7 @@
 							display: block	
 				.time-wrap
 					flex-direction: column
-					width: 90%
+					width: 60%
 					height: 100%
 					p
 						margin-bottom: rem(-10)
@@ -402,6 +416,8 @@
 						font-size: 24px
 						#days1, #hours1, #minutes1, #seconds1
 							min-width: rem(36)
+				.local-desc
+					display: block
 		.header-wellcome
 			.header-bonus
 				top: rem(90)
@@ -478,25 +494,25 @@
 
 	/* Blackfriday Start */
 
-	.blackfriday
-		padding: 0
-		.container
-			.bf-row
-				flex-direction: row
-				.bf-img-block
-					width: 50%
-				.bf-text-block
-					width: 50%
-					.aqua, .small-h
-						font-size: 44px
-						line-height: 44px
-					.aqua
-						.logo-font
-							font-size: 48px
-					.img-responsive
-					.small-h
-					.bf-adds
-					.bf-btn
+	// .blackfriday
+	// 	padding: 0
+	// 	.container
+	// 		.bf-row
+	// 			flex-direction: row
+	// 			.bf-img-block
+	// 				width: 50%
+	// 			.bf-text-block
+	// 				width: 50%
+	// 				.aqua, .small-h
+	// 					font-size: 44px
+	// 					line-height: 44px
+	// 				.aqua
+	// 					.logo-font
+	// 						font-size: 48px
+	// 				.img-responsive
+	// 				.small-h
+	// 				.bf-adds
+	// 				.bf-btn
 
 	/* Blackfriday End */	
 
@@ -996,6 +1012,8 @@
 	/* Header Start*/
 	
 	.header
+		.header-nav
+			.header-nav-box
 		.header-wellcome
 			.container-fluid
 				.row
@@ -1054,6 +1072,11 @@
 	/* Header Start*/
 	
 	.header
+		.header-nav
+			.header-nav-box
+				.local
+					.lang__control
+
 		.header-wellcome
 			.header-bonus
 				right: rem(105)

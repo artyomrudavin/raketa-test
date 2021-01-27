@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
+	.pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });
@@ -68,7 +68,7 @@ gulp.task('scripts-ua', function() {
 		'app/js/ua.common.js', // Always at the end
 		])
 	.pipe(concat('ua.scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
+	.pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });

@@ -23,28 +23,28 @@
 
 // });
 
-$(function() { // fridayblack
+// $(function() { // fridayblack
 
-	// When the user scrolls the page, execute myFunction
-	window.onscroll = function() {myFunction()};
+// 	// When the user scrolls the page, execute myFunction
+// 	window.onscroll = function() {myFunction()};
 
-	// Get the navbar
-	var wehave = document.getElementById("header-text");
-	var navbar = document.getElementById("navbar");
+// 	// Get the navbar
+// 	var wehave = document.getElementById("header-text");
+// 	var navbar = document.getElementById("navbar");
 
-	// Get the offset position of the navbar
-	var showMenu = wehave.offsetTop;
+// 	// Get the offset position of the navbar
+// 	var showMenu = wehave.offsetTop;
 
-	// Add the sticky class to the navbar
-	function myFunction() {
-		if (window.pageYOffset >= showMenu) {
-			navbar.classList.add("showMenu")
-		} else {
-			navbar.classList.remove("showMenu");
-		}
-	}
+// 	// Add the sticky class to the navbar
+// 	function myFunction() {
+// 		if (window.pageYOffset >= showMenu) {
+// 			navbar.classList.add("showMenu")
+// 		} else {
+// 			navbar.classList.remove("showMenu");
+// 		}
+// 	}
 
-});
+// });
 
 // Modal Control - Book
 
@@ -140,26 +140,26 @@ $(function() {
 
 // Modal Control - Black friday
 
-$(function() { // fridayblack
+// $(function() { // fridayblack
 
-	var modal = $('#blackfriday-modal.modal-mask');
+// 	var modal = $('#blackfriday-modal.modal-mask');
 
-	$('.bf-text-block .bf-btn').on('click', function(e) {
-		e.preventDefault();
-		modal.removeClass('hide');
-	});
+// 	$('.bf-text-block .bf-btn').on('click', function(e) {
+// 		e.preventDefault();
+// 		modal.removeClass('hide');
+// 	});
 
-	$('.modal-close').on('click', function() {
-		modal.addClass('hide');
-	});
+// 	$('.modal-close').on('click', function() {
+// 		modal.addClass('hide');
+// 	});
 
-	$(document).on('click', function(event) {
-		if ( event.target.id == 'mW3' ) {
-			modal.addClass('hide');
-		}
-	});
+// 	$(document).on('click', function(event) {
+// 		if ( event.target.id == 'mW3' ) {
+// 			modal.addClass('hide');
+// 		}
+// 	});
 
-});
+// });
 
 // Modal Control - About
 
@@ -200,47 +200,47 @@ $(function() {
 		modal.removeClass('hide');
 
 		if ( $(this).attr('id') == 'carga' ) {
-			addPrice.text('1 190₴');
-			addTextm.text('Додаткова царга з сіткою Панченкова');
-			hiddenComAdd.val('Дополнительная царга с сеткой Панченкова');
+			addPrice.text('600₴');
+			addTextm.text('Відвід під витяжку');
+			hiddenComAdd.val('Відвід під витяжку');
 			// console.log('carga');
 		} else if ( $(this).attr('id') == 'dioptr' ) {
-			addPrice.text('1 650₴');
+			addPrice.text('1 900₴');
 			addTextm.text('Інноваційний діоптр 4 в 1');
 			hiddenComAdd.val('Инновационный диоптр 4 в 1');
 			// console.log('dioptr');
 		} else if ( $(this).attr('id') == 'popugai' ) {
-			addPrice.text('750₴');
+			addPrice.text('900₴');
 			addTextm.text('Безперервний контроль фортеці (Папуга)');
 			hiddenComAdd.val('Непрерывный контроль крепости (Попугай)');
 			// console.log('popugai');
 		} else if ( $(this).attr('id') == 'rashiga' ) {
-			addPrice.text('710₴');
+			addPrice.text('850₴');
 			addTextm.text('Кільця Рашига 1 кг');
 			hiddenComAdd.val('Кольца Рашига 1 кг');
 			// console.log('rashiga');
 		} else if ( $(this).attr('id') == 'areom' ) {
-			addPrice.text('450₴');
+			addPrice.text('550₴');
 			addTextm.text('Набір професійних ареометрів і мірна колба');
 			hiddenComAdd.val('Набор профессиональных ареометров и мерная колба');
 			// console.log('areom');
 		} else if ( $(this).attr('id') == 'komplOhl' ) {
-			addPrice.text('750₴');
+			addPrice.text('865₴');
 			addTextm.text('Комплект охложденія ДеЛюкс');
 			hiddenComAdd.val('Комплект охлождения ДеЛюкс');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'ugol' ) {
-			addPrice.text('750₴');
+			addPrice.text('850₴');
 			addTextm.text('Вугільна колона AquaGradus');
 			hiddenComAdd.val('Угольная колонна AquaGradus');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'regMosh' ) {
-			addPrice.text('1 600₴');
+			addPrice.text('1 850₴');
 			addTextm.text('Регулятор потужності нагріву АГ-2');
 			hiddenComAdd.val('Регулятор мощности нагрева АГ-2');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'ten' ) {
-			addPrice.text('300₴');
+			addPrice.text('350₴');
 			addTextm.text('Водяний ТЕН для самогонного апарату');
 			hiddenComAdd.val('Водяной ТЭН для самогонного аппарата');
 			// console.log('drogi');
@@ -505,7 +505,7 @@ $(function() {
 		if ( bakVal.hasClass('active') ) {
 			formOld.hide();
 			if ( dataTk == 'twentyTk' ) {
-				formValue.text('2 700₴');
+				formValue.text('3 200₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -516,7 +516,7 @@ $(function() {
 				hiddenComment.val('Бак Aquagradus Стандарт на 25л');
 				// console.log(hiddenComment.val());
 			} else if ( dataTk == 'thirtyTk' ) {
-				formValue.text('3 200₴');
+				formValue.text('3 800₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -526,7 +526,7 @@ $(function() {
 				mtextValue.text('Бак Aquagradus Стандарт на 35л');
 				hiddenComment.val('Бак Aquagradus Стандарт на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formValue.text('3 700₴');
+				formValue.text('4 400₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-nocolumn_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -542,8 +542,8 @@ $(function() {
 			formOld.show();
 
 			if ( dataTk == 'twentyTk' ) {
-				formOld.text('7 150₴');
-				formValue.text('6 450₴');
+				formOld.text('8 090₴');
+				formValue.text('7 390₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -553,8 +553,8 @@ $(function() {
 				mtextValue.text('Самогонний апарат з баком на 25л');
 				hiddenComment.val('Самогонний апарат з баком на 25л');
 			} else if ( dataTk == 'thirtyTk' ) {
-				formOld.text('7 650₴');
-				formValue.text('6 950₴');
+				formOld.text('8 690₴');
+				formValue.text('7 990₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -564,8 +564,8 @@ $(function() {
 				mtextValue.text('Самогонний апарат з баком на 35л');
 				hiddenComment.val('Самогонний апарат з баком на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
-				formOld.text('8 150₴');
-				formValue.text('7 450₴');
+				formOld.text('9 290₴');
+				formValue.text('8 590₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -588,7 +588,7 @@ $(function() {
 		formOld.hide();
 
 
-		formValue.text('4 450₴');
+		formValue.text('5 100₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/pro_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -611,8 +611,8 @@ $(function() {
 			modalBtn.text('Купити колону окремо');
 		} else {
 			colVal.text('Колонна отдельно');
-			formOld.text('7 150₴');
-			formValue.text('6 450₴');
+			formOld.text('8 090₴');
+			formValue.text('7 390₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
@@ -647,7 +647,7 @@ $(function() {
 		formOld.hide();
 
 
-		formValue.text('2 700₴');
+		formValue.text('3 200₴');
 		imgConstr.css({
 			background: 'url(/img/constructor/20l-nocolumn_big.jpg)',
 			backgroundRepeat: 'no-repeat',
@@ -674,8 +674,8 @@ $(function() {
 			modalBtn.text('Купити бак окремо');
 		} else {
 			bakVal.text('Бак окремо');
-			formOld.text('7 150₴');
-			formValue.text('6 450₴');
+			formOld.text('8 090₴');
+			formValue.text('7 390₴');
 			formOld.show();
 			imgConstr.css({
 				background: 'url(/img/constructor/20l-pro_big.jpg)',
@@ -1089,12 +1089,12 @@ $(function() {
 		e.preventDefault();
 		
 		$('.hide-tip').toggle('slow');
-		$(this).text('Свернуть');
+		$(this).text('Згорнути');
 
 		if ( !$(this).hasClass('active') ) {
 			$(this).addClass('active');
 		} else {
-			$(this).text('Больше информации ... ');
+			$(this).text('Більше інформації ... ');
 		};
 
 	});
